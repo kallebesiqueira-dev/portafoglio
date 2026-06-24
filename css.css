@@ -270,12 +270,34 @@ body {
   position: relative;
   z-index: 2;
 
-  margin-right: 150px;
+  display: inline-grid;
+  place-items: center;
   margin-top: 18px;
   font-size: clamp(2.8rem, 5vw, 4.2rem);
   font-weight: 800;
   letter-spacing: -1.5px;
   margin-bottom: 16px;
+  text-align: center;
+}
+
+/* Invisible full name reserves the box so the layout below never shifts
+   while the name is being typed or deleted. */
+.hero-name-ghost {
+  visibility: hidden;
+}
+
+.hero-name-live {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Single inline wrapper so the space between "Kallebe" and "Gallo"
+   is preserved (flex items would otherwise collapse it). */
+.hero-name-inner {
+  white-space: pre;
 }
 
 .hero-header h1 .name-accent {
@@ -287,6 +309,51 @@ body {
   z-index: 2;
   max-width: 720px;
   font-size: 1.1rem;
+  color: var(--muted);
+}
+
+.hero-role {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 14px;
+  font-size: clamp(1.05rem, 2.2vw, 1.5rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: linear-gradient(100deg, var(--accent), #c084fc 55%, #7dd3fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--accent);
+}
+
+.hero-role::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 1px;
+  margin-right: 12px;
+  vertical-align: middle;
+  background: linear-gradient(90deg, transparent, var(--accent));
+}
+
+.hero-role::after {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 1px;
+  margin-left: 12px;
+  vertical-align: middle;
+  background: linear-gradient(90deg, var(--accent), transparent);
+}
+
+.hero-tagline {
+  position: relative;
+  z-index: 2;
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: clamp(0.95rem, 1.6vw, 1.15rem);
+  line-height: 1.6;
   color: var(--muted);
 }
 
@@ -681,6 +748,54 @@ section p {
 
 .skills-tech-stack {
   margin-top: 34px;
+}
+
+.skills-ai-lead {
+  margin-top: 26px;
+  padding-left: 16px;
+  border-left: 2px solid var(--accent);
+}
+
+.skills-tech-stack-ai .skills-tech-title {
+  background: linear-gradient(100deg, var(--accent), #c084fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.skills-tech-stack-ai .skills-tech-item {
+  border-color: rgba(192, 132, 252, 0.18);
+}
+
+.skills-tech-stack-ai .skills-tech-item:hover {
+  border-color: rgba(192, 132, 252, 0.4);
+}
+
+.skills-ai-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 900px;
+  margin: 22px auto 0;
+}
+
+.skills-ai-tag {
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  background: linear-gradient(180deg, rgba(192,132,252,0.12), rgba(125,211,252,0.06));
+  border: 1px solid rgba(192, 132, 252, 0.28);
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.skills-ai-tag:hover {
+  transform: translateY(-2px);
+  border-color: rgba(125, 211, 252, 0.55);
+  background: linear-gradient(180deg, rgba(192,132,252,0.2), rgba(125,211,252,0.12));
 }
 
 .skills-tech-title {
