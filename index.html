@@ -58,11 +58,15 @@
 </a>
 </header>
 
+<div class="bg-video-wrap" aria-hidden="true">
+  <video class="bg-video" src="bg-video.mp4" autoplay muted loop playsinline preload="metadata" tabindex="-1"></video>
+</div>
+
 
 <nav class="main-nav" aria-label="Navigazione principale">
   <a href="#sobre" data-i18n="nav.about">Chi sono</a>
   <a href="#skills-container" data-i18n="nav.skills">Competenze</a>
-  <a href="#projetos" data-i18n="nav.projects">Progetti</a>
+  <a href="#progetti-live" data-i18n="nav.projects">Progetti</a>
   <a href="#avaliacoes" data-i18n="nav.reviews">Recensioni</a>
   <div class="language-dropdown" id="languageDropdown">
     <button class="language-trigger" id="languageTrigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Seleziona lingua">
@@ -91,6 +95,8 @@
     </div>
   </div>
 </nav>
+
+<div class="nav-wave" aria-hidden="true"></div>
 
 
 <section id="sobre">
@@ -166,294 +172,132 @@ Per recruiter, hiring manager e CTO che stanno leggendo: cerco realtà ambiziose
 </section>
 
 
-<section id="projetos">
-  <div class="project-book-shell">
-    <div class="project-book-frame">
-      <div class="project-book" id="projectBook" aria-label="Portfolio progetti web" data-i18n-aria-label="book.aria">
-        <div class="book-spine" aria-hidden="true"></div>
-        <div class="book-page-stack">
-          <div class="book-underlay">
-            <span class="book-underlay-end" data-i18n="book.manifest.end">Fine</span>
-          </div>
+<section id="progetti-live">
+  <h2 data-i18n="ghp.title">Progetti principali</h2>
+  <p class="ghp-subtitle" data-i18n="ghp.subtitle">Prodotti reali sviluppati end-to-end: codice aperto su GitHub, demo live e sistemi in produzione.</p>
 
-          <article class="book-sheet book-sheet-cover" data-sheet-label="Progetti">
-            <div class="book-face book-face-front book-cover-face">
-              <h3 data-i18n="projects.title">Progetti</h3>
-              <p class="book-cover-phrase" data-i18n="book.heading.note">Una selezione pensata come un libro di studio: copertina, pagine corpose e navigazione laterale con gesto di sfoglio.</p>
-            </div>
-            <div class="book-face book-face-back book-manifest-face">
-            </div>
-          </article>
-
-          <article class="book-sheet" data-sheet-label="Gold Barber Shop">
-            <div class="book-face book-face-front">
-              <div class="book-project-visual" data-preview-label="Apri preview" data-i18n-preview-label="book.preview">
-                <img src="img/livro/1.png" alt="Preview Gold Barber Shop">
-              </div>
-              <div class="book-project-copy">
-                <span class="book-page-type" data-i18n="book.type.featured">Barber premium</span>
-                <h3>Gold Barber Shop</h3>
-                <p data-i18n="book.desc.alpenbau">Identità solida, struttura d’impatto e composizione pensata per comunicare affidabilità premium.</p>
-                <button class="book-preview-trigger" type="button" data-full="img/livro/2.png" data-title="Gold Barber Shop" data-i18n="book.preview">Apri preview</button>
-              </div>
-            </div>
-            <div class="book-face book-face-back">
-              <div class="book-project-visual" data-preview-label="Apri preview" data-i18n-preview-label="book.preview">
-                <img src="img/livro/2.png" alt="Preview Gold Barber Shop dettagli">
-              </div>
-              <div class="book-project-copy">
-                <span class="book-page-type" data-i18n="book.type.featured">Barber premium</span>
-                <h3>Gold Barber Shop</h3>
-                <p data-i18n="book.desc.alpenbau">Identità solida, struttura d’impatto e composizione pensata per comunicare affidabilità premium.</p>
-                <button class="book-preview-trigger" type="button" data-full="img/livro/2.png" data-title="Gold Barber Shop" data-i18n="book.preview">Apri preview</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="book-sheet" data-sheet-label="Bella Burger">
-            <div class="book-face book-face-front">
-              <div class="book-project-visual" data-preview-label="Apri preview" data-i18n-preview-label="book.preview">
-                <img src="img/livro/3.png" alt="Preview Bella Burger">
-              </div>
-              <div class="book-project-copy">
-                <span class="book-page-type" data-i18n="book.type.product">Food branding</span>
-                <h3>Bella Burger</h3>
-                <p data-i18n="book.desc.app">Dashboard finanziaria con gerarchia pulita, lettura immediata dei dati e presenza visiva senior.</p>
-                <button class="book-preview-trigger" type="button" data-full="img/livro/4.png" data-title="Bella Burger" data-i18n="book.preview">Apri preview</button>
-              </div>
-            </div>
-            <div class="book-face book-face-back">
-              <div class="book-project-visual" data-preview-label="Apri preview" data-i18n-preview-label="book.preview">
-                <img src="img/livro/4.png" alt="Preview Bella Burger dettagli">
-              </div>
-              <div class="book-project-copy">
-                <span class="book-page-type" data-i18n="book.type.product">Food branding</span>
-                <h3>Bella Burger</h3>
-                <p data-i18n="book.desc.app">Dashboard finanziaria con gerarchia pulita, lettura immediata dei dati e presenza visiva senior.</p>
-                <button class="book-preview-trigger" type="button" data-full="img/livro/4.png" data-title="Bella Burger" data-i18n="book.preview">Apri preview</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="book-sheet" data-sheet-label="Tata Button Maker">
-            <div class="book-face book-face-front">
-              <div class="book-project-visual" data-preview-label="Apri preview" data-i18n-preview-label="book.preview">
-                <img src="img/livro/5.png" alt="Preview Tata Button Maker">
-              </div>
-              <div class="book-project-copy">
-                <span class="book-page-type" data-i18n="book.type.brand">Artigianato creativo</span>
-                <h3>Tata Button Maker</h3>
-                <p data-i18n="book.desc.bella">Direzione calda, fotografia eroica e call to action disegnate per conversione e memorabilità.</p>
-                <button class="book-preview-trigger" type="button" data-full="img/livro/6.png" data-title="Tata Button Maker" data-i18n="book.preview">Apri preview</button>
-              </div>
-            </div>
-            <div class="book-face book-face-back">
-              <div class="book-project-visual" data-preview-label="Apri preview" data-i18n-preview-label="book.preview">
-                <img src="img/livro/6.png" alt="Preview Tata Button Maker dettagli">
-              </div>
-              <div class="book-project-copy">
-                <span class="book-page-type" data-i18n="book.type.brand">Artigianato creativo</span>
-                <h3>Tata Button Maker</h3>
-                <p data-i18n="book.desc.bella">Direzione calda, fotografia eroica e call to action disegnate per conversione e memorabilità.</p>
-                <button class="book-preview-trigger" type="button" data-full="img/livro/6.png" data-title="Tata Button Maker" data-i18n="book.preview">Apri preview</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="book-sheet" data-sheet-label="Contabile Pro">
-            <div class="book-face book-face-front">
-              <div class="book-project-visual" data-preview-label="Apri preview" data-i18n-preview-label="book.preview">
-                <img src="img/livro/7.png" alt="Preview Contabile Pro">
-              </div>
-              <div class="book-project-copy">
-                <span class="book-page-type" data-i18n="book.type.editorial">Suite contabile</span>
-                <h3>Contabile Pro</h3>
-                <p data-i18n="book.desc.blog">Un linguaggio editoriale più denso, pensato per contenuto, autorevolezza e permanenza sulla pagina.</p>
-                <button class="book-preview-trigger" type="button" data-full="img/livro/8.png" data-title="Contabile Pro" data-i18n="book.preview">Apri preview</button>
-              </div>
-            </div>
-            <div class="book-face book-face-back">
-              <div class="book-project-visual" data-preview-label="Apri preview" data-i18n-preview-label="book.preview">
-                <img src="img/livro/8.png" alt="Preview Contabile Pro dettagli">
-              </div>
-              <div class="book-project-copy">
-                <span class="book-page-type" data-i18n="book.type.editorial">Suite contabile</span>
-                <h3>Contabile Pro</h3>
-                <p data-i18n="book.desc.blog">Un linguaggio editoriale più denso, pensato per contenuto, autorevolezza e permanenza sulla pagina.</p>
-                <button class="book-preview-trigger" type="button" data-full="img/livro/8.png" data-title="Contabile Pro" data-i18n="book.preview">Apri preview</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="book-sheet" data-sheet-label="D&amp;G Automobili">
-            <div class="book-face book-face-front">
-              <div class="book-project-visual" data-preview-label="Apri preview" data-i18n-preview-label="book.preview">
-                <img src="img/livro/9.png" alt="Preview D&amp;G Automobili">
-              </div>
-              <div class="book-project-copy">
-                <span class="book-page-type" data-i18n="book.type.education">Automotive luxury</span>
-                <h3>D&amp;G Automobili</h3>
-                <p data-i18n="book.desc.corsi">Pagina orientata al percorso utente, con un equilibrio controllato tra enfasi tipografica e fiducia.</p>
-                <button class="book-preview-trigger" type="button" data-full="img/livro/10.png" data-title="D&amp;G Automobili" data-i18n="book.preview">Apri preview</button>
-              </div>
-            </div>
-            <div class="book-face book-face-back">
-              <div class="book-project-visual" data-preview-label="Apri preview" data-i18n-preview-label="book.preview">
-                <img src="img/livro/10.png" alt="Preview D&amp;G Automobili dettagli">
-              </div>
-              <div class="book-project-copy">
-                <span class="book-page-type" data-i18n="book.type.education">Automotive luxury</span>
-                <h3>D&amp;G Automobili</h3>
-                <p data-i18n="book.desc.corsi">Pagina orientata al percorso utente, con un equilibrio controllato tra enfasi tipografica e fiducia.</p>
-                <button class="book-preview-trigger" type="button" data-full="img/livro/10.png" data-title="D&amp;G Automobili" data-i18n="book.preview">Apri preview</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="book-sheet" data-sheet-label="Milkshake UAU">
-            <div class="book-face book-face-front">
-              <div class="book-project-visual" data-preview-label="Apri preview" data-i18n-preview-label="book.preview">
-                <img src="img/livro/11.png" alt="Preview Milkshake UAU">
-              </div>
-              <div class="book-project-copy">
-                <span class="book-page-type" data-i18n="book.type.hospitality">Beverage identity</span>
-                <h3>Milkshake UAU</h3>
-                <p data-i18n="book.desc.forno">Un progetto sensoriale, fatto di luce, contrasto e composizione capace di evocare immediatamente il prodotto.</p>
-                <button class="book-preview-trigger" type="button" data-full="img/livro/12.png" data-title="Milkshake UAU" data-i18n="book.preview">Apri preview</button>
-              </div>
-            </div>
-            <div class="book-face book-face-back">
-              <div class="book-project-visual" data-preview-label="Apri preview" data-i18n-preview-label="book.preview">
-                <img src="img/livro/12.png" alt="Preview Milkshake UAU dettagli">
-              </div>
-              <div class="book-project-copy">
-                <span class="book-page-type" data-i18n="book.type.hospitality">Beverage identity</span>
-                <h3>Milkshake UAU</h3>
-                <p data-i18n="book.desc.forno">Un progetto sensoriale, fatto di luce, contrasto e composizione capace di evocare immediatamente il prodotto.</p>
-                <button class="book-preview-trigger" type="button" data-full="img/livro/12.png" data-title="Milkshake UAU" data-i18n="book.preview">Apri preview</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="book-sheet" data-sheet-label="Odentrics Dentista">
-            <div class="book-face book-face-front">
-              <div class="book-project-visual" data-preview-label="Apri preview" data-i18n-preview-label="book.preview">
-                <img src="img/livro/13.png" alt="Preview Odentrics Dentista">
-              </div>
-              <div class="book-project-copy">
-                <span class="book-page-type" data-i18n="book.type.performance">Clinica dentale</span>
-                <h3>Odentrics Dentista</h3>
-                <p data-i18n="book.desc.garage">Un’impronta dark, tecnica e veloce, costruita per trasmettere precisione e potenza del marchio.</p>
-                <button class="book-preview-trigger" type="button" data-full="img/livro/14.png" data-title="Odentrics Dentista" data-i18n="book.preview">Apri preview</button>
-              </div>
-            </div>
-            <div class="book-face book-face-back">
-              <div class="book-project-visual" data-preview-label="Apri preview" data-i18n-preview-label="book.preview">
-                <img src="img/livro/14.png" alt="Preview Odentrics Dentista dettagli">
-              </div>
-              <div class="book-project-copy">
-                <span class="book-page-type" data-i18n="book.type.performance">Clinica dentale</span>
-                <h3>Odentrics Dentista</h3>
-                <p data-i18n="book.desc.garage">Un’impronta dark, tecnica e veloce, costruita per trasmettere precisione e potenza del marchio.</p>
-                <button class="book-preview-trigger" type="button" data-full="img/livro/14.png" data-title="Odentrics Dentista" data-i18n="book.preview">Apri preview</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="book-sheet" data-sheet-label="SpaceX">
-            <div class="book-face book-face-front">
-              <div class="book-project-visual" data-preview-label="Apri preview" data-i18n-preview-label="book.preview">
-                <img src="img/livro/15.png" alt="Preview SpaceX">
-              </div>
-              <div class="book-project-copy">
-                <span class="book-page-type" data-i18n="book.type.positioning">Visione spaziale</span>
-                <h3>SpaceX</h3>
-                <p data-i18n="book.desc.north">Scelte visive pulite e tono autorevole per valorizzare prodotto, dettaglio e percezione di qualità.</p>
-                <button class="book-preview-trigger" type="button" data-full="img/livro/16.png" data-title="SpaceX" data-i18n="book.preview">Apri preview</button>
-              </div>
-            </div>
-            <div class="book-face book-face-back">
-              <div class="book-project-visual" data-preview-label="Apri preview" data-i18n-preview-label="book.preview">
-                <img src="img/livro/16.png" alt="Preview SpaceX dettagli">
-              </div>
-              <div class="book-project-copy">
-                <span class="book-page-type" data-i18n="book.type.positioning">Visione spaziale</span>
-                <h3>SpaceX</h3>
-                <p data-i18n="book.desc.north">Scelte visive pulite e tono autorevole per valorizzare prodotto, dettaglio e percezione di qualità.</p>
-                <button class="book-preview-trigger" type="button" data-full="img/livro/16.png" data-title="SpaceX" data-i18n="book.preview">Apri preview</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="book-sheet" data-sheet-label="Direttore Vendita">
-            <div class="book-face book-face-front">
-              <div class="book-project-visual" data-preview-label="Apri preview" data-i18n-preview-label="book.preview">
-                <img src="img/livro/17.png" alt="Preview Direttore Vendita">
-              </div>
-              <div class="book-project-copy">
-                <span class="book-page-type" data-i18n="book.type.organic">Leadership commerciale</span>
-                <h3>Direttore Vendita</h3>
-                <p data-i18n="book.desc.verde">Una pagina luminosa, equilibrata e respirata, pensata per trasmettere naturalezza con taglio alto.</p>
-                <button class="book-preview-trigger" type="button" data-full="img/livro/18.png" data-title="Direttore Vendita" data-i18n="book.preview">Apri preview</button>
-              </div>
-            </div>
-            <div class="book-face book-face-back">
-              <div class="book-project-visual" data-preview-label="Apri preview" data-i18n-preview-label="book.preview">
-                <img src="img/livro/18.png" alt="Preview Direttore Vendita dettagli">
-              </div>
-              <div class="book-project-copy">
-                <span class="book-page-type" data-i18n="book.type.organic">Leadership commerciale</span>
-                <h3>Direttore Vendita</h3>
-                <p data-i18n="book.desc.verde">Una pagina luminosa, equilibrata e respirata, pensata per trasmettere naturalezza con taglio alto.</p>
-                <button class="book-preview-trigger" type="button" data-full="img/livro/18.png" data-title="Direttore Vendita" data-i18n="book.preview">Apri preview</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="book-sheet" data-sheet-label="Aprenser">
-            <div class="book-face book-face-front">
-              <div class="book-project-visual" data-preview-label="Apri preview" data-i18n-preview-label="book.preview">
-                <img src="img/livro/19.png" alt="Preview Aprenser">
-              </div>
-              <div class="book-project-copy">
-                <span class="book-page-type" data-i18n="book.type.luxury">Piattaforma educativa</span>
-                <h3>Aprenser</h3>
-                <p data-i18n="book.desc.vittorino">Un’estetica più sartoriale, tipografia elegante e forte atmosfera per un posizionamento distintivo.</p>
-                <button class="book-preview-trigger" type="button" data-full="img/livro/20.png" data-title="Aprenser" data-i18n="book.preview">Apri preview</button>
-              </div>
-            </div>
-            <div class="book-face book-face-back">
-              <div class="book-project-visual" data-preview-label="Apri preview" data-i18n-preview-label="book.preview">
-                <img src="img/livro/20.png" alt="Preview Aprenser dettagli">
-              </div>
-              <div class="book-project-copy">
-                <span class="book-page-type" data-i18n="book.type.luxury">Piattaforma educativa</span>
-                <h3>Aprenser</h3>
-                <p data-i18n="book.desc.vittorino">Un’estetica più sartoriale, tipografia elegante e forte atmosfera per un posizionamento distintivo.</p>
-                <button class="book-preview-trigger" type="button" data-full="img/livro/20.png" data-title="Aprenser" data-i18n="book.preview">Apri preview</button>
-              </div>
-            </div>
-          </article>
-        </div>
+  <div class="ghp-grid">
+    <article class="ghp-card">
+      <div class="ghp-card-top">
+        <span class="ghp-type" data-i18n="ghp.type.crm">SaaS multi-tenant</span>
+        <span class="ghp-badge" data-i18n="ghp.badge.prod">In produzione</span>
       </div>
-
-      <div class="book-swipe-hint" aria-label="Scorri lateralmente con il dito" data-i18n-aria-label="book.mobile.hint.aria">
-        <span class="book-swipe-hint-icon" aria-hidden="true"></span>
-        <span class="book-swipe-hint-text" data-i18n="book.mobile.hint">Scorri lateralmente</span>
+      <h3>Gallo CRM</h3>
+      <p data-i18n="ghp.desc.crm">CRM multi-tenant in produzione: FastAPI, Next.js, row-level security su PostgreSQL, billing Stripe e interfaccia in 7 lingue.</p>
+      <ul class="ghp-tags" aria-label="Stack tecnologico" data-i18n-aria-label="ghp.tags.aria">
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="" loading="lazy">FastAPI</li>
+        <li><img src="https://cdn.simpleicons.org/nextdotjs/FFFFFF" alt="" loading="lazy">Next.js</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="" loading="lazy">PostgreSQL</li>
+        <li><img src="https://cdn.simpleicons.org/stripe/635BFF" alt="" loading="lazy">Stripe</li>
+        <li><img src="https://cdn.simpleicons.org/railway/FFFFFF" alt="" loading="lazy">Railway</li>
+      </ul>
+      <div class="ghp-links">
+        <a class="ghp-link ghp-link-live" href="https://app.gallo-crm.com/" target="_blank" rel="noopener noreferrer"><span data-i18n="ghp.live">Demo live</span><span aria-hidden="true"> ↗</span></a>
+        <a class="ghp-link" href="https://github.com/kallebesiqueira-dev/crm_gallo" target="_blank" rel="noopener noreferrer"><span data-i18n="ghp.code">Codice sorgente</span><span aria-hidden="true"> ↗</span></a>
       </div>
+    </article>
 
-      <button class="book-nav book-nav-next" id="bookNext" type="button" aria-label="Pagina successiva" data-i18n-aria-label="book.nav.next">›</button>
-    </div>
+    <article class="ghp-card">
+      <div class="ghp-card-top">
+        <span class="ghp-type" data-i18n="ghp.type.inbox">Automazione AI</span>
+      </div>
+      <h3>Inbox AI</h3>
+      <p data-i18n="ghp.desc.inbox">Automazione email AI per back office B2B: classifica i messaggi, genera bozze di risposta e fa emergere opportunità commerciali.</p>
+      <ul class="ghp-tags" aria-label="Stack tecnologico" data-i18n-aria-label="ghp.tags.aria">
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="" loading="lazy">TypeScript</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="" loading="lazy">Node.js</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="" loading="lazy">React</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/playwright/playwright-original.svg" alt="" loading="lazy">Playwright</li>
+        <li><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23a78bfa'%3E%3Cpath d='M4 3h6a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm10 0h6a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zM9 13h6a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1z'/%3E%3C/svg%3E" alt="" loading="lazy">Monorepo</li>
+      </ul>
+      <div class="ghp-links">
+        <a class="ghp-link ghp-link-live" href="https://inbox-ai-client-gamma.vercel.app" target="_blank" rel="noopener noreferrer"><span data-i18n="ghp.live">Demo live</span><span aria-hidden="true"> ↗</span></a>
+        <a class="ghp-link" href="https://github.com/kallebesiqueira-dev/Inbox-AI" target="_blank" rel="noopener noreferrer"><span data-i18n="ghp.code">Codice sorgente</span><span aria-hidden="true"> ↗</span></a>
+      </div>
+    </article>
+
+    <article class="ghp-card">
+      <div class="ghp-card-top">
+        <span class="ghp-type" data-i18n="ghp.type.prof">EdTech AI</span>
+      </div>
+      <h3>Alívio do Professor</h3>
+      <p data-i18n="ghp.desc.prof">SaaS di correzione automatica per insegnanti: layer LLM provider-agnostic (OpenAI, Anthropic, Groq) su Next.js e Supabase.</p>
+      <ul class="ghp-tags" aria-label="Stack tecnologico" data-i18n-aria-label="ghp.tags.aria">
+        <li><img src="https://cdn.simpleicons.org/nextdotjs/FFFFFF" alt="" loading="lazy">Next.js</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" alt="" loading="lazy">Supabase</li>
+        <li><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.1419.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997z'/%3E%3C/svg%3E" alt="" loading="lazy">OpenAI</li>
+        <li><img src="https://cdn.simpleicons.org/anthropic/D97757" alt="" loading="lazy">Anthropic</li>
+        <li><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23F55036'%3E%3Cpath d='M9 2h2v3h2V2h2v3h2a2 2 0 0 1 2 2v2h3v2h-3v2h3v2h-3v2a2 2 0 0 1-2 2h-2v3h-2v-3h-2v3H9v-3H7a2 2 0 0 1-2-2v-2H2v-2h3v-2H2V9h3V7a2 2 0 0 1 2-2h2V2zm-2 5v10h10V7H7zm3 3h4v4h-4v-4z'/%3E%3C/svg%3E" alt="" loading="lazy">Groq</li>
+      </ul>
+      <div class="ghp-links">
+        <a class="ghp-link" href="https://github.com/kallebesiqueira-dev/alivio-do-professor" target="_blank" rel="noopener noreferrer"><span data-i18n="ghp.code">Codice sorgente</span><span aria-hidden="true"> ↗</span></a>
+      </div>
+    </article>
+
+    <article class="ghp-card">
+      <div class="ghp-card-top">
+        <span class="ghp-type" data-i18n="ghp.type.task">SaaS full stack</span>
+      </div>
+      <h3>Task Manager SaaS</h3>
+      <p data-i18n="ghp.desc.task">Kanban SaaS full stack con API documentata: Next.js, Express, Prisma e deploy containerizzato con Docker.</p>
+      <ul class="ghp-tags" aria-label="Stack tecnologico" data-i18n-aria-label="ghp.tags.aria">
+        <li><img src="https://cdn.simpleicons.org/nextdotjs/FFFFFF" alt="" loading="lazy">Next.js</li>
+        <li><img src="https://cdn.simpleicons.org/express/FFFFFF" alt="" loading="lazy">Express</li>
+        <li><img src="https://cdn.simpleicons.org/prisma/7B8EC8" alt="" loading="lazy">Prisma</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="" loading="lazy">Docker</li>
+      </ul>
+      <div class="ghp-links">
+        <a class="ghp-link ghp-link-live" href="https://task-manager-saas-frontend.vercel.app" target="_blank" rel="noopener noreferrer"><span data-i18n="ghp.live">Demo live</span><span aria-hidden="true"> ↗</span></a>
+        <a class="ghp-link" href="https://github.com/kallebesiqueira-dev/task-manager-saas" target="_blank" rel="noopener noreferrer"><span data-i18n="ghp.code">Codice sorgente</span><span aria-hidden="true"> ↗</span></a>
+      </div>
+    </article>
+
+    <article class="ghp-card">
+      <div class="ghp-card-top">
+        <span class="ghp-type" data-i18n="ghp.type.pharma">Chatbot AI</span>
+      </div>
+      <h3>Farmacia Chatbot</h3>
+      <p data-i18n="ghp.desc.pharma">Assistente AI per farmacie: backend Python con interfaccia chat per informazioni rapide su farmaci e punti vendita.</p>
+      <ul class="ghp-tags" aria-label="Stack tecnologico" data-i18n-aria-label="ghp.tags.aria">
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" loading="lazy">Python</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" loading="lazy">JavaScript</li>
+        <li><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2338bdf8'%3E%3Cpath d='M5 2h14a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H10l-5 4a1 1 0 0 1-1.63-.78V17a3 3 0 0 1-1.37-2.5V5a3 3 0 0 1 3-3zm2 5a1 1 0 1 0 0 2h10a1 1 0 1 0 0-2H7zm0 4a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2H7z'/%3E%3C/svg%3E" alt="" loading="lazy">Conversational AI</li>
+      </ul>
+      <div class="ghp-links">
+        <a class="ghp-link ghp-link-live" href="https://famarcia-chatbot.vercel.app" target="_blank" rel="noopener noreferrer"><span data-i18n="ghp.live">Demo live</span><span aria-hidden="true"> ↗</span></a>
+        <a class="ghp-link" href="https://github.com/kallebesiqueira-dev/famarcia_chatbot" target="_blank" rel="noopener noreferrer"><span data-i18n="ghp.code">Codice sorgente</span><span aria-hidden="true"> ↗</span></a>
+      </div>
+    </article>
+
+    <article class="ghp-card">
+      <div class="ghp-card-top">
+        <span class="ghp-type" data-i18n="ghp.type.finance">Web app</span>
+      </div>
+      <h3>Finanze Control</h3>
+      <p data-i18n="ghp.desc.finance">Dashboard di finanza personale: spese, budget e andamento degli investimenti con Next.js, Prisma e autenticazione NextAuth.</p>
+      <ul class="ghp-tags" aria-label="Stack tecnologico" data-i18n-aria-label="ghp.tags.aria">
+        <li><img src="https://cdn.simpleicons.org/nextdotjs/FFFFFF" alt="" loading="lazy">Next.js</li>
+        <li><img src="https://cdn.simpleicons.org/prisma/7B8EC8" alt="" loading="lazy">Prisma</li>
+        <li><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23c084fc'%3E%3Cpath d='M12 2a5 5 0 0 1 5 5v3h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h1V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v3h6V7a3 3 0 0 0-3-3zm0 8.5a1.8 1.8 0 0 0-.9 3.36V18a.9.9 0 0 0 1.8 0v-2.14a1.8 1.8 0 0 0-.9-3.36z'/%3E%3C/svg%3E" alt="" loading="lazy">NextAuth</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="" loading="lazy">Tailwind CSS</li>
+      </ul>
+      <div class="ghp-links">
+        <a class="ghp-link ghp-link-live" href="https://finanze-control.vercel.app" target="_blank" rel="noopener noreferrer"><span data-i18n="ghp.live">Demo live</span><span aria-hidden="true"> ↗</span></a>
+        <a class="ghp-link" href="https://github.com/kallebesiqueira-dev/finanze_control" target="_blank" rel="noopener noreferrer"><span data-i18n="ghp.code">Codice sorgente</span><span aria-hidden="true"> ↗</span></a>
+      </div>
+    </article>
+  </div>
+
+  <div class="ghp-cta-row">
+    <a class="ghp-cta" href="https://github.com/kallebesiqueira-dev" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2C6.48 2 2 6.58 2 12.23c0 4.51 2.87 8.33 6.84 9.68.5.1.66-.22.66-.49 0-.24-.01-.88-.01-1.73-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .07 1.54 1.06 1.54 1.06.9 1.56 2.35 1.11 2.92.85.09-.67.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.08 0-1.12.39-2.03 1.03-2.75-.11-.26-.45-1.3.1-2.72 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 7.09a9.3 9.3 0 0 1 2.5.35c1.9-1.32 2.74-1.05 2.74-1.05.56 1.42.21 2.46.1 2.72.64.72 1.02 1.63 1.02 2.75 0 3.95-2.34 4.81-4.58 5.07.36.32.69.93.69 1.88 0 1.36-.01 2.46-.01 2.8 0 .27.17.6.67.49A10.26 10.26 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"/>
+      </svg>
+      <span data-i18n="ghp.cta">Tutti i repository su GitHub</span>
+    </a>
   </div>
 </section>
 
-<div class="portfolio-lightbox" id="portfolioLightbox" aria-hidden="true">
-  <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Chiudi anteprima" data-i18n-aria-label="lightbox.close">×</button>
-  <figure class="lightbox-content">
-    <img id="lightboxImage" src="" alt="Anteprima progetto">
-    <figcaption id="lightboxCaption"></figcaption>
-  </figure>
-</div>
 
 
 <section class="reviews" id="avaliacoes">
@@ -742,7 +586,7 @@ Per recruiter, hiring manager e CTO che stanno leggendo: cerco realtà ambiziose
       <h4 data-i18n="footer.nav.title">Navigazione</h4>
       <a href="#sobre" data-i18n="footer.nav.about">Chi sono</a>
       <a href="#skills-container" data-i18n="footer.nav.skills">Competenze</a>
-      <a href="#projetos" data-i18n="footer.nav.projects">Progetti</a>
+      <a href="#progetti-live" data-i18n="footer.nav.projects">Progetti</a>
       <a href="#avaliacoes" data-i18n="footer.nav.reviews">Recensioni</a>
     </div>
 
@@ -841,48 +685,25 @@ const translations = {
     'specialties.performance.desc': 'SEO tecnico, ottimizzazione, accessibilità e migliori pratiche',
     'specialties.tools.title': 'Strumenti',
     'specialties.tools.desc': 'Git, Docker, CI/CD, cloud e workflow moderni',
-    'projects.title': 'Progetti',
-    'projects.p1.title': 'Piattaforme Aziendali',
-    'projects.p1.desc': 'Sistemi web scalabili focalizzati sulla performance strategica.',
-    'projects.p2.title': 'Landing Page Premium',
-    'projects.p2.desc': 'Design moderno e conversione ottimizzata per business digitali.',
-    'projects.p3.title': 'Applicazioni Web',
-    'projects.p3.desc': 'Dashboard, pannelli amministrativi e soluzioni personalizzate.',
-    'book.heading.kicker': 'Volume curato',
-    'book.heading.note': 'Una selezione pensata come un libro di studio: copertina, pagine corpose e navigazione laterale con gesto di sfoglio.',
-    'book.aria': 'Portfolio progetti web',
-    'book.nav.prev': 'Pagina precedente',
-    'book.nav.next': 'Pagina successiva',
-    'book.mobile.hint': 'Scorri lateralmente',
-    'book.mobile.hint.aria': 'Scorri lateralmente con il dito',
-    'book.cover.desc': 'Esperienze digitali concepite con attenzione editoriale, ritmo visivo e precisione tecnica.',
-    'book.manifest.type': 'Manifesto',
-    'book.manifest.title': 'Sfoglia il portfolio',
-    'book.manifest.desc': 'Clicca ai lati oppure trascina orizzontalmente per voltare le pagine come un volume fisico.',
-    'book.manifest.end': 'Fine',
-    'book.type.featured': 'Barber premium',
-    'book.type.product': 'Food branding',
-    'book.type.brand': 'Artigianato creativo',
-    'book.type.editorial': 'Suite contabile',
-    'book.type.education': 'Automotive luxury',
-    'book.type.hospitality': 'Beverage identity',
-    'book.type.performance': 'Clinica dentale',
-    'book.type.positioning': 'Visione spaziale',
-    'book.type.organic': 'Leadership commerciale',
-    'book.type.luxury': 'Piattaforma educativa',
-    'book.desc.alpenbau': 'Un’identità premium per barber shop, con atmosfera curata, ritmo visivo deciso e presenza da marchio distintivo.',
-    'book.desc.app': 'Un progetto food dal taglio diretto, costruito per fame visiva, impatto immediato e conversione.',
-    'book.desc.bella': 'Una presenza artigianale più narrativa, pensata per valorizzare prodotto, dettaglio e carattere del brand.',
-    'book.desc.blog': 'Interfaccia contabile pulita e leggibile, con gerarchia chiara e una percezione tecnica più senior.',
-    'book.desc.corsi': 'Un linguaggio automotive di fascia alta, fatto di contrasto, precisione e autorevolezza visiva.',
-    'book.desc.forno': 'Colore, energia e direzione commerciale per un brand beverage più memorabile e immediato.',
-    'book.desc.garage': 'Un impianto visivo affidabile per il settore dentistico, con chiarezza, fiducia e tono professionale.',
-    'book.desc.north': 'Un’estetica futuristica e controllata, costruita per trasmettere innovazione, ambizione e forza tecnica.',
-    'book.desc.verde': 'Una presenza più autorevole e orientata al business, con struttura chiara e comunicazione diretta.',
-    'book.desc.vittorino': 'Una piattaforma educativa con ritmo pulito, leggibilità alta e struttura pensata per apprendimento e fiducia.',
-    'book.preview': 'Apri preview',
-    'book.status.cover': 'Copertina',
-    'book.status.finale': 'Finale',
+    'ghp.title': 'Progetti principali',
+    'ghp.subtitle': 'Prodotti reali sviluppati end-to-end: codice aperto su GitHub, demo live e sistemi in produzione.',
+    'ghp.type.crm': 'SaaS multi-tenant',
+    'ghp.type.inbox': 'Automazione AI',
+    'ghp.type.prof': 'EdTech AI',
+    'ghp.type.task': 'SaaS full stack',
+    'ghp.type.pharma': 'Chatbot AI',
+    'ghp.type.finance': 'Web app',
+    'ghp.badge.prod': 'In produzione',
+    'ghp.desc.crm': 'CRM multi-tenant in produzione: FastAPI, Next.js, row-level security su PostgreSQL, billing Stripe e interfaccia in 7 lingue.',
+    'ghp.desc.inbox': 'Automazione email AI per back office B2B: classifica i messaggi, genera bozze di risposta e fa emergere opportunità commerciali.',
+    'ghp.desc.prof': 'SaaS di correzione automatica per insegnanti: layer LLM provider-agnostic (OpenAI, Anthropic, Groq) su Next.js e Supabase.',
+    'ghp.desc.task': 'Kanban SaaS full stack con API documentata: Next.js, Express, Prisma e deploy containerizzato con Docker.',
+    'ghp.desc.pharma': 'Assistente AI per farmacie: backend Python con interfaccia chat per informazioni rapide su farmaci e punti vendita.',
+    'ghp.desc.finance': 'Dashboard di finanza personale: spese, budget e andamento degli investimenti con Next.js, Prisma e autenticazione NextAuth.',
+    'ghp.live': 'Demo live',
+    'ghp.code': 'Codice sorgente',
+    'ghp.cta': 'Tutti i repository su GitHub',
+    'ghp.tags.aria': 'Stack tecnologico',
     'reviews.title': 'Recensioni',
     'reviews.subtitle': 'Feedback reali in stile Google da clienti e collaboratori.',
     'reviews.aria': 'Recensioni clienti',
@@ -925,7 +746,6 @@ const translations = {
     'footer.news.send': 'Invia email',
     'footer.copy': '© 2026 Kallebe Gallo •',
     'hero.scroll': 'Scorri verso il basso',
-    'lightbox.close': 'Chiudi anteprima',
     'whatsapp.aria': 'Contatta su WhatsApp',
     'contact.title': 'Contattami:',
     'contact.subtitle': 'Parliamo di progetti, idee o opportunità?',
@@ -978,48 +798,25 @@ const translations = {
     'specialties.performance.desc': 'Technisches SEO, Optimierung, Barrierefreiheit und Best Practices',
     'specialties.tools.title': 'Werkzeuge',
     'specialties.tools.desc': 'Git, Docker, CI/CD, Cloud und moderne Workflows',
-    'projects.title': 'Projekte',
-    'projects.p1.title': 'Unternehmensplattformen',
-    'projects.p1.desc': 'Skalierbare Websysteme mit Fokus auf strategische Performance.',
-    'projects.p2.title': 'Premium-Landingpages',
-    'projects.p2.desc': 'Modernes Design und optimierte Conversion für digitale Unternehmen.',
-    'projects.p3.title': 'Webanwendungen',
-    'projects.p3.desc': 'Dashboards, Admin-Panels und maßgeschneiderte Lösungen.',
-    'book.heading.kicker': 'Kuratiertes Volumen',
-    'book.heading.note': 'Eine Auswahl, gedacht wie ein Studio-Buch: Cover, dichte Seiten und seitliche Navigation mit Blättergeste.',
-    'book.aria': 'Portfolio der Webprojekte',
-    'book.nav.prev': 'Vorherige Seite',
-    'book.nav.next': 'Nächste Seite',
-    'book.mobile.hint': 'Seitlich wischen',
-    'book.mobile.hint.aria': 'Mit dem Finger seitlich wischen',
-    'book.cover.desc': 'Digitale Erlebnisse mit editorischer Präzision, visuellem Rhythmus und technischer Sorgfalt gestaltet.',
-    'book.manifest.type': 'Manifest',
-    'book.manifest.title': 'Blättere durch das Portfolio',
-    'book.manifest.desc': 'Klicke an den Seiten oder ziehe horizontal, um die Seiten wie in einem physischen Buch umzublättern.',
-    'book.manifest.end': 'Ende',
-    'book.type.featured': 'Premium-Barber',
-    'book.type.product': 'Food-Branding',
-    'book.type.brand': 'Kreatives Handwerk',
-    'book.type.editorial': 'Accounting-Suite',
-    'book.type.education': 'Automotive Luxury',
-    'book.type.hospitality': 'Beverage Identity',
-    'book.type.performance': 'Dental Clinic',
-    'book.type.positioning': 'Space Vision',
-    'book.type.organic': 'Sales Leadership',
-    'book.type.luxury': 'Education Platform',
-    'book.desc.alpenbau': 'Eine Premium-Identität für einen Barber Shop mit kuratierter Atmosphäre, klarem Rhythmus und markanter Präsenz.',
-    'book.desc.app': 'Ein Food-Projekt mit direkter Wirkung, gebaut für visuellen Appetit, Sofortwirkung und Conversion.',
-    'book.desc.bella': 'Eine handwerkliche, erzählerische Präsenz, die Produkt, Detail und Markencharakter stärker hervorhebt.',
-    'book.desc.blog': 'Eine saubere, gut lesbare Buchhaltungsoberfläche mit klarer Hierarchie und seniorer technischer Anmutung.',
-    'book.desc.corsi': 'Eine hochwertige Automotive-Sprache aus Kontrast, Präzision und visueller Autorität.',
-    'book.desc.forno': 'Farbe, Energie und kommerzielle Richtung für eine einprägsame und unmittelbare Beverage-Marke.',
-    'book.desc.garage': 'Ein verlässliches visuelles System für den Dentalbereich mit Klarheit, Vertrauen und professionellem Ton.',
-    'book.desc.north': 'Eine futuristische und kontrollierte Ästhetik, gebaut für Innovation, Ambition und technische Stärke.',
-    'book.desc.verde': 'Eine autoritativere, stärker businessorientierte Präsenz mit klarer Struktur und direkter Kommunikation.',
-    'book.desc.vittorino': 'Eine Lernplattform mit sauberem Rhythmus, hoher Lesbarkeit und Struktur für Lernen und Vertrauen.',
-    'book.preview': 'Vorschau öffnen',
-    'book.status.cover': 'Cover',
-    'book.status.finale': 'Finale',
+    'ghp.title': 'Ausgewählte Projekte',
+    'ghp.subtitle': 'Echte, End-to-End entwickelte Produkte: offener Code auf GitHub, Live-Demos und Systeme in Produktion.',
+    'ghp.type.crm': 'Multi-Tenant-SaaS',
+    'ghp.type.inbox': 'KI-Automatisierung',
+    'ghp.type.prof': 'KI-EdTech',
+    'ghp.type.task': 'Full-Stack-SaaS',
+    'ghp.type.pharma': 'KI-Chatbot',
+    'ghp.type.finance': 'Web-App',
+    'ghp.badge.prod': 'In Produktion',
+    'ghp.desc.crm': 'Multi-Tenant-CRM in Produktion: FastAPI, Next.js, Row-Level-Security auf PostgreSQL, Stripe-Billing und Oberfläche in 7 Sprachen.',
+    'ghp.desc.inbox': 'KI-E-Mail-Automatisierung für B2B-Backoffices: klassifiziert Nachrichten, erstellt Antwortentwürfe und deckt Geschäftschancen auf.',
+    'ghp.desc.prof': 'SaaS zur automatischen Korrektur für Lehrkräfte: provider-agnostische LLM-Schicht (OpenAI, Anthropic, Groq) auf Next.js und Supabase.',
+    'ghp.desc.task': 'Full-Stack-Kanban-SaaS mit dokumentierter API: Next.js, Express, Prisma und containerisiertes Deployment mit Docker.',
+    'ghp.desc.pharma': 'KI-Assistent für Apotheken: Python-Backend mit Chat-Oberfläche für schnelle Informationen zu Medikamenten und Filialen.',
+    'ghp.desc.finance': 'Dashboard für persönliche Finanzen: Ausgaben, Budgets und Entwicklung mit Next.js, Prisma und NextAuth-Authentifizierung.',
+    'ghp.live': 'Live-Demo',
+    'ghp.code': 'Quellcode',
+    'ghp.cta': 'Alle Repositories auf GitHub',
+    'ghp.tags.aria': 'Tech-Stack',
     'reviews.title': 'Bewertungen',
     'reviews.subtitle': 'Echte Google-ähnliche Rückmeldungen von Kunden und Partnern.',
     'reviews.aria': 'Kundenbewertungen',
@@ -1062,7 +859,6 @@ const translations = {
     'footer.news.send': 'E-Mail senden',
     'footer.copy': '© 2026 Kallebe Gallo •',
     'hero.scroll': 'Nach unten scrollen',
-    'lightbox.close': 'Vorschau schließen',
     'whatsapp.aria': 'Über WhatsApp kontaktieren',
     'contact.title': 'Kontaktiere mich:',
     'contact.subtitle': 'Sprechen wir über Projekte, Ideen oder Möglichkeiten?',
@@ -1070,7 +866,7 @@ const translations = {
     'footer.text': '© 2026 Kallebe Gallo • AI Full Stack Developer'
   },
   fr: {
-    pageTitle: 'Portafoglio Kallebe',
+    pageTitle: 'Kallebe Gallo — AI Full Stack Developer',
     'nav.about': 'À propos',
     'nav.skills': 'Compétences',
     'nav.projects': 'Projets',
@@ -1115,48 +911,25 @@ const translations = {
     'specialties.performance.desc': 'SEO technique, optimisation, accessibilité et meilleures pratiques',
     'specialties.tools.title': 'Outils',
     'specialties.tools.desc': 'Git, Docker, CI/CD, cloud et workflows modernes',
-    'projects.title': 'Projets',
-    'projects.p1.title': 'Plateformes d’entreprise',
-    'projects.p1.desc': 'Systèmes web évolutifs axés sur la performance stratégique.',
-    'projects.p2.title': 'Landing pages premium',
-    'projects.p2.desc': 'Design moderne et conversion optimisée pour les entreprises digitales.',
-    'projects.p3.title': 'Applications web',
-    'projects.p3.desc': 'Tableaux de bord, panneaux administratifs et solutions personnalisées.',
-    'book.heading.kicker': 'Volume curaté',
-    'book.heading.note': 'Une sélection pensée comme un livre de studio : couverture, pages denses et navigation latérale avec geste de feuilletage.',
-    'book.aria': 'Portfolio de projets web',
-    'book.nav.prev': 'Page précédente',
-    'book.nav.next': 'Page suivante',
-    'book.mobile.hint': 'Faites glisser latéralement',
-    'book.mobile.hint.aria': 'Faites glisser latéralement avec le doigt',
-    'book.cover.desc': 'Des expériences digitales conçues avec regard éditorial, rythme visuel et précision technique.',
-    'book.manifest.type': 'Manifeste',
-    'book.manifest.title': 'Feuilletez le portfolio',
-    'book.manifest.desc': 'Cliquez sur les côtés ou faites glisser horizontalement pour tourner les pages comme un volume physique.',
-    'book.manifest.end': 'Fin',
-    'book.type.featured': 'Barber premium',
-    'book.type.product': 'Branding food',
-    'book.type.brand': 'Artisanat créatif',
-    'book.type.editorial': 'Suite comptable',
-    'book.type.education': 'Automobile luxe',
-    'book.type.hospitality': 'Identité beverage',
-    'book.type.performance': 'Clinique dentaire',
-    'book.type.positioning': 'Vision spatiale',
-    'book.type.organic': 'Leadership commercial',
-    'book.type.luxury': 'Plateforme éducative',
-    'book.desc.alpenbau': 'Une identité premium pour barber shop, avec une atmosphère soignée, un rythme visuel affirmé et une présence distinctive.',
-    'book.desc.app': 'Un projet food au langage direct, conçu pour l’appétit visuel, l’impact immédiat et la conversion.',
-    'book.desc.bella': 'Une présence plus artisanale et narrative, pensée pour valoriser le produit, le détail et le caractère de la marque.',
-    'book.desc.blog': 'Une interface comptable propre et lisible, avec hiérarchie claire et perception technique plus senior.',
-    'book.desc.corsi': 'Un langage automobile haut de gamme fait de contraste, de précision et d’autorité visuelle.',
-    'book.desc.forno': 'Couleur, énergie et direction commerciale pour une marque beverage plus mémorable et immédiate.',
-    'book.desc.garage': 'Une structure visuelle fiable pour le secteur dentaire, avec clarté, confiance et ton professionnel.',
-    'book.desc.north': 'Une esthétique futuriste et maîtrisée, construite pour transmettre innovation, ambition et force technique.',
-    'book.desc.verde': 'Une présence plus autoritaire et orientée business, avec structure claire et communication directe.',
-    'book.desc.vittorino': 'Une plateforme éducative au rythme propre, à la lecture élevée et à la structure pensée pour l’apprentissage.',
-    'book.preview': 'Ouvrir l’aperçu',
-    'book.status.cover': 'Couverture',
-    'book.status.finale': 'Final',
+    'ghp.title': 'Projets phares',
+    'ghp.subtitle': 'Des produits réels développés de bout en bout : code ouvert sur GitHub, démos live et systèmes en production.',
+    'ghp.type.crm': 'SaaS multi-tenant',
+    'ghp.type.inbox': 'Automatisation IA',
+    'ghp.type.prof': 'EdTech IA',
+    'ghp.type.task': 'SaaS full stack',
+    'ghp.type.pharma': 'Chatbot IA',
+    'ghp.type.finance': 'Application web',
+    'ghp.badge.prod': 'En production',
+    'ghp.desc.crm': 'CRM multi-tenant en production : FastAPI, Next.js, row-level security sur PostgreSQL, facturation Stripe et interface en 7 langues.',
+    'ghp.desc.inbox': 'Automatisation e-mail IA pour back-offices B2B : classe les messages, génère des brouillons de réponse et fait émerger des opportunités.',
+    'ghp.desc.prof': 'SaaS de correction automatique pour enseignants : couche LLM agnostique (OpenAI, Anthropic, Groq) sur Next.js et Supabase.',
+    'ghp.desc.task': 'Kanban SaaS full stack avec API documentée : Next.js, Express, Prisma et déploiement conteneurisé avec Docker.',
+    'ghp.desc.pharma': 'Assistant IA pour pharmacies : backend Python avec interface de chat pour des informations rapides sur les médicaments et points de vente.',
+    'ghp.desc.finance': 'Tableau de bord de finances personnelles : dépenses, budgets et suivi avec Next.js, Prisma et authentification NextAuth.',
+    'ghp.live': 'Démo live',
+    'ghp.code': 'Code source',
+    'ghp.cta': 'Tous les dépôts sur GitHub',
+    'ghp.tags.aria': 'Stack technique',
     'reviews.title': 'Avis',
     'reviews.subtitle': 'Retours réels de style Google de clients et collaborateurs.',
     'reviews.aria': 'Avis clients',
@@ -1199,7 +972,6 @@ const translations = {
     'footer.news.send': 'Envoyer e-mail',
     'footer.copy': '© 2026 Kallebe Gallo •',
     'hero.scroll': 'Faire défiler vers le bas',
-    'lightbox.close': 'Fermer l’aperçu',
     'whatsapp.aria': 'Contacter via WhatsApp',
     'contact.title': 'Contactez-moi :',
     'contact.subtitle': 'Parlons de projets, d’idées ou d’opportunités ?',
@@ -1252,48 +1024,25 @@ const translations = {
     'specialties.performance.desc': 'Technical SEO, optimization, accessibility and best practices',
     'specialties.tools.title': 'Tools',
     'specialties.tools.desc': 'Git, Docker, CI/CD, cloud and modern workflows',
-    'projects.title': 'Projects',
-    'projects.p1.title': 'Business Platforms',
-    'projects.p1.desc': 'Scalable web systems focused on strategic performance.',
-    'projects.p2.title': 'Premium Landing Pages',
-    'projects.p2.desc': 'Modern design and optimized conversion for digital businesses.',
-    'projects.p3.title': 'Web Applications',
-    'projects.p3.desc': 'Dashboards, admin panels and custom solutions.',
-    'book.heading.kicker': 'Curated volume',
-    'book.heading.note': 'A selection designed like a studio book: cover, dense pages, and lateral navigation with a page-turn gesture.',
-    'book.aria': 'Web projects portfolio',
-    'book.nav.prev': 'Previous page',
-    'book.nav.next': 'Next page',
-    'book.mobile.hint': 'Swipe sideways',
-    'book.mobile.hint.aria': 'Swipe sideways with your finger',
-    'book.cover.desc': 'Digital experiences shaped with editorial care, visual rhythm, and technical precision.',
-    'book.manifest.type': 'Manifesto',
-    'book.manifest.title': 'Browse the portfolio',
-    'book.manifest.desc': 'Click the sides or drag horizontally to turn the pages like a physical volume.',
-    'book.manifest.end': 'End',
-    'book.type.featured': 'Premium barber',
-    'book.type.product': 'Food branding',
-    'book.type.brand': 'Creative craft',
-    'book.type.editorial': 'Accounting suite',
-    'book.type.education': 'Automotive luxury',
-    'book.type.hospitality': 'Beverage identity',
-    'book.type.performance': 'Dental clinic',
-    'book.type.positioning': 'Space vision',
-    'book.type.organic': 'Sales leadership',
-    'book.type.luxury': 'Education platform',
-    'book.desc.alpenbau': 'A premium barber shop identity with a curated atmosphere, strong visual rhythm, and distinctive brand presence.',
-    'book.desc.app': 'A food project built for visual appetite, immediate impact, and stronger conversion.',
-    'book.desc.bella': 'A more crafted, narrative presence designed to elevate product, detail, and brand character.',
-    'book.desc.blog': 'A clean, readable accounting interface with clear hierarchy and a more senior technical feel.',
-    'book.desc.corsi': 'A high-end automotive language built on contrast, precision, and visual authority.',
-    'book.desc.forno': 'Color, energy, and commercial direction for a beverage brand with stronger memorability and punch.',
-    'book.desc.garage': 'A reliable visual system for the dental sector, built around clarity, trust, and professional tone.',
-    'book.desc.north': 'A futuristic and controlled aesthetic designed to communicate innovation, ambition, and technical strength.',
-    'book.desc.verde': 'A more authoritative, business-oriented presence with clear structure and direct communication.',
-    'book.desc.vittorino': 'An education platform with clean rhythm, strong readability, and a structure built for learning and trust.',
-    'book.preview': 'Open preview',
-    'book.status.cover': 'Cover',
-    'book.status.finale': 'Final',
+    'ghp.title': 'Featured Projects',
+    'ghp.subtitle': 'Real products built end-to-end: open code on GitHub, live demos and systems running in production.',
+    'ghp.type.crm': 'Multi-tenant SaaS',
+    'ghp.type.inbox': 'AI Automation',
+    'ghp.type.prof': 'AI EdTech',
+    'ghp.type.task': 'Full stack SaaS',
+    'ghp.type.pharma': 'AI Chatbot',
+    'ghp.type.finance': 'Web app',
+    'ghp.badge.prod': 'In production',
+    'ghp.desc.crm': 'Multi-tenant CRM in production: FastAPI, Next.js, PostgreSQL row-level security, Stripe billing and a 7-language interface.',
+    'ghp.desc.inbox': 'AI email automation for B2B back offices: classifies mail, drafts replies and surfaces business opportunities.',
+    'ghp.desc.prof': 'AI grading SaaS for teachers: provider-agnostic LLM layer (OpenAI, Anthropic, Groq) on Next.js and Supabase.',
+    'ghp.desc.task': 'Full stack Kanban SaaS with a documented API: Next.js, Express, Prisma and containerized deployment with Docker.',
+    'ghp.desc.pharma': 'AI assistant for pharmacies: Python backend with a chat interface for quick medication and store information.',
+    'ghp.desc.finance': 'Personal finance dashboard: expenses, budgets and performance tracking with Next.js, Prisma and NextAuth authentication.',
+    'ghp.live': 'Live demo',
+    'ghp.code': 'Source code',
+    'ghp.cta': 'All repositories on GitHub',
+    'ghp.tags.aria': 'Tech stack',
     'reviews.title': 'Reviews',
     'reviews.subtitle': 'Real Google-style feedback from clients and collaborators.',
     'reviews.aria': 'Client reviews',
@@ -1336,7 +1085,6 @@ const translations = {
     'footer.news.send': 'Send email',
     'footer.copy': '© 2026 Kallebe Gallo •',
     'hero.scroll': 'Scroll down',
-    'lightbox.close': 'Close preview',
     'whatsapp.aria': 'Contact on WhatsApp',
     'contact.title': 'Contact me:',
     'contact.subtitle': 'Let’s talk about projects, ideas or opportunities?',
@@ -1359,7 +1107,6 @@ const languageArrow = document.getElementById('languageArrow');
 const languageCurrentFlag = document.getElementById('languageCurrentFlag');
 const languageCurrentCode = document.getElementById('languageCurrentCode');
 const languageOptions = document.querySelectorAll('.language-option');
-let refreshBookStatus = null;
 
 function getTranslationValue(key) {
   const currentLang = translations[document.documentElement.lang] ? document.documentElement.lang : 'it';
@@ -1448,9 +1195,6 @@ function applyTranslations(lang) {
     }
   });
 
-  if (typeof refreshBookStatus === 'function') {
-    refreshBookStatus();
-  }
 }
 
 function setLanguageUI(lang) {
@@ -1551,104 +1295,10 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
-const portfolioLightbox = document.getElementById('portfolioLightbox');
-const lightboxImage = document.getElementById('lightboxImage');
-const lightboxCaption = document.getElementById('lightboxCaption');
-const lightboxClose = document.getElementById('lightboxClose');
-const projectBook = document.getElementById('projectBook');
-const projectBookFrame = projectBook?.closest('.project-book-frame') || null;
-const bookSheets = Array.from(document.querySelectorAll('.book-sheet'));
-let bookPreviewTriggers = [];
-let bookPreviewVisuals = [];
-const bookNext = document.getElementById('bookNext');
-const bookStatus = document.getElementById('bookStatus');
 const inPageAnchors = document.querySelectorAll('a[href^="#"]');
 
-function normalizeBookPreviewPairs() {
-  document.querySelectorAll('.book-face').forEach((face) => {
-    const imageElement = face.querySelector('.book-project-visual img');
-    const previewTrigger = face.querySelector('.book-preview-trigger');
-
-    if (!imageElement || !previewTrigger) {
-      return;
-    }
-
-    const match = imageElement.getAttribute('src')?.match(/img\/livro\/(\d+)\.png$/i);
-    if (!match) {
-      return;
-    }
-
-    const imageNumber = Number.parseInt(match[1], 10);
-    if (Number.isNaN(imageNumber)) {
-      return;
-    }
-
-    const previewNumber = imageNumber % 2 === 1 ? Math.min(imageNumber + 1, 20) : imageNumber;
-    previewTrigger.dataset.full = `img/livro/${previewNumber}.png`;
-  });
-}
-
-normalizeBookPreviewPairs();
-bookPreviewTriggers = document.querySelectorAll('.book-preview-trigger');
-bookPreviewVisuals = document.querySelectorAll('.book-project-visual');
-
-function closePortfolioLightbox() {
-  portfolioLightbox.classList.remove('open');
-  portfolioLightbox.setAttribute('aria-hidden', 'true');
-  lightboxImage.src = '';
-  lightboxCaption.textContent = '';
-}
-
-function openPortfolioLightbox(fullImage, projectTitle) {
-  if (!fullImage) {
-    return;
-  }
-
-  lightboxImage.src = fullImage;
-  lightboxImage.alt = projectTitle;
-  lightboxCaption.textContent = projectTitle;
-  portfolioLightbox.classList.add('open');
-  portfolioLightbox.setAttribute('aria-hidden', 'false');
-}
-
-bookPreviewTriggers.forEach((trigger) => {
-  trigger.addEventListener('click', (event) => {
-    event.stopPropagation();
-    openPortfolioLightbox(trigger.dataset.full, trigger.dataset.title || '');
-  });
-});
-
-bookPreviewVisuals.forEach((visual) => {
-  visual.addEventListener('click', (event) => {
-    event.stopPropagation();
-    const previewTrigger = visual.parentElement?.querySelector('.book-preview-trigger');
-    if (previewTrigger) {
-      openPortfolioLightbox(previewTrigger.dataset.full, previewTrigger.dataset.title || '');
-      return;
-    }
-
-    if (visual.dataset.full) {
-      openPortfolioLightbox(visual.dataset.full, visual.dataset.title || '');
-    }
-  });
-});
-
-lightboxClose.addEventListener('click', closePortfolioLightbox);
-
-portfolioLightbox.addEventListener('click', (event) => {
-  if (event.target === portfolioLightbox) {
-    closePortfolioLightbox();
-  }
-});
-
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && portfolioLightbox.classList.contains('open')) {
-    closePortfolioLightbox();
-  }
-});
-
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const revealTargets = document.querySelectorAll('#sobre, .skills-intro, #skills-container, #projetos, .reviews, .site-footer');
+const revealTargets = document.querySelectorAll('#sobre, .skills-intro, #skills-container, #progetti-live, .reviews, .site-footer');
 
 function clamp(value, min, max) {
   return Math.min(Math.max(value, min), max);
@@ -1748,254 +1398,6 @@ if (!prefersReducedMotion) {
   });
 }
 
-if (projectBook && bookSheets.length) {
-  const coverSheet = bookSheets.find((sheet) => sheet.classList.contains('book-sheet-cover')) || null;
-  const projectSheets = bookSheets.filter((sheet) => !sheet.classList.contains('book-sheet-cover'));
-  let currentProjectIndex = -1;
-  let pointerStartX = 0;
-  let pointerDeltaX = 0;
-  let isPointerActive = false;
-  let isTurningProject = false;
-
-  const activeSpread = document.createElement('article');
-  activeSpread.className = 'book-active-spread';
-  activeSpread.innerHTML = `
-    <div class="book-active-copy"></div>
-    <div class="book-active-visual" role="button" tabindex="0" aria-label="Apri preview">
-      <img alt="">
-    </div>
-  `;
-
-  projectBook.classList.add('is-flat-mode');
-  projectBook.append(activeSpread);
-
-  const activeCopy = activeSpread.querySelector('.book-active-copy');
-  const activeVisual = activeSpread.querySelector('.book-active-visual');
-  const activeImage = activeSpread.querySelector('img');
-
-  function getCoverData() {
-    const coverFace = coverSheet?.querySelector('.book-cover-face');
-    const title = coverFace?.querySelector('h3')?.textContent?.trim() || getTranslationValue('projects.title') || 'Progetti';
-    const note = coverFace?.querySelector('.book-cover-phrase')?.textContent?.trim() || getTranslationValue('book.heading.note') || '';
-
-    return {
-      title,
-      note,
-      label: getTranslationValue('book.status.cover') || 'Cover',
-    };
-  }
-
-  function getProjectData(index) {
-    const sheet = projectSheets[index];
-    const frontFace = sheet?.querySelector('.book-face-front');
-    const copy = frontFace?.querySelector('.book-project-copy');
-    const visual = frontFace?.querySelector('.book-project-visual img');
-    const trigger = copy?.querySelector('.book-preview-trigger');
-    const pageType = copy?.querySelector('.book-page-type')?.outerHTML || '';
-    const title = copy?.querySelector('h3')?.textContent?.trim() || '';
-    const description = copy?.querySelector('p')?.textContent?.trim() || '';
-
-    return {
-      label: sheet?.dataset.sheetLabel || title || 'Progetti',
-      pageType,
-      title,
-      description,
-      imageSrc: visual?.getAttribute('src') || '',
-      imageAlt: visual?.getAttribute('alt') || title,
-      previewFull: trigger?.dataset.full || visual?.getAttribute('src') || '',
-      previewTitle: trigger?.dataset.title || title,
-      previewLabel: getTranslationValue('book.preview') || 'Apri preview',
-    };
-  }
-
-  function renderActiveSpread(direction = 'next') {
-    const isCover = currentProjectIndex < 0;
-    activeSpread.classList.toggle('is-cover', isCover);
-
-    if (isCover) {
-      const cover = getCoverData();
-      activeCopy.innerHTML = `
-        <span class="book-page-type">${getTranslationValue('book.heading.kicker') || 'Volume curato'}</span>
-        <h3>${cover.title}</h3>
-        <p>${cover.note}</p>
-      `;
-      activeVisual.innerHTML = `
-        <div class="book-cover-art" aria-hidden="true">
-          <span class="book-cover-orb"></span>
-          <span class="book-cover-line"></span>
-          <span class="book-cover-seal">${cover.title}</span>
-        </div>
-      `;
-      activeVisual.removeAttribute('role');
-      activeVisual.removeAttribute('tabindex');
-      activeVisual.removeAttribute('aria-label');
-      delete activeVisual.dataset.full;
-      delete activeVisual.dataset.title;
-    } else {
-      const project = getProjectData(currentProjectIndex);
-
-      activeCopy.innerHTML = `
-        ${project.pageType}
-        <h3>${project.title}</h3>
-        <p>${project.description}</p>
-        <div class="book-active-actions">
-          <button class="book-preview-trigger" type="button" data-full="${project.previewFull}" data-title="${project.previewTitle}">${project.previewLabel}</button>
-          <button class="book-return-trigger" type="button">${getTranslationValue('book.backToCover') || 'Torna alla copertina'}</button>
-        </div>
-      `;
-
-      activeVisual.innerHTML = '<img alt="">';
-      const currentActiveImage = activeVisual.querySelector('img');
-      activeVisual.setAttribute('role', 'button');
-      activeVisual.setAttribute('tabindex', '0');
-      activeVisual.setAttribute('aria-label', project.previewLabel);
-      activeVisual.dataset.full = project.previewFull;
-      activeVisual.dataset.title = project.previewTitle;
-      currentActiveImage.src = project.imageSrc;
-      currentActiveImage.alt = project.imageAlt;
-
-      const spreadTrigger = activeCopy.querySelector('.book-preview-trigger');
-      spreadTrigger.addEventListener('click', (event) => {
-        event.stopPropagation();
-        openPortfolioLightbox(project.previewFull, project.previewTitle || project.title);
-      });
-
-      const returnTrigger = activeCopy.querySelector('.book-return-trigger');
-      returnTrigger.addEventListener('click', () => {
-        animateProjectTurn(-1, 'prev');
-      });
-    }
-
-    activeSpread.dataset.turn = direction;
-
-    if (bookNext) {
-      bookNext.disabled = currentProjectIndex === projectSheets.length - 1;
-    }
-
-    if (bookStatus) {
-      bookStatus.textContent = isCover
-        ? getTranslationValue('book.status.cover') || 'Cover'
-        : getProjectData(currentProjectIndex).label;
-    }
-
-    projectBook.classList.toggle('is-opened', currentProjectIndex > -1);
-    if (projectBookFrame) {
-      projectBookFrame.classList.toggle('is-opened', currentProjectIndex > -1);
-    }
-
-    activeSpread.classList.remove('is-revealing');
-    void activeSpread.offsetWidth;
-    activeSpread.classList.add('is-revealing');
-  }
-
-  function animateProjectTurn(nextIndex, direction) {
-    if (isTurningProject || nextIndex === currentProjectIndex || nextIndex < -1 || nextIndex >= projectSheets.length) {
-      return;
-    }
-
-    isTurningProject = true;
-    projectBook.classList.remove('is-turning-forward', 'is-turning-backward');
-    projectBook.classList.add(direction === 'next' ? 'is-turning-forward' : 'is-turning-backward');
-
-    window.setTimeout(() => {
-      currentProjectIndex = nextIndex;
-      renderActiveSpread(direction);
-    }, 120);
-
-    window.setTimeout(() => {
-      projectBook.classList.remove('is-turning-forward', 'is-turning-backward');
-      isTurningProject = false;
-    }, 720);
-  }
-
-  function goToNextProject() {
-    if (currentProjectIndex < projectSheets.length - 1) {
-      animateProjectTurn(currentProjectIndex + 1, 'next');
-    }
-  }
-
-  function goToPreviousProject() {
-    if (currentProjectIndex >= 0) {
-      animateProjectTurn(currentProjectIndex - 1, 'prev');
-    }
-  }
-
-  refreshBookStatus = renderActiveSpread;
-
-  if (bookNext) {
-    bookNext.addEventListener('click', goToNextProject);
-  }
-
-  activeVisual.addEventListener('click', () => {
-    if (!activeVisual.dataset.full) {
-      return;
-    }
-    openPortfolioLightbox(activeVisual.dataset.full || '', activeVisual.dataset.title || '');
-  });
-
-  activeVisual.addEventListener('keydown', (event) => {
-    if (!activeVisual.dataset.full) {
-      return;
-    }
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault();
-      openPortfolioLightbox(activeVisual.dataset.full || '', activeVisual.dataset.title || '');
-    }
-  });
-
-  projectBook.addEventListener('pointerdown', (event) => {
-    if (event.target.closest('.book-preview-trigger, .book-active-visual')) {
-      return;
-    }
-
-    isPointerActive = true;
-    pointerStartX = event.clientX;
-    pointerDeltaX = 0;
-  });
-
-  projectBook.addEventListener('pointermove', (event) => {
-    if (!isPointerActive || isTurningProject) {
-      return;
-    }
-
-    pointerDeltaX = event.clientX - pointerStartX;
-  });
-
-  function handleProjectPointerRelease() {
-    if (!isPointerActive || isTurningProject) {
-      isPointerActive = false;
-      return;
-    }
-
-    isPointerActive = false;
-
-    if (pointerDeltaX <= -52) {
-      goToNextProject();
-    } else if (pointerDeltaX >= 52) {
-      goToPreviousProject();
-    }
-  }
-
-  projectBook.addEventListener('pointerup', handleProjectPointerRelease);
-  projectBook.addEventListener('pointercancel', handleProjectPointerRelease);
-
-  document.addEventListener('keydown', (event) => {
-    if (portfolioLightbox.classList.contains('open') || isTurningProject) {
-      return;
-    }
-
-    if (event.key === 'ArrowRight') {
-      goToNextProject();
-    }
-
-    if (event.key === 'ArrowLeft') {
-      goToPreviousProject();
-    }
-  });
-
-  renderActiveSpread('next');
-}
-
 const nameBaseElement = document.getElementById('nameBase');
 const nameAccentElement = document.getElementById('nameAccent');
 
@@ -2043,6 +1445,23 @@ if (nameBaseElement && nameAccentElement) {
 
   renderTypingName();
   setTimeout(animateTypingName, 800);
+}
+
+const bgVideo = document.querySelector('.bg-video');
+if (bgVideo) {
+  const heroElement = document.querySelector('.hero-header');
+
+  function toggleBgVideo() {
+    const heroBottom = heroElement ? heroElement.getBoundingClientRect().bottom : 0;
+    if (heroBottom <= window.innerHeight * 0.92) {
+      bgVideo.play().catch(() => {});
+    } else {
+      bgVideo.pause();
+    }
+  }
+
+  window.addEventListener('scroll', toggleBgVideo, { passive: true });
+  toggleBgVideo();
 }
 
 const savedLang = localStorage.getItem('siteLanguage') || 'it';

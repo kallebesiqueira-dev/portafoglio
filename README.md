@@ -14,7 +14,7 @@ Main features:
 
 - Hero section with animated typing effect
 - Language switcher (Italian, German, French, English)
-- Floating portfolio gallery with lightbox preview
+- Featured GitHub projects section with live demos, source links and tech stack tags
 - Client reviews marquee
 - Responsive layout for desktop, tablet, and mobile
 - Social/contact links and WhatsApp floating action button
@@ -75,7 +75,6 @@ git push
 
 ## Notes
 
-- Keep image file names unchanged to avoid broken gallery links.
 - The language selected by the user is saved in `localStorage`.
 - The default page language is Italian (`<html lang="it">`).
 
