@@ -168,8 +168,14 @@ body {
   filter: brightness(1.235) contrast(1.12) saturate(1.1);
   transform: none;
 
-  -webkit-mask-image: linear-gradient(to right, transparent 44%, #000 58%, #000 80%, transparent 97%);
-  mask-image: linear-gradient(to right, transparent 44%, #000 58%, #000 80%, transparent 97%);
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 44%, #000 58%, #000 80%, transparent 97%),
+    linear-gradient(to bottom, transparent 0%, #000 9%, #000 91%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to right, transparent 44%, #000 58%, #000 80%, transparent 97%),
+    linear-gradient(to bottom, transparent 0%, #000 9%, #000 91%, transparent 100%);
+  mask-composite: intersect;
 
   z-index: -2;
 }
