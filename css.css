@@ -165,9 +165,11 @@ body {
   background-position: 94% center;
   background-repeat: no-repeat;
   background-image: url("./IMG_6345.jpg");
-  border-radius: 50%;
   filter: brightness(1.235) contrast(1.12) saturate(1.1);
   transform: none;
+
+  -webkit-mask-image: linear-gradient(to right, transparent 44%, #000 58%, #000 80%, transparent 97%);
+  mask-image: linear-gradient(to right, transparent 44%, #000 58%, #000 80%, transparent 97%);
 
   z-index: -2;
 }
@@ -1432,6 +1434,8 @@ section p {
     background-image: url("./IMG_6345.jpg");
     background-size: cover;
     background-position: center 20%;
+    -webkit-mask-image: none;
+    mask-image: none;
   }
 
   .hero-effects {
