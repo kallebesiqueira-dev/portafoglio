@@ -63,6 +63,7 @@
 </div>
 
 
+<div class="nav-sticky">
 <nav class="main-nav" aria-label="Navigazione principale">
   <a href="#sobre" data-i18n="nav.about">Chi sono</a>
   <a href="#skills-container" data-i18n="nav.skills">Competenze</a>
@@ -97,6 +98,7 @@
 </nav>
 
 <div class="nav-wave" aria-hidden="true"></div>
+</div>
 
 
 <section id="sobre">
@@ -1345,7 +1347,9 @@ inPageAnchors.forEach((anchor) => {
 
     event.preventDefault();
 
-    const navHeight = document.querySelector('.main-nav')?.offsetHeight || 0;
+    const navHeight = document.querySelector('.nav-sticky')?.offsetHeight
+      || document.querySelector('.main-nav')?.offsetHeight
+      || 0;
     const targetY = rawTarget === '#'
       ? 0
       : Math.max(targetElement.getBoundingClientRect().top + window.scrollY - navHeight - 24, 0);
