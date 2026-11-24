@@ -609,7 +609,7 @@ function bootSmooth() {
   script.type = "module";
   script.textContent = `
     import Lenis from "https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.mjs";
-    const lenis = new Lenis({ lerp: 0.085, smoothWheel: true });
+    const lenis = new Lenis({ lerp: 0.085, smoothWheel: true, syncTouch: true });
     window.__lenis = lenis;
     const raf = (time) => { lenis.raf(time); requestAnimationFrame(raf); };
     requestAnimationFrame(raf);
