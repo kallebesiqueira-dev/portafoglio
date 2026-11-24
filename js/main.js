@@ -625,9 +625,53 @@ function bootWorld() {
   document.body.appendChild(script);
 }
 
+function bootClouds() {
+  const shifts = [...document.querySelectorAll(".hero-cloud-shift")];
+  if (!shifts.length || reduced) return;
+  const script = document.createElement("script");
+  script.src = "https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js";
+  script.onload = () => {
+    const gsap = window.gsap;
+    if (!gsap) return;
+    const drifts = [
+      { x: 2.5, duration: 90 },
+      { x: -2, duration: 110 },
+      { x: -3, duration: 75 },
+    ];
+    const depth = [6, -5, -3];
+    const pointer = { x: 0, y: 0 };
+    const states = shifts.map(() => ({ drift: 0 }));
+    shifts.forEach((shift, index) => {
+      const spec = drifts[index] || drifts[0];
+      gsap.to(states[index], {
+        drift: spec.x,
+        duration: spec.duration,
+        ease: "sine.inOut",
+        yoyo: true,
+        repeat: -1,
+      });
+    });
+    gsap.ticker.add(() => {
+      shifts.forEach((shift, index) => {
+        const amount = depth[index] || 0;
+        gsap.set(shift, {
+          xPercent: states[index].drift + pointer.x * amount,
+          yPercent: pointer.y * amount * 0.45,
+        });
+      });
+    });
+    window.addEventListener("pointermove", (event) => {
+      pointer.x = event.clientX / window.innerWidth - 0.5;
+      pointer.y = event.clientY / window.innerHeight - 0.5;
+    }, { passive: true });
+  };
+  document.body.appendChild(script);
+}
+
 applyLang();
 updatePins();
 bootSmooth();
+bootClouds();
 
 if ("requestIdleCallback" in window) requestIdleCallback(bootWorld, { timeout: 900 });
 else window.addEventListener("load", () => window.setTimeout(bootWorld, 250));

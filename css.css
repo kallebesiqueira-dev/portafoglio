@@ -365,6 +365,42 @@ html.js.is-ready .line > span { transform: none; }
 
 .hero-card .stage { z-index: 0; }
 
+.hero-clouds {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.hero-cloud {
+  position: absolute;
+  display: block;
+}
+
+.hero-cloud-shift { display: block; will-change: transform; }
+
+.hero-cloud img {
+  width: 100%;
+  height: auto;
+  display: block;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.hero-cloud-left { opacity: 0.5; width: 64.4%; top: -1%; left: -29%; }
+.hero-cloud-left img { scale: -1 1; }
+.hero-cloud-right { opacity: 0.78; width: 71.7%; top: 44.6%; left: 58.5%; }
+.hero-cloud-center { opacity: 0.16; width: 40%; top: 14%; left: 34%; }
+
+@media (min-width: 981px) {
+  .hero-clouds { z-index: 2; }
+  .hero-card .stage { z-index: 3; }
+  .hero-photo { z-index: 4; }
+  .hero-top,
+  .hero-dock { z-index: 5; }
+}
+
 .hero-photo {
   position: absolute;
   right: 10%;
@@ -531,8 +567,6 @@ html.js.is-ready .line > span { transform: none; }
 .beats button[aria-selected="true"],
 .layers button[aria-selected="true"] { color: var(--fg); }
 
-.layers button[aria-selected="true"] { box-shadow: inset 2px 0 0 var(--accent); }
-
 .on-paper .beats button[aria-selected="true"] { color: var(--ink); }
 
 .term {
@@ -588,10 +622,13 @@ html.js.is-ready .line > span { transform: none; }
   margin: 0;
   padding: clamp(1.5rem, 3vw, 2.4rem);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
   background: var(--card);
+  text-align: center;
 }
+
+.metric-row li { text-align: center; }
 
 .metric-num {
   display: block;
@@ -599,9 +636,10 @@ html.js.is-ready .line > span { transform: none; }
   font-size: clamp(3rem, 6vw, 5rem);
   letter-spacing: -0.05em;
   line-height: 0.9;
+  text-align: center;
 }
 
-.metric-row small { color: var(--dim); }
+.metric-row small { display: block; color: var(--dim); text-align: center; }
 
 .stack { height: 280vh; }
 
@@ -619,13 +657,17 @@ html.js.is-ready .line > span { transform: none; }
 
 .layers button {
   display: flex;
-  gap: 0.8rem;
+  gap: 1.35rem;
   align-items: baseline;
-  padding: 0.72rem 0;
-  border-top: 1px solid var(--rule);
+  padding: 0.72rem 0 0.72rem 0.9rem;
+  border: 0;
   font-family: var(--display);
   font-size: clamp(1.2rem, 2vw, 1.7rem);
   letter-spacing: -0.03em;
+}
+
+.layers button[aria-selected="true"] {
+  box-shadow: inset 2px 0 0 var(--accent);
 }
 
 .layers button span:first-child {
@@ -1130,6 +1172,9 @@ html.js.is-ready .reveal { opacity: 1; transform: none; }
     padding-top: 108px;
   }
   .hero-top { margin-top: 26vh; }
+  .hero-cloud-center { display: none; }
+  .hero-cloud-left { opacity: 0.42; width: 125%; top: 6%; left: -62%; }
+  .hero-cloud-right { opacity: 0.7; width: 135%; top: 58%; left: 22%; }
   .hero-dock { margin-top: auto; margin-bottom: 4.75rem; }
   .hero-card::after {
     background: linear-gradient(180deg, rgba(18, 18, 18, 0.1) 20%, rgba(18, 18, 18, 0.78) 68%);
