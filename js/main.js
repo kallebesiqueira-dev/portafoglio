@@ -637,65 +637,51 @@ function bootPortrait() {
   load("https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js")
     .then(() => load("https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"))
     .then(() => {
-      const photo = document.querySelector(".hero-photo");
-      if (!photo || !window.gsap) return;
+      if (!window.gsap) return;
       const gsap = window.gsap;
       gsap.registerPlugin(window.ScrollTrigger);
       document.documentElement.classList.add("motion");
-      const lines = document.querySelectorAll(".line > span");
-      if (params.has("reveal")) {
-        gsap.set(lines, { yPercent: 0 });
-      } else {
-        gsap.set(lines, { yPercent: 110 });
-        gsap.to("#top .line > span", {
-          yPercent: 0,
-          duration: 1.05,
-          ease: "power3.out",
+      const photo = document.querySelector(".hero-photo");
+      const reveal = params.has("reveal");
+      const show = (targets) => gsap.set(targets, { autoAlpha: 1, y: 0, yPercent: 0, scale: 1, clearProps: "opacity,visibility" });
+      if (!reveal) {
+        gsap.from("#top .hero-photo, #top .display, #top .hero-line, #top .hero-dock", {
+          autoAlpha: 0,
+          y: 18,
+          duration: 0.9,
           stagger: 0.08,
-          delay: 0.08
+          ease: "power3.out",
+          overwrite: "auto"
         });
-        gsap.utils.toArray(".display").forEach((heading) => {
+        document.querySelectorAll(".display").forEach((heading) => {
           if (heading.closest("#top")) return;
-          gsap.to(heading.querySelectorAll(".line > span"), {
-            yPercent: 0,
-            duration: 1,
-            ease: "power3.out",
-            stagger: 0.07,
-            scrollTrigger: { trigger: heading, start: "top 86%" }
-          });
-        });
-        gsap.utils.toArray(".mini, .metric-row").forEach((block) => {
-          gsap.from(block, {
+          const rect = heading.getBoundingClientRect();
+          if (rect.top < window.innerHeight * 0.92) return;
+          gsap.from(heading, {
             autoAlpha: 0,
-            y: 28,
+            y: 20,
             duration: 0.8,
             ease: "power3.out",
-            scrollTrigger: { trigger: block, start: "top 90%" }
+            immediateRender: false,
+            scrollTrigger: { trigger: heading, start: "top 90%", once: true }
           });
         });
       }
-      if (!photo || !window.matchMedia("(min-width: 981px)").matches) return;
-      gsap.set(photo, { xPercent: -50, yPercent: -48, force3D: true });
-      if (!params.has("reveal")) {
-        gsap.from(photo, {
-          autoAlpha: 0,
-          scale: 0.94,
-          yPercent: -40,
-          duration: 1.35,
-          ease: "power3.out",
-          delay: 0.1
+      if (photo && window.matchMedia("(min-width: 981px)").matches) {
+        gsap.to(photo, {
+          y: -24,
+          ease: "none",
+          scrollTrigger: {
+            trigger: "#top",
+            start: "top top",
+            end: "bottom top",
+            scrub: 0.6
+          }
         });
       }
-      gsap.to(photo, {
-        yPercent: -58,
-        ease: "none",
-        scrollTrigger: {
-          trigger: "#top",
-          start: "top top",
-          end: "bottom top",
-          scrub: 0.6
-        }
-      });
+      window.setTimeout(() => {
+        show("#top .hero-photo, #top .display, #top .hero-line, #top .hero-dock, .line > span");
+      }, 1600);
     });
 }
 
