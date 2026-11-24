@@ -472,21 +472,6 @@ html.js.is-ready .line > span { transform: none; }
 
 .stage canvas { width: 100%; height: 100%; display: block; }
 
-.stage::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 46%;
-  width: 180px;
-  height: 180px;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 74, 28, 0.2), transparent 68%);
-  filter: blur(8px);
-}
-
-.hero-card .stage::before { display: none; }
-
 .who { height: 230vh; }
 
 .who-sticky,
@@ -539,7 +524,7 @@ html.js.is-ready .line > span { transform: none; }
   display: block;
   width: min(70%, 220px);
   height: auto;
-  margin: 0;
+  margin: 0 auto;
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: 24px;
