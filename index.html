@@ -1,1451 +1,372 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kallebe Gallo — AI Full Stack Developer</title>
-  <meta name="description" content="Kallebe Gallo, AI Full Stack Developer: applicazioni web moderne potenziate dall'intelligenza artificiale — integrazione LLM, RAG, automazioni e prodotti digitali scalabili, performanti e orientati ai risultati.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kallebe Gallo — AI Full Stack Engineer</title>
+  <meta name="description" content="Kallebe Gallo, AI Full Stack Engineer e co-founder di CTRL Agency. Agenda Easy, CRM Gallo e sistemi web in produzione.">
   <meta name="author" content="Kallebe Gallo">
-  <meta name="keywords" content="AI Full Stack Developer, intelligenza artificiale, LLM, RAG, OpenAI, LangChain, React, Next.js, Node.js, sviluppo web, machine learning">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#0c0c0c">
+  <meta name="theme-color" content="#0b0b0b">
   <link rel="canonical" href="https://portafoglio-alpha.vercel.app/">
-
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Kallebe Gallo — AI Full Stack Developer">
-  <meta property="og:description" content="Applicazioni web moderne potenziate dall'intelligenza artificiale: integrazione LLM, RAG, automazioni e prodotti digitali scalabili e orientati ai risultati.">
+  <meta property="og:title" content="Kallebe Gallo — AI Full Stack Engineer">
+  <meta property="og:description" content="Dal codice al prodotto. Agenda Easy, CRM Gallo e sistemi web in produzione.">
   <meta property="og:image" content="https://portafoglio-alpha.vercel.app/img/portrait.jpg">
   <meta property="og:url" content="https://portafoglio-alpha.vercel.app/">
   <meta property="og:locale" content="it_IT">
   <meta property="og:locale:alternate" content="en_GB">
-  <meta property="og:locale:alternate" content="de_DE">
-  <meta property="og:locale:alternate" content="fr_FR">
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Kallebe Gallo — AI Full Stack Developer">
-  <meta name="twitter:description" content="Applicazioni web moderne potenziate dall'intelligenza artificiale: integrazione LLM, RAG e automazioni.">
+  <meta name="twitter:title" content="Kallebe Gallo — AI Full Stack Engineer">
+  <meta name="twitter:description" content="Dal codice al prodotto. Agenda Easy, CRM Gallo e sistemi web in produzione.">
   <meta name="twitter:image" content="https://portafoglio-alpha.vercel.app/img/portrait.jpg">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+  <link rel="preload" as="image" href="img/portrait.webp" type="image/webp" fetchpriority="high">
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@500,700&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="img/portrait.webp" type="image/webp" fetchpriority="high">
-  <link rel="stylesheet" href="css.css?v=4">
+  <link rel="stylesheet" href="css.css">
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
- 
-<header class="hero-header">
+  <a class="skip" href="#main">Salta al contenuto</a>
 
-<div class="hero-effects" aria-hidden="true">
-  <span class="hero-glow glow-1"></span>
-  <span class="hero-glow glow-2"></span>
-  <span class="hero-glow glow-3"></span>
-</div>
-
-<h1 class="hero-typing" aria-label="Kallebe Gallo">
-  <span class="hero-name-ghost" aria-hidden="true">Kallebe Gallo</span>
-  <span class="hero-name-live"><span class="hero-name-inner"><span id="nameBase"></span><span class="name-accent" id="nameAccent"></span></span></span>
-</h1>
-
-<p class="hero-role" data-i18n="hero.role">AI Full Stack Developer</p>
-<p class="hero-tagline" data-i18n="hero.tagline">Applicazioni web intelligenti — LLM, RAG e automazioni che generano risultati.</p>
-
-<a href="#sobre" class="scroll-indicator" aria-label="Scorri verso il basso" data-i18n-aria-label="hero.scroll">
-  <span class="scroll-line"></span>
-  <span class="scroll-dot"></span>
-</a>
-</header>
-
-<div class="bg-video-wrap" aria-hidden="true">
-  <video class="bg-video" src="bg-video.mp4" autoplay muted loop playsinline preload="metadata" tabindex="-1"></video>
-</div>
-
-
-<div class="nav-sticky">
-<nav class="main-nav" aria-label="Navigazione principale">
-  <a href="#sobre" data-i18n="nav.about">Chi sono</a>
-  <a href="#skills-container" data-i18n="nav.skills">Competenze</a>
-  <a href="#progetti-live" data-i18n="nav.projects">Progetti</a>
-  <a href="#avaliacoes" data-i18n="nav.reviews">Recensioni</a>
-  <div class="language-dropdown" id="languageDropdown">
-    <button class="language-trigger" id="languageTrigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Seleziona lingua">
-      <img class="language-flag" id="languageCurrentFlag" src="https://flagcdn.com/w20/it.png" alt="Bandiera Italia">
-      <span class="language-current-code" id="languageCurrentCode">IT</span>
-      <span class="language-arrow" id="languageArrow">▾</span>
-    </button>
-
-    <div class="language-menu" id="languageMenu" role="listbox" aria-label="Selezione lingua">
-      <button type="button" class="language-option" data-lang="it" role="option">
-        <img class="language-flag" src="https://flagcdn.com/w20/it.png" alt="Bandiera Italia">
-        <span data-i18n="lang.it">Italiano</span>
-      </button>
-      <button type="button" class="language-option" data-lang="de" role="option">
-        <img class="language-flag" src="https://flagcdn.com/w20/de.png" alt="Bandiera Germania">
-        <span data-i18n="lang.de">Deutsch</span>
-      </button>
-      <button type="button" class="language-option" data-lang="fr" role="option">
-        <img class="language-flag" src="https://flagcdn.com/w20/fr.png" alt="Bandiera Francia">
-        <span data-i18n="lang.fr">Français</span>
-      </button>
-      <button type="button" class="language-option" data-lang="en" role="option">
-        <img class="language-flag" src="https://flagcdn.com/w20/gb.png" alt="Bandiera Regno Unito">
-        <span data-i18n="lang.en">English</span>
+  <header class="nav" id="nav">
+    <a class="logo" href="#top">Kallebe</a>
+    <nav class="nav-links" id="nav-links" aria-label="Principale">
+      <a href="#chi-sono" data-i18n="nav.who">Chi sono</a>
+      <a href="#lavoro" data-i18n="nav.work">Progetti</a>
+      <a href="#stack" data-i18n="nav.stack">Stack</a>
+      <a href="#esperienza" data-i18n="nav.exp">Esperienza</a>
+      <a href="#contatti" data-i18n="nav.contact">Contatti</a>
+    </nav>
+    <div class="nav-end">
+      <div class="lang" role="group" aria-label="Lingua">
+        <button type="button" data-set-lang="it" aria-pressed="true">IT</button>
+        <span aria-hidden="true">/</span>
+        <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="btn btn-small" href="#contatti" data-i18n="nav.cta">Parliamone</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" data-i18n-label="nav.menu" aria-label="Menu">
+        <span></span><span></span>
       </button>
     </div>
-  </div>
-</nav>
+  </header>
 
-<div class="nav-wave" aria-hidden="true"></div>
-</div>
-
-
-<section id="sobre">
-<h2 data-i18n="about.title">Chi sono</h2>
-<div class="about">
-<p data-i18n="about.p1">
-Sono Kallebe Gallo, AI Full Stack Developer con un approccio metodico, orientato alla qualità del codice e ai risultati misurabili. Unisco lo sviluppo web full stack all’intelligenza artificiale per trasformare idee e specifiche tecniche in prodotti digitali intelligenti, stabili e scalabili, riducendo il debito tecnico e accelerando il time-to-market.
-</p>
-<p data-i18n="about.p2">
-La mia esperienza copre l’intero ciclo di vita di un progetto web: dall’analisi dei requisiti e dalla progettazione dell’architettura, allo sviluppo frontend e backend, fino al deploy, al monitoraggio e alla manutenzione evolutiva. Lavoro quotidianamente con HTML5, CSS3, JavaScript, TypeScript, React, Next.js, Node.js, PostgreSQL, MongoDB, Docker e flussi Git professionali, applicando metodologie Agile e Scrum.
-</p>
-<p data-i18n="about.p3">
-Nel frontend curo ogni dettaglio dell’esperienza utente: tipografia, accessibilità (WCAG), responsive design, micro-interazioni e ottimizzazione delle Core Web Vitals. Le interfacce che progetto sono veloci, leggibili, coerenti con l’identità del brand e ingegnerizzate per convertire, garantendo punteggi Lighthouse elevati e una SEO tecnica solida.
-</p>
-<p data-i18n="about.p4">
-Nel backend costruisco API REST sicure, gestisco autenticazione, autorizzazione, integrazioni con servizi terzi e database relazionali e NoSQL. Adotto pattern collaudati, test automatizzati, code review e principi di clean code per consegnare prodotti affidabili anche sotto carico, con un occhio attento a sicurezza, scalabilità e manutenibilità.
-</p>
-<p data-i18n="about.p5">
-Ho una mentalità orientata al business: capisco gli obiettivi del cliente prima di scrivere una riga di codice. Comunico in modo chiaro, rispetto le scadenze, gestisco le priorità e propongo soluzioni concrete invece di sollevare problemi. Sono autonomo nella gestione delle attività e mi inserisco con naturalezza in team distribuiti, lavorando con designer, product owner e stakeholder non tecnici.
-</p>
-<p data-i18n="about.p6">
-Parlo italiano, inglese, francese, tedesco e portoghese, il che mi permette di operare senza attriti in contesti internazionali e di gestire interlocutori diversi. La formazione continua mi tiene aggiornato sulle tecnologie più richieste dal mercato e sulle best practice del settore, dall’architettura serverless ai framework di nuova generazione, passando per DevOps e accessibilità.
-</p>
-<p data-i18n="about.p7">
-Per recruiter, hiring manager e CTO che stanno leggendo: cerco realtà ambiziose in cui contribuire fin dal primo giorno con codice pulito, attenzione ai dettagli e una forte etica del lavoro. Sono disponibile per ruoli full-time, contratti freelance e collaborazioni a lungo termine, in presenza, ibrido o full remote. Parliamone: il prossimo progetto solido inizia da una conversazione concreta.
-</p>
-</div>
-</section>
-
-<section class="skills-intro" id="skills-container">
-  <div class="skills-intro-panel">
-    <h2 data-i18n="skillsIntro.title">Competenze AI Full Stack Developer</h2>
-    <p data-i18n="skillsIntro.p1">L’AI Full Stack Developer è una figura professionale completa, capace di gestire l’intero processo di sviluppo di un progetto web — dal design dell’interfaccia alla logica lato server e ai database — integrando l’intelligenza artificiale dove genera reale valore.</p>
-    <p data-i18n="skillsIntro.p2">Nel frontend si occupa della realizzazione di siti e applicazioni moderne, responsive e orientate all’esperienza utente, utilizzando tecnologie come HTML, CSS e JavaScript. Nel backend sviluppa la struttura che permette al sistema di funzionare in modo sicuro ed efficiente, creando API, gestendo database e implementando sistemi di autenticazione.</p>
-    <p data-i18n="skillsIntro.p3">Oltre alle competenze tecniche, un Full Stack Developer possiede capacità di problem solving, organizzazione e comunicazione con il cliente, garantendo soluzioni digitali complete, performanti e scalabili.</p>
-    <p data-i18n="skillsIntro.p4">È una figura strategica per aziende che desiderano sviluppare progetti web professionali con un unico referente tecnico competente e affidabile.</p>
-
-    <p class="skills-ai-lead" data-i18n="skillsIntro.ai1">Come AI Full Stack Developer porto l’intelligenza artificiale dentro il prodotto: integro modelli LLM (OpenAI, Anthropic Claude), costruisco assistenti conversazionali, pipeline RAG con database vettoriali, automazioni intelligenti e funzionalità data-driven che trasformano un’app in un prodotto realmente differenziante.</p>
-    <p data-i18n="skillsIntro.ai2">Progetto l’architettura end-to-end di soluzioni AI: prompt engineering, orchestrazione con LangChain, embedding e ricerca semantica, fine-tuning leggero, gestione dei costi token e deploy sicuro in produzione — sempre con attenzione a privacy, affidabilità delle risposte e misurabilità dei risultati.</p>
-
-    <div class="skills-tech-stack skills-tech-stack-ai" aria-label="Tecnologie AI & Machine Learning">
-      <p class="skills-tech-title" data-i18n="skillsIntro.aiStack">AI &amp; Machine Learning</p>
-      <div class="skills-tech-icons">
-        <span class="skills-tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" loading="lazy"><span>Python</span></span>
-        <span class="skills-tech-item"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.1419.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997z'/%3E%3C/svg%3E" alt="OpenAI" loading="lazy"><span>OpenAI</span></span>
-        <span class="skills-tech-item"><img src="https://cdn.simpleicons.org/anthropic/D97757" alt="Anthropic Claude" loading="lazy"><span>Claude</span></span>
-        <span class="skills-tech-item"><img src="https://cdn.simpleicons.org/langchain/1C3C3C" alt="LangChain" loading="lazy"><span>LangChain</span></span>
-        <span class="skills-tech-item"><img src="https://cdn.simpleicons.org/huggingface/FFD21E" alt="Hugging Face" loading="lazy"><span>Hugging Face</span></span>
-        <span class="skills-tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch" loading="lazy"><span>PyTorch</span></span>
-        <span class="skills-tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" loading="lazy"><span>TensorFlow</span></span>
-        <span class="skills-tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" alt="scikit-learn" loading="lazy"><span>scikit-learn</span></span>
+  <main id="main">
+    <section class="hero shell" id="top">
+      <div class="hero-card">
+        <div class="stage" data-scene="hero" aria-hidden="true"></div>
+        <picture class="hero-photo">
+          <source srcset="img/portrait.webp" type="image/webp">
+          <img src="img/portrait.jpg" alt="Kallebe Gallo, ritratto in studio" width="960" height="960" fetchpriority="high" data-i18n-alt="hero.alt">
+        </picture>
+        <div class="hero-top">
+          <h1 class="display">
+            <span class="line"><span data-i18n="hero.l1">Dal codice</span></span>
+            <span class="line"><span data-i18n="hero.l2">al prodotto.</span></span>
+          </h1>
+          <p class="hero-line" data-i18n="hero.line">Sistemi web e AI, costruiti per restare in produzione.</p>
+        </div>
+        <div class="hero-dock">
+          <span class="dock-label" data-i18n="hero.dock">Kallebe Gallo</span>
+          <a class="btn" href="#lavoro" data-i18n="hero.cta">Vedi i progetti</a>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="skills-tech-stack" aria-label="Tecnologie Full Stack">
-      <p class="skills-tech-title" data-i18n="skillsIntro.stack">Tecnologie principali</p>
-      <div class="skills-tech-icons">
-        <span class="skills-tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" loading="lazy"><span>HTML5</span></span>
-        <span class="skills-tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" loading="lazy"><span>CSS3</span></span>
-        <span class="skills-tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" loading="lazy"><span>Bootstrap</span></span>
-        <span class="skills-tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" loading="lazy"><span>JavaScript</span></span>
-        <span class="skills-tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" loading="lazy"><span>TypeScript</span></span>
-        <span class="skills-tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" loading="lazy"><span>React</span></span>
-        <span class="skills-tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" loading="lazy"><span>Next.js</span></span>
-        <span class="skills-tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" loading="lazy"><span>Node.js</span></span>
-        <span class="skills-tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" loading="lazy"><span>PostgreSQL</span></span>
-        <span class="skills-tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" loading="lazy"><span>MongoDB</span></span>
-        <span class="skills-tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" loading="lazy"><span>Git</span></span>
-        <span class="skills-tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" loading="lazy"><span>Docker</span></span>
+    <section class="who shell" id="chi-sono">
+      <div class="who-sticky">
+        <div class="who-card on-paper">
+          <p class="kicker" data-i18n="who.kicker">Chi sono</p>
+          <h2 class="display">
+            <span class="line"><span data-i18n="who.h1">Un referente.</span></span>
+            <span class="line"><span data-i18n="who.h2">L'intero stack.</span></span>
+          </h2>
+          <div class="who-grid">
+            <div class="who-visual">
+              <div class="stage" data-scene="who" aria-hidden="true"></div>
+              <figure>
+                <picture>
+                  <source srcset="img/portrait.webp" type="image/webp">
+                  <img src="img/portrait.jpg" alt="Kallebe Gallo" width="960" height="960" loading="lazy" decoding="async" data-i18n-alt="who.alt">
+                </picture>
+              </figure>
+            </div>
+            <div class="who-story">
+              <div class="beats" role="tablist" data-i18n-label="who.tabs" aria-label="Percorso">
+                <button type="button" role="tab" id="beat-tab-0" data-beat-btn="0" aria-selected="true" aria-controls="who-term" data-i18n="who.b1">Co-founder di CTRL Agency.</button>
+                <button type="button" role="tab" id="beat-tab-1" data-beat-btn="1" aria-selected="false" aria-controls="who-term" data-i18n="who.b2">Dalla specifica alla produzione, senza passaggi di mano.</button>
+                <button type="button" role="tab" id="beat-tab-2" data-beat-btn="2" aria-selected="false" aria-controls="who-term" data-i18n="who.b3">Italiano, inglese, francese, tedesco, portoghese.</button>
+              </div>
+              <div class="term">
+                <div class="term-bar" aria-hidden="true"><i></i><i></i><i></i><em>kallebe — whoami</em></div>
+                <pre class="term-body" id="who-term">$ whoami
+Kallebe Gallo
+co-founder · CTRL Agency</pre>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-
-<section id="progetti-live">
-  <h2 data-i18n="ghp.title">Progetti principali</h2>
-  <p class="ghp-subtitle" data-i18n="ghp.subtitle">Prodotti reali sviluppati end-to-end: codice aperto su GitHub, demo live e sistemi in produzione.</p>
-
-  <div class="ghp-grid">
-    <article class="ghp-card">
-      <div class="ghp-card-top">
-        <span class="ghp-type" data-i18n="ghp.type.crm">SaaS multi-tenant</span>
-        <span class="ghp-badge" data-i18n="ghp.badge.prod">In produzione</span>
-      </div>
-      <h3>Gallo CRM</h3>
-      <p data-i18n="ghp.desc.crm">CRM multi-tenant in produzione: FastAPI, Next.js, row-level security su PostgreSQL, billing Stripe e interfaccia in 7 lingue.</p>
-      <ul class="ghp-tags" aria-label="Stack tecnologico" data-i18n-aria-label="ghp.tags.aria">
-        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="" loading="lazy">FastAPI</li>
-        <li><img src="https://cdn.simpleicons.org/nextdotjs/FFFFFF" alt="" loading="lazy">Next.js</li>
-        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="" loading="lazy">PostgreSQL</li>
-        <li><img src="https://cdn.simpleicons.org/stripe/635BFF" alt="" loading="lazy">Stripe</li>
-        <li><img src="https://cdn.simpleicons.org/railway/FFFFFF" alt="" loading="lazy">Railway</li>
+    <section class="metrics shell" aria-labelledby="metrics-title">
+      <h2 class="sr" id="metrics-title" data-i18n="metrics.title">In cifre</h2>
+      <ul class="metric-row">
+        <li>
+          <span class="metric-num" data-count="5">5</span>
+          <small data-i18n="metrics.m1">prodotti in produzione</small>
+        </li>
+        <li>
+          <span class="metric-num" data-count="7">7</span>
+          <small data-i18n="metrics.m2">lingue nel CRM</small>
+        </li>
+        <li>
+          <span class="metric-num" data-count="5">5</span>
+          <small data-i18n="metrics.m3">lingue di lavoro</small>
+        </li>
       </ul>
-      <div class="ghp-links">
-        <a class="ghp-link ghp-link-live" href="https://app.gallo-crm.com/" target="_blank" rel="noopener noreferrer"><span data-i18n="ghp.live">Demo live</span><span aria-hidden="true"> ↗</span></a>
-        <a class="ghp-link" href="https://github.com/kallebesiqueira-dev/crm_gallo" target="_blank" rel="noopener noreferrer"><span data-i18n="ghp.code">Codice sorgente</span><span aria-hidden="true"> ↗</span></a>
+    </section>
+
+    <section class="stack shell" id="stack">
+      <div class="stack-sticky">
+        <div class="stack-card">
+          <div class="stack-copy">
+            <p class="kicker" data-i18n="stack.kicker">Stack</p>
+            <h2 class="display">
+              <span class="line"><span data-i18n="stack.h1">Quattro strati.</span></span>
+              <span class="line"><span data-i18n="stack.h2">Un solo flusso.</span></span>
+            </h2>
+            <div class="layers" role="tablist" data-i18n-label="stack.tabs" aria-label="Architettura">
+              <button type="button" role="tab" data-layer-btn="0" aria-selected="true" aria-controls="layer-0"><span>01</span><span data-i18n="stack.l1">Frontend</span></button>
+              <button type="button" role="tab" data-layer-btn="1" aria-selected="false" aria-controls="layer-1"><span>02</span><span data-i18n="stack.l2">API</span></button>
+              <button type="button" role="tab" data-layer-btn="2" aria-selected="false" aria-controls="layer-2"><span>03</span><span data-i18n="stack.l3">Dati</span></button>
+              <button type="button" role="tab" data-layer-btn="3" aria-selected="false" aria-controls="layer-3"><span>04</span><span data-i18n="stack.l4">Cloud</span></button>
+            </div>
+            <div class="layer-panels">
+              <p class="layer-detail is-on" id="layer-0" role="tabpanel" data-i18n="stack.d1">TypeScript, React, Next.js. Interfacce, accessibilità, Core Web Vitals.</p>
+              <p class="layer-detail" id="layer-1" role="tabpanel" hidden data-i18n="stack.d2">FastAPI e Node.js. Contratti espliciti, autenticazione, integrazioni.</p>
+              <p class="layer-detail" id="layer-2" role="tabpanel" hidden data-i18n="stack.d3">PostgreSQL, Supabase, row-level security. I dati di ogni tenant restano isolati.</p>
+              <p class="layer-detail" id="layer-3" role="tabpanel" hidden data-i18n="stack.d4">Vercel, Railway, Docker. Preview, produzione, una via per il rollback.</p>
+            </div>
+          </div>
+          <div class="stack-visual">
+            <div class="stage" data-scene="stack" data-layer="0" aria-hidden="true"></div>
+            <div class="term term-dark">
+              <div class="term-bar" aria-hidden="true"><i></i><i></i><i></i><em>stack — layer</em></div>
+              <pre class="term-body" id="stack-term">$ layer frontend
+Next.js · TypeScript · React
+UI, accessibilità, Core Web Vitals</pre>
+            </div>
+          </div>
+        </div>
       </div>
-    </article>
+    </section>
 
-    <article class="ghp-card">
-      <div class="ghp-card-top">
-        <span class="ghp-type" data-i18n="ghp.type.agenda">SaaS prenotazioni</span>
-        <span class="ghp-badge" data-i18n="ghp.badge.prod">In produzione</span>
+    <section class="work shell" id="lavoro">
+      <header class="work-head reveal">
+        <p class="kicker" data-i18n="work.kicker">Progetti</p>
+        <h2 class="display">
+          <span class="line"><span data-i18n="work.h1">Due prodotti.</span></span>
+          <span class="line"><span data-i18n="work.h2">Poi i sistemi intorno.</span></span>
+        </h2>
+      </header>
+
+      <article class="case" id="agenda-easy">
+        <div class="case-card">
+          <div class="case-copy">
+            <p class="kicker" data-i18n="agenda.k">01 — Prodotto</p>
+            <h3 class="display case-title">Agenda Easy</h3>
+            <p class="role" data-i18n="agenda.role">Full stack, end to end</p>
+            <div class="psr">
+              <div>
+                <h4 data-i18n="ps.p">Problema</h4>
+                <p data-i18n="agenda.p">Le prenotazioni di attività e professionisti si perdono tra messaggi e calendari scollegati.</p>
+              </div>
+              <div>
+                <h4 data-i18n="ps.s">Soluzione</h4>
+                <p data-i18n="agenda.s">SaaS di prenotazione online su Next.js 16, Supabase e Stripe, con interfaccia italiana e inglese.</p>
+              </div>
+              <div>
+                <h4 data-i18n="ps.r">Risultato</h4>
+                <p data-i18n="agenda.r">Online su agendaeasy.it: pagamenti e agenda nello stesso flusso.</p>
+              </div>
+            </div>
+            <ul class="tags" aria-label="Stack">
+              <li>Next.js</li><li>Supabase</li><li>Stripe</li><li>TypeScript</li>
+            </ul>
+            <div class="case-links">
+              <a class="btn" href="https://agendaeasy.it" target="_blank" rel="noopener noreferrer"><span data-i18n="links.live">Live</span></a>
+              <a class="btn btn-ghost" href="https://github.com/kallebesiqueira-dev/agenda-easy-it" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+          <div class="case-visual">
+            <div class="stage" data-scene="agenda" aria-hidden="true"></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="case" id="crm-gallo">
+        <div class="case-card">
+          <div class="case-copy">
+            <p class="kicker" data-i18n="crm.k">02 — Piattaforma</p>
+            <h3 class="display case-title">CRM Gallo</h3>
+            <p class="role" data-i18n="crm.role">Architettura multi-tenant, full stack</p>
+            <div class="psr">
+              <div>
+                <h4 data-i18n="ps.p">Problema</h4>
+                <p data-i18n="crm.p">Un CRM unico non regge più clienti se dati e fatturazione non sono isolati.</p>
+              </div>
+              <div>
+                <h4 data-i18n="ps.s">Soluzione</h4>
+                <p data-i18n="crm.s">FastAPI, Next.js, row-level security su PostgreSQL e Stripe. Interfaccia in sette lingue.</p>
+              </div>
+              <div>
+                <h4 data-i18n="ps.r">Risultato</h4>
+                <p data-i18n="crm.r">In produzione: tenant, billing e accessi separati.</p>
+              </div>
+            </div>
+            <ul class="tags" aria-label="Stack">
+              <li>FastAPI</li><li>Next.js</li><li>PostgreSQL</li><li>Stripe</li><li>Railway</li>
+            </ul>
+            <div class="case-links">
+              <a class="btn" href="https://gallo-crm.vercel.app" target="_blank" rel="noopener noreferrer"><span data-i18n="links.live">Live</span></a>
+              <a class="btn btn-ghost" href="https://github.com/kallebesiqueira-dev/crm_gallo" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+          <div class="case-visual">
+            <div class="stage" data-scene="crm" aria-hidden="true"></div>
+          </div>
+        </div>
+      </article>
+
+      <div class="more">
+        <p class="kicker" data-i18n="more.k">Altri sistemi</p>
+        <div class="more-grid">
+          <article class="mini reveal">
+            <p class="role" data-i18n="inbox.role">Automazione AI</p>
+            <h3>Inbox AI</h3>
+            <p data-i18n="inbox.p">Il back office B2B perde segnali commerciali dentro la posta.</p>
+            <p data-i18n="inbox.s">Classifica i messaggi, prepara bozze di risposta e fa emergere le opportunità.</p>
+            <ul class="tags"><li>TypeScript</li><li>Node.js</li><li>React</li></ul>
+            <div class="case-links">
+              <a class="btn btn-small" href="https://inbox-ai-client-gamma.vercel.app" target="_blank" rel="noopener noreferrer"><span data-i18n="links.live">Live</span></a>
+              <a class="btn btn-small btn-ghost" href="https://github.com/kallebesiqueira-dev/Inbox-AI" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </article>
+          <article class="mini reveal">
+            <p class="role" data-i18n="alivio.role">EdTech AI</p>
+            <h3>Alívio do Professor</h3>
+            <p data-i18n="alivio.p">Correggere a mano non scala quando le classi crescono.</p>
+            <p data-i18n="alivio.s">SaaS di correzione con un layer LLM indipendente dal provider, su Next.js e Supabase.</p>
+            <ul class="tags"><li>Next.js</li><li>Supabase</li><li>LLM</li></ul>
+            <div class="case-links">
+              <a class="btn btn-small btn-ghost" href="https://github.com/kallebesiqueira-dev/alivio-do-professor" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </article>
+          <article class="mini reveal">
+            <p class="role" data-i18n="farma.role">Chatbot AI</p>
+            <h3>Farmacia Chatbot</h3>
+            <p data-i18n="farma.p">In farmacia le stesse domande su prodotti e sedi interrompono il banco.</p>
+            <p data-i18n="farma.s">Assistente con backend Python e interfaccia chat per risposte rapide.</p>
+            <ul class="tags"><li>Python</li><li>JavaScript</li></ul>
+            <div class="case-links">
+              <a class="btn btn-small" href="https://famarcia-chatbot.vercel.app" target="_blank" rel="noopener noreferrer"><span data-i18n="links.live">Live</span></a>
+              <a class="btn btn-small btn-ghost" href="https://github.com/kallebesiqueira-dev/famarcia_chatbot" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </article>
+        </div>
       </div>
-      <h3>Agenda Easy</h3>
-      <p data-i18n="ghp.desc.agenda">SaaS di prenotazioni online per attività e professionisti: Next.js 16, Supabase e pagamenti Stripe, con interfaccia bilingue IT/EN.</p>
-      <ul class="ghp-tags" aria-label="Stack tecnologico" data-i18n-aria-label="ghp.tags.aria">
-        <li><img src="https://cdn.simpleicons.org/nextdotjs/FFFFFF" alt="" loading="lazy">Next.js</li>
-        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" alt="" loading="lazy">Supabase</li>
-        <li><img src="https://cdn.simpleicons.org/stripe/635BFF" alt="" loading="lazy">Stripe</li>
-        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="" loading="lazy">TypeScript</li>
-      </ul>
-      <div class="ghp-links">
-        <a class="ghp-link ghp-link-live" href="https://agenda-easy-it.vercel.app" target="_blank" rel="noopener noreferrer"><span data-i18n="ghp.live">Demo live</span><span aria-hidden="true"> ↗</span></a>
-        <a class="ghp-link" href="https://github.com/kallebesiqueira-dev/agenda-easy-it" target="_blank" rel="noopener noreferrer"><span data-i18n="ghp.code">Codice sorgente</span><span aria-hidden="true"> ↗</span></a>
+    </section>
+
+    <section class="exp shell" id="esperienza">
+      <div class="exp-card">
+        <div class="stage" data-scene="exp" aria-hidden="true"></div>
+        <p class="kicker" data-i18n="exp.kicker">Esperienza</p>
+        <h2 class="display">
+          <span class="line"><span data-i18n="exp.h1">Dove sta il lavoro.</span></span>
+        </h2>
+        <ol class="timeline">
+          <li>
+            <span class="when" data-i18n="exp.now">Oggi</span>
+            <span class="dot" aria-hidden="true"></span>
+            <div>
+              <h3>CTRL Agency</h3>
+              <p class="role" data-i18n="exp.r1">Co-founder, backend</p>
+              <p data-i18n="exp.r1d">Prodotto, siti e software con lo studio. Architettura, API e i sistemi che il team manda in produzione.</p>
+              <a class="text-link" href="https://www.ctrlagency.dev/" target="_blank" rel="noopener noreferrer">ctrlagency.dev</a>
+            </div>
+          </li>
+          <li>
+            <span class="when" data-i18n="exp.prod">In produzione</span>
+            <span class="dot" aria-hidden="true"></span>
+            <div>
+              <h3 data-i18n="exp.r2">Prodotti propri</h3>
+              <p class="role" data-i18n="exp.r2r">Progetto e sviluppo</p>
+              <p data-i18n="exp.r2d">Agenda Easy, CRM Gallo, Inbox AI e gli altri sistemi in questa pagina.</p>
+            </div>
+          </li>
+        </ol>
       </div>
-    </article>
+    </section>
 
-    <article class="ghp-card">
-      <div class="ghp-card-top">
-        <span class="ghp-type" data-i18n="ghp.type.inbox">Automazione AI</span>
+    <section class="talk shell" id="contatti">
+      <div class="talk-card on-paper">
+        <div class="stage" data-scene="contact" aria-hidden="true"></div>
+        <p class="kicker" data-i18n="talk.kicker">Contatto</p>
+        <h2 class="display">
+          <span class="line"><span data-i18n="talk.h1">Parliamone.</span></span>
+        </h2>
+        <p class="talk-lead" data-i18n="talk.lead">Un ruolo, un prodotto, una collaborazione. Si parte dal concreto.</p>
+        <a class="mail" href="mailto:kallebesiqueira@gmail.com">kallebesiqueira@gmail.com</a>
+        <ul class="socials">
+          <li><a href="https://www.linkedin.com/in/kallebe-gallo-a55b01211" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="https://github.com/kallebesiqueira-dev" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://wa.me/41782307853" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+        </ul>
+        <p class="legal" data-i18n="footer.copy">© 2026 Kallebe Gallo</p>
       </div>
-      <h3>Inbox AI</h3>
-      <p data-i18n="ghp.desc.inbox">Automazione email AI per back office B2B: classifica i messaggi, genera bozze di risposta e fa emergere opportunità commerciali.</p>
-      <ul class="ghp-tags" aria-label="Stack tecnologico" data-i18n-aria-label="ghp.tags.aria">
-        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="" loading="lazy">TypeScript</li>
-        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="" loading="lazy">Node.js</li>
-        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="" loading="lazy">React</li>
-        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/playwright/playwright-original.svg" alt="" loading="lazy">Playwright</li>
-        <li><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23a78bfa'%3E%3Cpath d='M4 3h6a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm10 0h6a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zM9 13h6a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1z'/%3E%3C/svg%3E" alt="" loading="lazy">Monorepo</li>
-      </ul>
-      <div class="ghp-links">
-        <a class="ghp-link ghp-link-live" href="https://inbox-ai-client-gamma.vercel.app" target="_blank" rel="noopener noreferrer"><span data-i18n="ghp.live">Demo live</span><span aria-hidden="true"> ↗</span></a>
-        <a class="ghp-link" href="https://github.com/kallebesiqueira-dev/Inbox-AI" target="_blank" rel="noopener noreferrer"><span data-i18n="ghp.code">Codice sorgente</span><span aria-hidden="true"> ↗</span></a>
+    </section>
+  </main>
+
+  <div class="support" id="support">
+    <div class="support-panel" id="support-panel" role="dialog" aria-modal="true" aria-labelledby="support-title" hidden>
+      <div class="support-glow" aria-hidden="true"></div>
+      <header class="support-head">
+        <span class="support-avatar" aria-hidden="true"><i></i><i></i></span>
+        <div>
+          <strong id="support-title">Kallebe</strong>
+          <small data-i18n="chat.status">Online</small>
+        </div>
+        <button class="panel-x" type="button" data-close data-i18n-label="chat.close" aria-label="Chiudi la chat">×</button>
+      </header>
+      <div class="support-log" id="support-log">
+        <div class="bubble">
+          <span class="dots" id="support-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <p class="greet-text" id="support-greet"></p>
+        </div>
       </div>
-    </article>
-
-    <article class="ghp-card">
-      <div class="ghp-card-top">
-        <span class="ghp-type" data-i18n="ghp.type.prof">EdTech AI</span>
+      <div class="chips" role="group" data-i18n-label="chat.chips" aria-label="Risposte rapide">
+        <button type="button" class="chip" data-msg-key="msg.quote" data-i18n="chip.quote">Preventivo</button>
+        <button type="button" class="chip" data-msg-key="msg.work" data-i18n="chip.work">Progetti</button>
+        <button type="button" class="chip" data-msg-key="msg.contact" data-i18n="chip.contact">Contatti</button>
       </div>
-      <h3>Alívio do Professor</h3>
-      <p data-i18n="ghp.desc.prof">SaaS di correzione automatica per insegnanti: layer LLM provider-agnostic (OpenAI, Anthropic, Groq) su Next.js e Supabase.</p>
-      <ul class="ghp-tags" aria-label="Stack tecnologico" data-i18n-aria-label="ghp.tags.aria">
-        <li><img src="https://cdn.simpleicons.org/nextdotjs/FFFFFF" alt="" loading="lazy">Next.js</li>
-        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" alt="" loading="lazy">Supabase</li>
-        <li><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.1419.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997z'/%3E%3C/svg%3E" alt="" loading="lazy">OpenAI</li>
-        <li><img src="https://cdn.simpleicons.org/anthropic/D97757" alt="" loading="lazy">Anthropic</li>
-        <li><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23F55036'%3E%3Cpath d='M9 2h2v3h2V2h2v3h2a2 2 0 0 1 2 2v2h3v2h-3v2h3v2h-3v2a2 2 0 0 1-2 2h-2v3h-2v-3h-2v3H9v-3H7a2 2 0 0 1-2-2v-2H2v-2h3v-2H2V9h3V7a2 2 0 0 1 2-2h2V2zm-2 5v10h10V7H7zm3 3h4v4h-4v-4z'/%3E%3C/svg%3E" alt="" loading="lazy">Groq</li>
-      </ul>
-      <div class="ghp-links">
-        <a class="ghp-link" href="https://github.com/kallebesiqueira-dev/alivio-do-professor" target="_blank" rel="noopener noreferrer"><span data-i18n="ghp.code">Codice sorgente</span><span aria-hidden="true"> ↗</span></a>
-      </div>
-    </article>
-
-    <article class="ghp-card">
-      <div class="ghp-card-top">
-        <span class="ghp-type" data-i18n="ghp.type.pharma">Chatbot AI</span>
-      </div>
-      <h3>Farmacia Chatbot</h3>
-      <p data-i18n="ghp.desc.pharma">Assistente AI per farmacie: backend Python con interfaccia chat per informazioni rapide su farmaci e punti vendita.</p>
-      <ul class="ghp-tags" aria-label="Stack tecnologico" data-i18n-aria-label="ghp.tags.aria">
-        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" loading="lazy">Python</li>
-        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" loading="lazy">JavaScript</li>
-        <li><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2338bdf8'%3E%3Cpath d='M5 2h14a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H10l-5 4a1 1 0 0 1-1.63-.78V17a3 3 0 0 1-1.37-2.5V5a3 3 0 0 1 3-3zm2 5a1 1 0 1 0 0 2h10a1 1 0 1 0 0-2H7zm0 4a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2H7z'/%3E%3C/svg%3E" alt="" loading="lazy">Conversational AI</li>
-      </ul>
-      <div class="ghp-links">
-        <a class="ghp-link ghp-link-live" href="https://famarcia-chatbot.vercel.app" target="_blank" rel="noopener noreferrer"><span data-i18n="ghp.live">Demo live</span><span aria-hidden="true"> ↗</span></a>
-        <a class="ghp-link" href="https://github.com/kallebesiqueira-dev/famarcia_chatbot" target="_blank" rel="noopener noreferrer"><span data-i18n="ghp.code">Codice sorgente</span><span aria-hidden="true"> ↗</span></a>
-      </div>
-    </article>
-  </div>
-
-  <div class="ghp-cta-row">
-    <a class="ghp-cta" href="https://github.com/kallebesiqueira-dev" target="_blank" rel="noopener noreferrer">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M12 2C6.48 2 2 6.58 2 12.23c0 4.51 2.87 8.33 6.84 9.68.5.1.66-.22.66-.49 0-.24-.01-.88-.01-1.73-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .07 1.54 1.06 1.54 1.06.9 1.56 2.35 1.11 2.92.85.09-.67.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.08 0-1.12.39-2.03 1.03-2.75-.11-.26-.45-1.3.1-2.72 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 7.09a9.3 9.3 0 0 1 2.5.35c1.9-1.32 2.74-1.05 2.74-1.05.56 1.42.21 2.46.1 2.72.64.72 1.02 1.63 1.02 2.75 0 3.95-2.34 4.81-4.58 5.07.36.32.69.93.69 1.88 0 1.36-.01 2.46-.01 2.8 0 .27.17.6.67.49A10.26 10.26 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"/>
-      </svg>
-      <span data-i18n="ghp.cta">Tutti i repository su GitHub</span>
-    </a>
-  </div>
-</section>
-
-
-
-<section class="reviews" id="avaliacoes">
-  <h2 data-i18n="reviews.title">Recensioni</h2>
-  <p data-i18n="reviews.subtitle">Feedback reali in stile Google da clienti e collaboratori.</p>
-
-  <div class="reviews-marquee" aria-label="Recensioni clienti" data-i18n-aria-label="reviews.aria">
-    <div class="reviews-track">
-      <article class="review-card">
-        <div class="review-head">
-          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Marco Bianchi">
-          <div>
-            <h3>Marco Bianchi</h3>
-            <span>CEO • Studio MB</span>
-          </div>
-        </div>
-        <div class="review-stars" aria-label="5 stelle">★★★★★</div>
-        <p>Professionale, veloce e preciso. Il nuovo sito ha aumentato conversioni e credibilità del brand.</p>
-        <small>Recensione Google</small>
-      </article>
-
-      <article class="review-card">
-        <div class="review-head">
-          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Giulia Rossi">
-          <div>
-            <h3>Giulia Rossi</h3>
-            <span>Marketing Manager</span>
-          </div>
-        </div>
-        <div class="review-stars" aria-label="5 stelle">★★★★★</div>
-        <p>Design premium e performance eccellente. Collaborazione impeccabile dall’inizio alla consegna.</p>
-        <small>Recensione Google</small>
-      </article>
-
-      <article class="review-card">
-        <div class="review-head">
-          <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Luca Moretti">
-          <div>
-            <h3>Luca Moretti</h3>
-            <span>Founder • LM Tech</span>
-          </div>
-        </div>
-        <div class="review-stars" aria-label="5 stelle">★★★★★</div>
-        <p>Ha trasformato la nostra idea in una piattaforma moderna, stabile e orientata ai risultati.</p>
-        <small>Recensione Google</small>
-      </article>
-
-      <article class="review-card">
-        <div class="review-head">
-          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Francesca Conti">
-          <div>
-            <h3>Francesca Conti</h3>
-            <span>Project Lead</span>
-          </div>
-        </div>
-        <div class="review-stars" aria-label="5 stelle">★★★★★</div>
-        <p>Ottima comunicazione, attenzione ai dettagli e soluzioni tecniche di alto livello.</p>
-        <small>Recensione Google</small>
-      </article>
-
-      <article class="review-card">
-        <div class="review-head">
-          <img src="https://randomuser.me/api/portraits/men/71.jpg" alt="Davide Greco">
-          <div>
-            <h3>Davide Greco</h3>
-            <span>COO • DG Consulting</span>
-          </div>
-        </div>
-        <div class="review-stars" aria-label="5 stelle">★★★★★</div>
-        <p>Codice pulito, tempi rispettati e grande visione strategica. Esperienza davvero top.</p>
-        <small>Recensione Google</small>
-      </article>
-
-      <article class="review-card">
-        <div class="review-head">
-          <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Alessia Romano">
-          <div>
-            <h3>Alessia Romano</h3>
-            <span>Creative Director</span>
-          </div>
-        </div>
-        <div class="review-stars" aria-label="5 stelle">★★★★★</div>
-        <p>UX elegante e intuitiva. Il risultato finale supera nettamente le aspettative iniziali.</p>
-        <small>Recensione Google</small>
-      </article>
-
-      <article class="review-card">
-        <div class="review-head">
-          <img src="https://randomuser.me/api/portraits/men/19.jpg" alt="Stefano Villa">
-          <div>
-            <h3>Stefano Villa</h3>
-            <span>Product Manager</span>
-          </div>
-        </div>
-        <div class="review-stars" aria-label="5 stelle">★★★★★</div>
-        <p>Perfetto equilibrio tra tecnologia e design. Lavoro serio, rapido e orientato al business.</p>
-        <small>Recensione Google</small>
-      </article>
-
-      <article class="review-card">
-        <div class="review-head">
-          <img src="https://randomuser.me/api/portraits/women/39.jpg" alt="Martina Neri">
-          <div>
-            <h3>Martina Neri</h3>
-            <span>E-commerce Specialist</span>
-          </div>
-        </div>
-        <div class="review-stars" aria-label="5 stelle">★★★★★</div>
-        <p>Incremento misurabile delle vendite online dopo il redesign. Competenza straordinaria.</p>
-        <small>Recensione Google</small>
-      </article>
-
-      <article class="review-card">
-        <div class="review-head">
-          <img src="https://randomuser.me/api/portraits/men/58.jpg" alt="Andrea Serra">
-          <div>
-            <h3>Andrea Serra</h3>
-            <span>Founder • AS Digital</span>
-          </div>
-        </div>
-        <div class="review-stars" aria-label="5 stelle">★★★★★</div>
-        <p>Supporto costante e qualità premium. Ogni dettaglio è stato curato in modo impeccabile.</p>
-        <small>Recensione Google</small>
-      </article>
-
-      <article class="review-card">
-        <div class="review-head">
-          <img src="https://randomuser.me/api/portraits/women/77.jpg" alt="Valentina Gallo">
-          <div>
-            <h3>Valentina Gallo</h3>
-            <span>Brand Strategist</span>
-          </div>
-        </div>
-        <div class="review-stars" aria-label="5 stelle">★★★★★</div>
-        <p>Implementazione moderna, SEO curata e performance elevate. Consigliatissimo.</p>
-        <small>Recensione Google</small>
-      </article>
-
-      <article class="review-card" aria-hidden="true">
-        <div class="review-head">
-          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="">
-          <div>
-            <h3>Marco Bianchi</h3>
-            <span>CEO • Studio MB</span>
-          </div>
-        </div>
-        <div class="review-stars">★★★★★</div>
-        <p>Professionale, veloce e preciso. Il nuovo sito ha aumentato conversioni e credibilità del brand.</p>
-        <small>Recensione Google</small>
-      </article>
-
-      <article class="review-card" aria-hidden="true">
-        <div class="review-head">
-          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="">
-          <div>
-            <h3>Giulia Rossi</h3>
-            <span>Marketing Manager</span>
-          </div>
-        </div>
-        <div class="review-stars">★★★★★</div>
-        <p>Design premium e performance eccellente. Collaborazione impeccabile dall’inizio alla consegna.</p>
-        <small>Recensione Google</small>
-      </article>
-
-      <article class="review-card" aria-hidden="true">
-        <div class="review-head">
-          <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="">
-          <div>
-            <h3>Luca Moretti</h3>
-            <span>Founder • LM Tech</span>
-          </div>
-        </div>
-        <div class="review-stars">★★★★★</div>
-        <p>Ha trasformato la nostra idea in una piattaforma moderna, stabile e orientata ai risultati.</p>
-        <small>Recensione Google</small>
-      </article>
-
-      <article class="review-card" aria-hidden="true">
-        <div class="review-head">
-          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="">
-          <div>
-            <h3>Francesca Conti</h3>
-            <span>Project Lead</span>
-          </div>
-        </div>
-        <div class="review-stars">★★★★★</div>
-        <p>Ottima comunicazione, attenzione ai dettagli e soluzioni tecniche di alto livello.</p>
-        <small>Recensione Google</small>
-      </article>
-
-      <article class="review-card" aria-hidden="true">
-        <div class="review-head">
-          <img src="https://randomuser.me/api/portraits/men/71.jpg" alt="">
-          <div>
-            <h3>Davide Greco</h3>
-            <span>COO • DG Consulting</span>
-          </div>
-        </div>
-        <div class="review-stars">★★★★★</div>
-        <p>Codice pulito, tempi rispettati e grande visione strategica. Esperienza davvero top.</p>
-        <small>Recensione Google</small>
-      </article>
-
-      <article class="review-card" aria-hidden="true">
-        <div class="review-head">
-          <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="">
-          <div>
-            <h3>Alessia Romano</h3>
-            <span>Creative Director</span>
-          </div>
-        </div>
-        <div class="review-stars">★★★★★</div>
-        <p>UX elegante e intuitiva. Il risultato finale supera nettamente le aspettative iniziali.</p>
-        <small>Recensione Google</small>
-      </article>
-
-      <article class="review-card" aria-hidden="true">
-        <div class="review-head">
-          <img src="https://randomuser.me/api/portraits/men/19.jpg" alt="">
-          <div>
-            <h3>Stefano Villa</h3>
-            <span>Product Manager</span>
-          </div>
-        </div>
-        <div class="review-stars">★★★★★</div>
-        <p>Perfetto equilibrio tra tecnologia e design. Lavoro serio, rapido e orientato al business.</p>
-        <small>Recensione Google</small>
-      </article>
-
-      <article class="review-card" aria-hidden="true">
-        <div class="review-head">
-          <img src="https://randomuser.me/api/portraits/women/39.jpg" alt="">
-          <div>
-            <h3>Martina Neri</h3>
-            <span>E-commerce Specialist</span>
-          </div>
-        </div>
-        <div class="review-stars">★★★★★</div>
-        <p>Incremento misurabile delle vendite online dopo il redesign. Competenza straordinaria.</p>
-        <small>Recensione Google</small>
-      </article>
-
-      <article class="review-card" aria-hidden="true">
-        <div class="review-head">
-          <img src="https://randomuser.me/api/portraits/men/58.jpg" alt="">
-          <div>
-            <h3>Andrea Serra</h3>
-            <span>Founder • AS Digital</span>
-          </div>
-        </div>
-        <div class="review-stars">★★★★★</div>
-        <p>Supporto costante e qualità premium. Ogni dettaglio è stato curato in modo impeccabile.</p>
-        <small>Recensione Google</small>
-      </article>
-
-      <article class="review-card" aria-hidden="true">
-        <div class="review-head">
-          <img src="https://randomuser.me/api/portraits/women/77.jpg" alt="">
-          <div>
-            <h3>Valentina Gallo</h3>
-            <span>Brand Strategist</span>
-          </div>
-        </div>
-        <div class="review-stars">★★★★★</div>
-        <p>Implementazione moderna, SEO curata e performance elevate. Consigliatissimo.</p>
-        <small>Recensione Google</small>
-      </article>
-    </div>
-  </div>
-</section>
-
-
-<footer class="site-footer">
-  <div class="footer-top">
-    <a href="#" class="footer-brand">Kallebe <span>Gallo</span></a>
-    <a href="mailto:kallebesiqueira@gmail.com" class="footer-email">kallebesiqueira@gmail.com</a>
-  </div>
-
-  <div class="footer-grid">
-    <div class="footer-col footer-about">
-      <p data-i18n="footer.about">Sviluppo web moderno, performante e orientato ai risultati per aziende e professionisti.</p>
-      <a href="#avaliacoes" class="footer-cta" data-i18n="footer.cta">Recensioni</a>
-    </div>
-
-    <div class="footer-col">
-      <h4 data-i18n="footer.nav.title">Navigazione</h4>
-      <a href="#sobre" data-i18n="footer.nav.about">Chi sono</a>
-      <a href="#skills-container" data-i18n="footer.nav.skills">Competenze</a>
-      <a href="#progetti-live" data-i18n="footer.nav.projects">Progetti</a>
-      <a href="#avaliacoes" data-i18n="footer.nav.reviews">Recensioni</a>
-    </div>
-
-    <div class="footer-col">
-      <h4 data-i18n="footer.contact.title">Contatti</h4>
-      <a href="mailto:kallebesiqueira@gmail.com" data-i18n="footer.contact.email">Email</a>
-      <a href="https://www.linkedin.com/in/kallebe-gallo-a55b01211" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://github.com/kallebesiqueira-dev" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="#" data-i18n="footer.contact.freelance">Disponibilità freelance</a>
-    </div>
-
-    <div class="footer-col footer-newsletter">
-      <h4 data-i18n="footer.news.title">Newsletter</h4>
-      <p data-i18n="footer.news.desc">Ricevi aggiornamenti su nuovi progetti e tecnologie.</p>
-      <form class="newsletter-form" action="#" method="post">
-        <input type="email" placeholder="Inserisci la tua email" aria-label="Email newsletter" data-i18n-placeholder="footer.news.placeholder" data-i18n-aria-label="footer.news.aria">
-        <button type="submit" aria-label="Invia email" data-i18n-aria-label="footer.news.send">→</button>
+      <form class="composer" id="support-form">
+        <label class="sr" for="support-text" data-i18n="chat.field">Messaggio</label>
+        <input id="support-text" type="text" maxlength="400" autocomplete="off" data-i18n-placeholder="chat.placeholder" placeholder="Scrivi un messaggio">
+        <button class="btn btn-small" type="submit" data-i18n="chat.send">Invia</button>
       </form>
     </div>
+    <button class="eye-launcher" id="eye-launcher" type="button" aria-expanded="false" aria-controls="support-panel" data-i18n-label="chat.open" aria-label="Apri la chat di supporto">
+      <span class="eye-face" aria-hidden="true">
+        <span class="eye-ball"><span class="pupil"></span></span>
+        <span class="eye-ball"><span class="pupil"></span></span>
+      </span>
+    </button>
   </div>
 
-  <div class="footer-bottom">
-    <p><span data-i18n="footer.copy">© 2026 Kallebe Gallo</span></p>
-
-    <div class="footer-socials" aria-label="Social media">
-      <a href="https://www.linkedin.com/in/kallebe-gallo-a55b01211" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M6.94 8.5H3.56V20h3.38V8.5Zm.22-3.56c0-1.06-.8-1.94-1.91-1.94S3.34 3.88 3.34 4.94c0 1.04.79 1.91 1.89 1.91h.02c1.12 0 1.91-.87 1.91-1.91ZM20.66 13.41c0-3.38-1.8-4.95-4.21-4.95-1.94 0-2.8 1.07-3.28 1.82V8.5H9.79c.05 1.18 0 11.5 0 11.5h3.38v-6.42c0-.34.02-.68.13-.92.27-.68.89-1.38 1.93-1.38 1.36 0 1.9 1.04 1.9 2.57V20h3.38v-6.59Z"/>
-        </svg>
-      </a>
-      <a href="https://github.com/kallebesiqueira-dev" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M12 2C6.48 2 2 6.58 2 12.23c0 4.51 2.87 8.33 6.84 9.68.5.1.66-.22.66-.49 0-.24-.01-.88-.01-1.73-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .07 1.54 1.06 1.54 1.06.9 1.56 2.35 1.11 2.92.85.09-.67.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.08 0-1.12.39-2.03 1.03-2.75-.11-.26-.45-1.3.1-2.72 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 7.09a9.3 9.3 0 0 1 2.5.35c1.9-1.32 2.74-1.05 2.74-1.05.56 1.42.21 2.46.1 2.72.64.72 1.02 1.63 1.02 2.75 0 3.95-2.34 4.81-4.58 5.07.36.32.69.93.69 1.88 0 1.36-.01 2.46-.01 2.8 0 .27.17.6.67.49A10.26 10.26 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"/>
-        </svg>
-      </a>
-    </div>
-  </div>
-</footer>
-
-<a class="whatsapp-float" href="https://wa.me/41782307853" target="_blank" rel="noopener noreferrer" aria-label="Contatta su WhatsApp" data-i18n-aria-label="whatsapp.aria">
-  <svg viewBox="0 0 24 24" aria-hidden="true">
-    <path d="M20.52 3.48A11.83 11.83 0 0 0 12.09 0C5.53 0 .2 5.33.2 11.88c0 2.1.55 4.15 1.59 5.97L0 24l6.33-1.75a11.82 11.82 0 0 0 5.75 1.47h.01c6.55 0 11.88-5.33 11.88-11.88a11.8 11.8 0 0 0-3.45-8.36ZM12.1 21.7h-.01a9.8 9.8 0 0 1-4.99-1.36l-.36-.21-3.76 1.04 1-3.66-.23-.38a9.84 9.84 0 0 1-1.51-5.25C2.24 6.44 6.66 2.02 12.1 2.02c2.63 0 5.1 1.02 6.96 2.88a9.76 9.76 0 0 1 2.88 6.95c0 5.44-4.43 9.86-9.85 9.86Zm5.4-7.38c-.29-.15-1.72-.85-1.99-.95-.27-.1-.46-.15-.65.15-.19.29-.75.95-.92 1.14-.17.19-.34.22-.63.07-.29-.15-1.24-.46-2.35-1.47-.87-.77-1.46-1.73-1.63-2.02-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.65-1.57-.89-2.15-.23-.56-.47-.48-.65-.49h-.56c-.19 0-.51.07-.77.36-.27.29-1.02.99-1.02 2.42s1.04 2.81 1.19 3.01c.15.19 2.04 3.11 4.95 4.36.69.3 1.24.48 1.66.61.7.22 1.33.19 1.83.11.56-.08 1.72-.7 1.96-1.38.24-.68.24-1.26.17-1.38-.07-.12-.27-.19-.56-.34Z"/>
-  </svg>
-</a>
-
-<script>
-const translations = {
-  it: {
-    pageTitle: 'Kallebe Gallo — AI Full Stack Developer',
-    'nav.about': 'Chi sono',
-    'nav.skills': 'Competenze',
-    'nav.projects': 'Progetti',
-    'nav.reviews': 'Recensioni',
-    'lang.it': 'Italiano',
-    'lang.de': 'Deutsch',
-    'lang.fr': 'Français',
-    'lang.en': 'English',
-    'hero.role': 'AI Full Stack Developer',
-    'hero.tagline': 'Applicazioni web intelligenti — LLM, RAG e automazioni che generano risultati.',
-    'about.title': 'Chi sono',
-    'about.p1': 'Sono Kallebe Gallo, AI Full Stack Developer con un approccio metodico, orientato alla qualità del codice e ai risultati misurabili. Unisco lo sviluppo web full stack all’intelligenza artificiale per trasformare idee e specifiche tecniche in prodotti digitali intelligenti, stabili e scalabili, riducendo il debito tecnico e accelerando il time-to-market.',
-    'about.p2': 'La mia esperienza copre l’intero ciclo di vita di un progetto web: dall’analisi dei requisiti e dalla progettazione dell’architettura, allo sviluppo frontend e backend, fino al deploy, al monitoraggio e alla manutenzione evolutiva. Lavoro quotidianamente con HTML5, CSS3, JavaScript, TypeScript, React, Next.js, Node.js, PostgreSQL, MongoDB, Docker e flussi Git professionali, applicando metodologie Agile e Scrum.',
-    'about.p3': 'Nel frontend curo ogni dettaglio dell’esperienza utente: tipografia, accessibilità (WCAG), responsive design, micro-interazioni e ottimizzazione delle Core Web Vitals. Le interfacce che progetto sono veloci, leggibili, coerenti con l’identità del brand e ingegnerizzate per convertire, garantendo punteggi Lighthouse elevati e una SEO tecnica solida.',
-    'about.p4': 'Nel backend costruisco API REST sicure, gestisco autenticazione, autorizzazione, integrazioni con servizi terzi e database relazionali e NoSQL. Adotto pattern collaudati, test automatizzati, code review e principi di clean code per consegnare prodotti affidabili anche sotto carico, con un occhio attento a sicurezza, scalabilità e manutenibilità.',
-    'about.p5': 'Ho una mentalità orientata al business: capisco gli obiettivi del cliente prima di scrivere una riga di codice. Comunico in modo chiaro, rispetto le scadenze, gestisco le priorità e propongo soluzioni concrete invece di sollevare problemi. Sono autonomo nella gestione delle attività e mi inserisco con naturalezza in team distribuiti, lavorando con designer, product owner e stakeholder non tecnici.',
-    'about.p6': 'Parlo italiano, inglese, francese, tedesco e portoghese, il che mi permette di operare senza attriti in contesti internazionali e di gestire interlocutori diversi. La formazione continua mi tiene aggiornato sulle tecnologie più richieste dal mercato e sulle best practice del settore, dall’architettura serverless ai framework di nuova generazione, passando per DevOps e accessibilità.',
-    'about.p7': 'Per recruiter, hiring manager e CTO che stanno leggendo: cerco realtà ambiziose in cui contribuire fin dal primo giorno con codice pulito, attenzione ai dettagli e una forte etica del lavoro. Sono disponibile per ruoli full-time, contratti freelance e collaborazioni a lungo termine, in presenza, ibrido o full remote. Parliamone: il prossimo progetto solido inizia da una conversazione concreta.',
-    'skillsIntro.title': 'Competenze AI Full Stack Developer',
-    'skillsIntro.p1': 'L’AI Full Stack Developer è una figura professionale completa, capace di gestire l’intero processo di sviluppo di un progetto web — dal design dell’interfaccia alla logica lato server e ai database — integrando l’intelligenza artificiale dove genera reale valore.',
-    'skillsIntro.p2': 'Nel frontend si occupa della realizzazione di siti e applicazioni moderne, responsive e orientate all’esperienza utente, utilizzando tecnologie come HTML, CSS e JavaScript. Nel backend sviluppa la struttura che permette al sistema di funzionare in modo sicuro ed efficiente, creando API, gestendo database e implementando sistemi di autenticazione.',
-    'skillsIntro.p3': 'Oltre alle competenze tecniche, un Full Stack Developer possiede capacità di problem solving, organizzazione e comunicazione con il cliente, garantendo soluzioni digitali complete, performanti e scalabili.',
-    'skillsIntro.p4': 'È una figura strategica per aziende che desiderano sviluppare progetti web professionali con un unico referente tecnico competente e affidabile.',
-    'skillsIntro.stack': 'Tecnologie principali',
-    'skillsIntro.ai1': 'Come AI Full Stack Developer porto l’intelligenza artificiale dentro il prodotto: integro modelli LLM (OpenAI, Anthropic Claude), costruisco assistenti conversazionali, pipeline RAG con database vettoriali, automazioni intelligenti e funzionalità data-driven che trasformano un’app in un prodotto realmente differenziante.',
-    'skillsIntro.ai2': 'Progetto l’architettura end-to-end di soluzioni AI: prompt engineering, orchestrazione con LangChain, embedding e ricerca semantica, fine-tuning leggero, gestione dei costi token e deploy sicuro in produzione — sempre con attenzione a privacy, affidabilità delle risposte e misurabilità dei risultati.',
-    'skillsIntro.aiStack': 'AI & Machine Learning',
-    'skillsIntro.tag.rag': 'RAG',
-    'skillsIntro.tag.llm': 'Integrazione LLM',
-    'skillsIntro.tag.prompt': 'Prompt Engineering',
-    'skillsIntro.tag.embeddings': 'Embeddings & Ricerca semantica',
-    'skillsIntro.tag.agents': 'AI Agents',
-    'skillsIntro.tag.automation': 'Automazioni AI',
-    'skills.title': 'Le mie competenze',
-    'skills.subtitle': 'Principali aree di attività e conoscenze tecniche.',
-    'specialties.title': 'Specialità',
-    'specialties.frontend.title': 'Frontend',
-    'specialties.frontend.desc': 'HTML5, CSS3, JavaScript, TypeScript, React, Next.js, UX/UI moderno',
-    'specialties.backend.title': 'Backend',
-    'specialties.backend.desc': 'Node.js, API REST, autenticazione, sicurezza, architettura scalabile',
-    'specialties.performance.title': 'Performance',
-    'specialties.performance.desc': 'SEO tecnico, ottimizzazione, accessibilità e migliori pratiche',
-    'specialties.tools.title': 'Strumenti',
-    'specialties.tools.desc': 'Git, Docker, CI/CD, cloud e workflow moderni',
-    'ghp.title': 'Progetti principali',
-    'ghp.subtitle': 'Prodotti reali sviluppati end-to-end: codice aperto su GitHub, demo live e sistemi in produzione.',
-    'ghp.type.crm': 'SaaS multi-tenant',
-    'ghp.type.inbox': 'Automazione AI',
-    'ghp.type.prof': 'EdTech AI',
-    'ghp.type.pharma': 'Chatbot AI',
-    'ghp.type.agenda': 'SaaS prenotazioni',
-    'ghp.badge.prod': 'In produzione',
-    'ghp.desc.crm': 'CRM multi-tenant in produzione: FastAPI, Next.js, row-level security su PostgreSQL, billing Stripe e interfaccia in 7 lingue.',
-    'ghp.desc.inbox': 'Automazione email AI per back office B2B: classifica i messaggi, genera bozze di risposta e fa emergere opportunità commerciali.',
-    'ghp.desc.prof': 'SaaS di correzione automatica per insegnanti: layer LLM provider-agnostic (OpenAI, Anthropic, Groq) su Next.js e Supabase.',
-    'ghp.desc.pharma': 'Assistente AI per farmacie: backend Python con interfaccia chat per informazioni rapide su farmaci e punti vendita.',
-    'ghp.desc.agenda': 'SaaS di prenotazioni online per attività e professionisti: Next.js 16, Supabase e pagamenti Stripe, con interfaccia bilingue IT/EN.',
-    'ghp.live': 'Demo live',
-    'ghp.code': 'Codice sorgente',
-    'ghp.cta': 'Tutti i repository su GitHub',
-    'ghp.tags.aria': 'Stack tecnologico',
-    'reviews.title': 'Recensioni',
-    'reviews.subtitle': 'Feedback reali in stile Google da clienti e collaboratori.',
-    'reviews.aria': 'Recensioni clienti',
-    'reviews.stars': '5 stelle',
-    'reviews.source': 'Recensione Google',
-    'reviews.role1': 'CEO • Studio MB',
-    'reviews.role2': 'Marketing Manager',
-    'reviews.role3': 'Founder • LM Tech',
-    'reviews.role4': 'Project Lead',
-    'reviews.role5': 'COO • DG Consulting',
-    'reviews.role6': 'Creative Director',
-    'reviews.role7': 'Product Manager',
-    'reviews.role8': 'E-commerce Specialist',
-    'reviews.role9': 'Founder • AS Digital',
-    'reviews.role10': 'Brand Strategist',
-    'reviews.text1': 'Professionale, veloce e preciso. Il nuovo sito ha aumentato conversioni e credibilità del brand.',
-    'reviews.text2': 'Design premium e performance eccellente. Collaborazione impeccabile dall’inizio alla consegna.',
-    'reviews.text3': 'Ha trasformato la nostra idea in una piattaforma moderna, stabile e orientata ai risultati.',
-    'reviews.text4': 'Ottima comunicazione, attenzione ai dettagli e soluzioni tecniche di alto livello.',
-    'reviews.text5': 'Codice pulito, tempi rispettati e grande visione strategica. Esperienza davvero top.',
-    'reviews.text6': 'UX elegante e intuitiva. Il risultato finale supera nettamente le aspettative iniziali.',
-    'reviews.text7': 'Perfetto equilibrio tra tecnologia e design. Lavoro serio, rapido e orientato al business.',
-    'reviews.text8': 'Incremento misurabile delle vendite online dopo il redesign. Competenza straordinaria.',
-    'reviews.text9': 'Supporto costante e qualità premium. Ogni dettaglio è stato curato in modo impeccabile.',
-    'reviews.text10': 'Implementazione moderna, SEO curata e performance elevate. Consigliatissimo.',
-    'footer.about': 'Sviluppo web moderno, performante e orientato ai risultati per aziende e professionisti.',
-    'footer.cta': 'Recensioni',
-    'footer.nav.title': 'Navigazione',
-    'footer.nav.about': 'Chi sono',
-    'footer.nav.skills': 'Competenze',
-    'footer.nav.projects': 'Progetti',
-    'footer.nav.reviews': 'Recensioni',
-    'footer.contact.title': 'Contatti',
-    'footer.contact.email': 'Email',
-    'footer.contact.freelance': 'Disponibilità freelance',
-    'footer.news.title': 'Newsletter',
-    'footer.news.desc': 'Ricevi aggiornamenti su nuovi progetti e tecnologie.',
-    'footer.news.placeholder': 'Inserisci la tua email',
-    'footer.news.aria': 'Email newsletter',
-    'footer.news.send': 'Invia email',
-    'footer.copy': '© 2026 Kallebe Gallo',
-    'hero.scroll': 'Scorri verso il basso',
-    'whatsapp.aria': 'Contatta su WhatsApp',
-    'contact.title': 'Contattami:',
-    'contact.subtitle': 'Parliamo di progetti, idee o opportunità?',
-    'contact.email': 'Email',
-    'footer.text': '© 2026 Kallebe Gallo • AI Full Stack Developer'
-  },
-  de: {
-    pageTitle: 'Kallebe Gallo — AI Full Stack Developer',
-    'nav.about': 'Über mich',
-    'nav.skills': 'Fähigkeiten',
-    'nav.projects': 'Projekte',
-    'nav.reviews': 'Bewertungen',
-    'lang.it': 'Italienisch',
-    'lang.de': 'Deutsch',
-    'lang.fr': 'Französisch',
-    'lang.en': 'Englisch',
-    'hero.role': 'AI Full Stack Developer',
-    'hero.tagline': 'Intelligente Webanwendungen — LLM, RAG und Automatisierungen, die Ergebnisse liefern.',
-    'about.title': 'Über mich',
-    'about.p1': 'Ich bin Kallebe Gallo, AI Full Stack Developer mit einem methodischen, qualitätsorientierten und ergebnisbezogenen Ansatz. Ich verbinde Full-Stack-Webentwicklung mit künstlicher Intelligenz, um Ideen und technische Spezifikationen in intelligente, stabile und skalierbare digitale Produkte zu verwandeln – mit dem Ziel, technische Schulden zu reduzieren und die Time-to-Market zu verkürzen.',
-    'about.p2': 'Meine Erfahrung umfasst den gesamten Lebenszyklus eines Webprojekts: von der Anforderungsanalyse und Architekturplanung über Frontend- und Backend-Entwicklung bis hin zu Deployment, Monitoring und evolutionärer Wartung. Ich arbeite täglich mit HTML5, CSS3, JavaScript, TypeScript, React, Next.js, Node.js, PostgreSQL, MongoDB, Docker und professionellen Git-Workflows und wende Agile- und Scrum-Methoden an.',
-    'about.p3': 'Im Frontend achte ich auf jedes Detail der Benutzererfahrung: Typografie, Barrierefreiheit (WCAG), Responsive Design, Mikrointeraktionen und Optimierung der Core Web Vitals. Die Oberflächen, die ich entwerfe, sind schnell, gut lesbar, markengerecht und auf Conversion ausgelegt – mit hohen Lighthouse-Werten und solidem technischem SEO.',
-    'about.p4': 'Im Backend baue ich sichere REST-APIs, verwalte Authentifizierung und Autorisierung, Integrationen mit Drittanbieterdiensten sowie relationale und NoSQL-Datenbanken. Ich setze bewährte Patterns, automatisierte Tests, Code-Reviews und Clean-Code-Prinzipien ein, um Produkte zu liefern, die auch unter Last zuverlässig bleiben – mit besonderem Augenmerk auf Sicherheit, Skalierbarkeit und Wartbarkeit.',
-    'about.p5': 'Ich denke unternehmerisch: Ich verstehe die Ziele des Kunden, bevor ich eine Zeile Code schreibe. Ich kommuniziere klar, halte Deadlines ein, priorisiere effektiv und liefere konkrete Lösungen statt neuer Probleme. Ich arbeite eigenständig und füge mich nahtlos in verteilte Teams ein – im Austausch mit Designern, Product Ownern und nicht-technischen Stakeholdern.',
-    'about.p6': 'Ich spreche Italienisch, Englisch, Französisch, Deutsch und Portugiesisch, was mir ermöglicht, mich reibungslos in internationale Kontexte zu integrieren und mit unterschiedlichen Ansprechpartnern zu arbeiten. Stetige Weiterbildung hält mich auf dem aktuellen Stand der gefragtesten Technologien und Best Practices – von Serverless-Architekturen über die neueste Framework-Generation bis hin zu DevOps und Accessibility.',
-    'about.p7': 'An Recruiter, Hiring Manager und CTOs, die dies lesen: Ich suche ambitionierte Unternehmen, in denen ich vom ersten Tag an mit sauberem Code, Detailgenauigkeit und starker Arbeitsethik beitragen kann. Ich bin verfügbar für Festanstellung, Freelance-Verträge und langfristige Kooperationen – vor Ort, hybrid oder vollständig remote. Sprechen wir darüber: Das nächste solide Projekt beginnt mit einem konkreten Gespräch.',
-    'skillsIntro.title': 'Kompetenzen AI Full Stack Developer',
-    'skillsIntro.p1': 'Ein AI Full Stack Developer ist ein vielseitiger Profi, der den gesamten Entwicklungsprozess eines Webprojekts steuert – vom Interface-Design über die serverseitige Logik bis zur Datenbankverwaltung – und künstliche Intelligenz dort integriert, wo sie echten Mehrwert schafft.',
-    'skillsIntro.p2': 'Im Frontend entwickelt er moderne, responsive Websites und Anwendungen mit Fokus auf Benutzererlebnis, unter Einsatz von Technologien wie HTML, CSS und JavaScript. Im Backend erstellt er die Struktur für einen sicheren und effizienten Betrieb, entwickelt APIs, verwaltet Datenbanken und implementiert Authentifizierungssysteme.',
-    'skillsIntro.p3': 'Neben technischen Fähigkeiten verfügt ein Full-Stack-Developer über Problemlösungskompetenz, Organisation und klare Kundenkommunikation, um komplette, leistungsstarke und skalierbare digitale Lösungen zu liefern.',
-    'skillsIntro.p4': 'Er ist eine strategische Rolle für Unternehmen, die professionelle Webprojekte mit einem einzigen kompetenten und verlässlichen technischen Ansprechpartner entwickeln möchten.',
-    'skillsIntro.stack': 'Wichtige Technologien',
-    'skillsIntro.ai1': 'Als AI Full Stack Developer bringe ich künstliche Intelligenz direkt ins Produkt: Ich integriere LLM-Modelle (OpenAI, Anthropic Claude), entwickle Konversationsassistenten, RAG-Pipelines mit Vektordatenbanken, intelligente Automatisierungen und datengetriebene Funktionen, die aus einer App ein wirklich differenzierendes Produkt machen.',
-    'skillsIntro.ai2': 'Ich entwerfe die End-to-End-Architektur von KI-Lösungen: Prompt Engineering, Orchestrierung mit LangChain, Embeddings und semantische Suche, leichtes Fine-Tuning, Token-Kostenmanagement und sicheres Deployment in Produktion – stets mit Fokus auf Datenschutz, Zuverlässigkeit der Antworten und Messbarkeit der Ergebnisse.',
-    'skillsIntro.aiStack': 'AI & Machine Learning',
-    'skillsIntro.tag.rag': 'RAG',
-    'skillsIntro.tag.llm': 'LLM-Integration',
-    'skillsIntro.tag.prompt': 'Prompt Engineering',
-    'skillsIntro.tag.embeddings': 'Embeddings & Semantische Suche',
-    'skillsIntro.tag.agents': 'AI Agents',
-    'skillsIntro.tag.automation': 'KI-Automatisierungen',
-    'skills.title': 'Meine Fähigkeiten',
-    'skills.subtitle': 'Wichtigste Tätigkeitsbereiche und technisches Know-how.',
-    'specialties.title': 'Spezialisierungen',
-    'specialties.frontend.title': 'Frontend',
-    'specialties.frontend.desc': 'HTML5, CSS3, JavaScript, TypeScript, React, Next.js, modernes UX/UI',
-    'specialties.backend.title': 'Backend',
-    'specialties.backend.desc': 'Node.js, REST APIs, Authentifizierung, Sicherheit, skalierbare Architektur',
-    'specialties.performance.title': 'Performance',
-    'specialties.performance.desc': 'Technisches SEO, Optimierung, Barrierefreiheit und Best Practices',
-    'specialties.tools.title': 'Werkzeuge',
-    'specialties.tools.desc': 'Git, Docker, CI/CD, Cloud und moderne Workflows',
-    'ghp.title': 'Ausgewählte Projekte',
-    'ghp.subtitle': 'Echte, End-to-End entwickelte Produkte: offener Code auf GitHub, Live-Demos und Systeme in Produktion.',
-    'ghp.type.crm': 'Multi-Tenant-SaaS',
-    'ghp.type.inbox': 'KI-Automatisierung',
-    'ghp.type.prof': 'KI-EdTech',
-    'ghp.type.pharma': 'KI-Chatbot',
-    'ghp.type.agenda': 'Buchungs-SaaS',
-    'ghp.badge.prod': 'In Produktion',
-    'ghp.desc.crm': 'Multi-Tenant-CRM in Produktion: FastAPI, Next.js, Row-Level-Security auf PostgreSQL, Stripe-Billing und Oberfläche in 7 Sprachen.',
-    'ghp.desc.inbox': 'KI-E-Mail-Automatisierung für B2B-Backoffices: klassifiziert Nachrichten, erstellt Antwortentwürfe und deckt Geschäftschancen auf.',
-    'ghp.desc.prof': 'SaaS zur automatischen Korrektur für Lehrkräfte: provider-agnostische LLM-Schicht (OpenAI, Anthropic, Groq) auf Next.js und Supabase.',
-    'ghp.desc.pharma': 'KI-Assistent für Apotheken: Python-Backend mit Chat-Oberfläche für schnelle Informationen zu Medikamenten und Filialen.',
-    'ghp.desc.agenda': 'Online-Buchungs-SaaS für Betriebe und Freiberufler: Next.js 16, Supabase und Stripe-Zahlungen, mit zweisprachiger Oberfläche IT/EN.',
-    'ghp.live': 'Live-Demo',
-    'ghp.code': 'Quellcode',
-    'ghp.cta': 'Alle Repositories auf GitHub',
-    'ghp.tags.aria': 'Tech-Stack',
-    'reviews.title': 'Bewertungen',
-    'reviews.subtitle': 'Echte Google-ähnliche Rückmeldungen von Kunden und Partnern.',
-    'reviews.aria': 'Kundenbewertungen',
-    'reviews.stars': '5 Sterne',
-    'reviews.source': 'Google-Bewertung',
-    'reviews.role1': 'CEO • Studio MB',
-    'reviews.role2': 'Marketingmanagerin',
-    'reviews.role3': 'Founder • LM Tech',
-    'reviews.role4': 'Projektleiterin',
-    'reviews.role5': 'COO • DG Consulting',
-    'reviews.role6': 'Creative Director',
-    'reviews.role7': 'Produktmanager',
-    'reviews.role8': 'E-Commerce-Spezialistin',
-    'reviews.role9': 'Founder • AS Digital',
-    'reviews.role10': 'Brand Strategin',
-    'reviews.text1': 'Professionell, schnell und präzise. Die neue Website hat unsere Conversion und Markenwirkung gesteigert.',
-    'reviews.text2': 'Premium-Design und hervorragende Performance. Die Zusammenarbeit war vom Start bis zur Lieferung makellos.',
-    'reviews.text3': 'Er hat unsere Idee in eine moderne, stabile und ergebnisorientierte Plattform verwandelt.',
-    'reviews.text4': 'Starke Kommunikation, hohe Detailgenauigkeit und technische Lösungen auf Top-Niveau.',
-    'reviews.text5': 'Sauberer Code, termingerechte Lieferung und strategischer Weitblick. Wirklich eine Top-Erfahrung.',
-    'reviews.text6': 'Elegantes und intuitives UX. Das Endergebnis hat unsere Erwartungen deutlich übertroffen.',
-    'reviews.text7': 'Perfekte Balance zwischen Technologie und Design. Seriöse, schnelle und businessorientierte Arbeit.',
-    'reviews.text8': 'Messbarer Anstieg der Online-Verkäufe nach dem Redesign. Außergewöhnliche Kompetenz.',
-    'reviews.text9': 'Konstanter Support und Premium-Qualität. Jedes Detail wurde hervorragend umgesetzt.',
-    'reviews.text10': 'Moderne Umsetzung, sauberes SEO und hohe Performance. Klare Empfehlung.',
-    'footer.about': 'Moderne und performante Webentwicklung für Unternehmen und Fachleute mit Fokus auf Ergebnisse.',
-    'footer.cta': 'Bewertungen',
-    'footer.nav.title': 'Navigation',
-    'footer.nav.about': 'Über mich',
-    'footer.nav.skills': 'Fähigkeiten',
-    'footer.nav.projects': 'Projekte',
-    'footer.nav.reviews': 'Bewertungen',
-    'footer.contact.title': 'Kontakte',
-    'footer.contact.email': 'E-Mail',
-    'footer.contact.freelance': 'Freelance-Verfügbarkeit',
-    'footer.news.title': 'Newsletter',
-    'footer.news.desc': 'Erhalte Updates zu neuen Projekten und Technologien.',
-    'footer.news.placeholder': 'E-Mail eingeben',
-    'footer.news.aria': 'Newsletter-E-Mail',
-    'footer.news.send': 'E-Mail senden',
-    'footer.copy': '© 2026 Kallebe Gallo',
-    'hero.scroll': 'Nach unten scrollen',
-    'whatsapp.aria': 'Über WhatsApp kontaktieren',
-    'contact.title': 'Kontaktiere mich:',
-    'contact.subtitle': 'Sprechen wir über Projekte, Ideen oder Möglichkeiten?',
-    'contact.email': 'E-Mail',
-    'footer.text': '© 2026 Kallebe Gallo • AI Full Stack Developer'
-  },
-  fr: {
-    pageTitle: 'Kallebe Gallo — AI Full Stack Developer',
-    'nav.about': 'À propos',
-    'nav.skills': 'Compétences',
-    'nav.projects': 'Projets',
-    'nav.reviews': 'Avis',
-    'lang.it': 'Italien',
-    'lang.de': 'Allemand',
-    'lang.fr': 'Français',
-    'lang.en': 'Anglais',
-    'hero.role': 'AI Full Stack Developer',
-    'hero.tagline': 'Applications web intelligentes — LLM, RAG et automatisations qui génèrent des résultats.',
-    'about.title': 'À propos',
-    'about.p1': 'Je suis Kallebe Gallo, AI Full Stack Developer avec une approche méthodique, orientée qualité du code et résultats mesurables. J’associe le développement web full stack à l’intelligence artificielle pour transformer idées et spécifications techniques en produits digitaux intelligents, stables et évolutifs, en réduisant la dette technique et en accélérant le time-to-market.',
-    'about.p2': 'Mon expérience couvre tout le cycle de vie d’un projet web : de l’analyse des besoins à la conception de l’architecture, du développement frontend et backend au déploiement, au monitoring et à la maintenance évolutive. Je travaille quotidiennement avec HTML5, CSS3, JavaScript, TypeScript, React, Next.js, Node.js, PostgreSQL, MongoDB, Docker et des workflows Git professionnels, en appliquant des méthodologies Agile et Scrum.',
-    'about.p3': 'Côté frontend, je soigne chaque détail de l’expérience utilisateur : typographie, accessibilité (WCAG), responsive design, micro-interactions et optimisation des Core Web Vitals. Les interfaces que je conçois sont rapides, lisibles, cohérentes avec l’identité de marque et pensées pour convertir, avec d’excellents scores Lighthouse et un SEO technique solide.',
-    'about.p4': 'Côté backend, je construis des API REST sécurisées, gère l’authentification, l’autorisation, les intégrations avec des services tiers ainsi que des bases de données relationnelles et NoSQL. J’applique des patterns éprouvés, des tests automatisés, des revues de code et des principes de clean code pour livrer des produits fiables même sous charge, avec une attention particulière à la sécurité, la scalabilité et la maintenabilité.',
-    'about.p5': 'J’ai une mentalité orientée business : je comprends les objectifs du client avant d’écrire la moindre ligne de code. Je communique clairement, respecte les délais, gère les priorités et fournis des solutions concrètes plutôt que de nouveaux problèmes. Autonome dans la gestion de mes tâches, je m’intègre naturellement dans des équipes distribuées, aux côtés de designers, product owners et interlocuteurs non techniques.',
-    'about.p6': 'Je parle italien, anglais, français, allemand et portugais, ce qui me permet d’évoluer sans friction dans des contextes internationaux et de gérer des interlocuteurs variés. La formation continue me garde au fait des technologies les plus demandées et des meilleures pratiques du secteur, de l’architecture serverless aux frameworks de nouvelle génération, en passant par le DevOps et l’accessibilité.',
-    'about.p7': 'Aux recruteurs, responsables RH et CTO qui me lisent : je recherche des entreprises ambitieuses où contribuer dès le premier jour, avec du code propre, le sens du détail et une éthique de travail solide. Je suis disponible pour des postes en CDI, des contrats freelance et des collaborations à long terme, en présentiel, hybride ou full remote. Parlons-en : le prochain projet solide commence par une conversation concrète.',
-    'skillsIntro.title': 'Compétences AI Full Stack Developer',
-    'skillsIntro.p1': 'L’AI Full Stack Developer est un professionnel complet, capable de gérer tout le processus de développement d’un projet web — du design de l’interface à la logique serveur et à la gestion des bases de données — en intégrant l’intelligence artificielle là où elle crée une vraie valeur.',
-    'skillsIntro.p2': 'En frontend, il réalise des sites et applications modernes, responsives et orientés expérience utilisateur, avec des technologies comme HTML, CSS et JavaScript. En backend, il construit la structure qui permet au système de fonctionner de manière sûre et efficace, en créant des API, en gérant les bases de données et en implémentant l’authentification.',
-    'skillsIntro.p3': 'Au-delà des compétences techniques, un développeur Full Stack possède des capacités de résolution de problèmes, d’organisation et de communication client, garantissant des solutions digitales complètes, performantes et évolutives.',
-    'skillsIntro.p4': 'C’est un profil stratégique pour les entreprises qui souhaitent développer des projets web professionnels avec un interlocuteur technique unique, compétent et fiable.',
-    'skillsIntro.stack': 'Technologies principales',
-    'skillsIntro.ai1': 'En tant qu’AI Full Stack Developer, j’intègre l’intelligence artificielle au cœur du produit : modèles LLM (OpenAI, Anthropic Claude), assistants conversationnels, pipelines RAG avec bases de données vectorielles, automatisations intelligentes et fonctionnalités data-driven qui transforment une app en un produit réellement différenciant.',
-    'skillsIntro.ai2': 'Je conçois l’architecture end-to-end de solutions IA : prompt engineering, orchestration avec LangChain, embeddings et recherche sémantique, fine-tuning léger, gestion des coûts en tokens et déploiement sécurisé en production — toujours avec une attention à la confidentialité, la fiabilité des réponses et la mesurabilité des résultats.',
-    'skillsIntro.aiStack': 'AI & Machine Learning',
-    'skillsIntro.tag.rag': 'RAG',
-    'skillsIntro.tag.llm': 'Intégration LLM',
-    'skillsIntro.tag.prompt': 'Prompt Engineering',
-    'skillsIntro.tag.embeddings': 'Embeddings & Recherche sémantique',
-    'skillsIntro.tag.agents': 'AI Agents',
-    'skillsIntro.tag.automation': 'Automatisations IA',
-    'skills.title': 'Mes compétences',
-    'skills.subtitle': 'Principaux domaines d’activité et connaissances techniques.',
-    'specialties.title': 'Spécialités',
-    'specialties.frontend.title': 'Frontend',
-    'specialties.frontend.desc': 'HTML5, CSS3, JavaScript, TypeScript, React, Next.js, UX/UI moderne',
-    'specialties.backend.title': 'Backend',
-    'specialties.backend.desc': 'Node.js, API REST, authentification, sécurité, architecture évolutive',
-    'specialties.performance.title': 'Performance',
-    'specialties.performance.desc': 'SEO technique, optimisation, accessibilité et meilleures pratiques',
-    'specialties.tools.title': 'Outils',
-    'specialties.tools.desc': 'Git, Docker, CI/CD, cloud et workflows modernes',
-    'ghp.title': 'Projets phares',
-    'ghp.subtitle': 'Des produits réels développés de bout en bout : code ouvert sur GitHub, démos live et systèmes en production.',
-    'ghp.type.crm': 'SaaS multi-tenant',
-    'ghp.type.inbox': 'Automatisation IA',
-    'ghp.type.prof': 'EdTech IA',
-    'ghp.type.pharma': 'Chatbot IA',
-    'ghp.type.agenda': 'SaaS de réservation',
-    'ghp.badge.prod': 'En production',
-    'ghp.desc.crm': 'CRM multi-tenant en production : FastAPI, Next.js, row-level security sur PostgreSQL, facturation Stripe et interface en 7 langues.',
-    'ghp.desc.inbox': 'Automatisation e-mail IA pour back-offices B2B : classe les messages, génère des brouillons de réponse et fait émerger des opportunités.',
-    'ghp.desc.prof': 'SaaS de correction automatique pour enseignants : couche LLM agnostique (OpenAI, Anthropic, Groq) sur Next.js et Supabase.',
-    'ghp.desc.pharma': 'Assistant IA pour pharmacies : backend Python avec interface de chat pour des informations rapides sur les médicaments et points de vente.',
-    'ghp.desc.agenda': 'SaaS de réservation en ligne pour entreprises et indépendants : Next.js 16, Supabase et paiements Stripe, avec interface bilingue IT/EN.',
-    'ghp.live': 'Démo live',
-    'ghp.code': 'Code source',
-    'ghp.cta': 'Tous les dépôts sur GitHub',
-    'ghp.tags.aria': 'Stack technique',
-    'reviews.title': 'Avis',
-    'reviews.subtitle': 'Retours réels de style Google de clients et collaborateurs.',
-    'reviews.aria': 'Avis clients',
-    'reviews.stars': '5 étoiles',
-    'reviews.source': 'Avis Google',
-    'reviews.role1': 'CEO • Studio MB',
-    'reviews.role2': 'Responsable Marketing',
-    'reviews.role3': 'Founder • LM Tech',
-    'reviews.role4': 'Cheffe de Projet',
-    'reviews.role5': 'COO • DG Consulting',
-    'reviews.role6': 'Directrice Créative',
-    'reviews.role7': 'Product Manager',
-    'reviews.role8': 'Spécialiste E-commerce',
-    'reviews.role9': 'Founder • AS Digital',
-    'reviews.role10': 'Stratège de Marque',
-    'reviews.text1': 'Professionnel, rapide et précis. Le nouveau site a renforcé nos conversions et la crédibilité de la marque.',
-    'reviews.text2': 'Design premium et performance excellente. Une collaboration impeccable du début à la livraison.',
-    'reviews.text3': 'Il a transformé notre idée en une plateforme moderne, stable et orientée résultats.',
-    'reviews.text4': 'Excellente communication, grande attention aux détails et solutions techniques de haut niveau.',
-    'reviews.text5': 'Code propre, délais respectés et vision stratégique. Une expérience vraiment haut de gamme.',
-    'reviews.text6': 'UX élégante et intuitive. Le résultat final dépasse nettement nos attentes initiales.',
-    'reviews.text7': 'Équilibre parfait entre technologie et design. Travail sérieux, rapide et orienté business.',
-    'reviews.text8': 'Hausse mesurable des ventes en ligne après la refonte. Compétence remarquable.',
-    'reviews.text9': 'Support constant et qualité premium. Chaque détail a été soigné avec précision.',
-    'reviews.text10': 'Implémentation moderne, SEO soigné et hautes performances. Fortement recommandé.',
-    'footer.about': 'Développement web moderne et performant pour entreprises et professionnels, orienté résultats.',
-    'footer.cta': 'Avis',
-    'footer.nav.title': 'Navigation',
-    'footer.nav.about': 'À propos',
-    'footer.nav.skills': 'Compétences',
-    'footer.nav.projects': 'Projets',
-    'footer.nav.reviews': 'Avis',
-    'footer.contact.title': 'Contacts',
-    'footer.contact.email': 'E-mail',
-    'footer.contact.freelance': 'Disponibilité freelance',
-    'footer.news.title': 'Newsletter',
-    'footer.news.desc': 'Recevez des mises à jour sur les nouveaux projets et technologies.',
-    'footer.news.placeholder': 'Entrez votre e-mail',
-    'footer.news.aria': 'E-mail newsletter',
-    'footer.news.send': 'Envoyer e-mail',
-    'footer.copy': '© 2026 Kallebe Gallo',
-    'hero.scroll': 'Faire défiler vers le bas',
-    'whatsapp.aria': 'Contacter via WhatsApp',
-    'contact.title': 'Contactez-moi :',
-    'contact.subtitle': 'Parlons de projets, d’idées ou d’opportunités ?',
-    'contact.email': 'E-mail',
-    'footer.text': '© 2026 Kallebe Gallo • AI Full Stack Developer'
-  },
-  en: {
-    pageTitle: 'Kallebe Gallo — AI Full Stack Developer',
-    'nav.about': 'About',
-    'nav.skills': 'Skills',
-    'nav.projects': 'Projects',
-    'nav.reviews': 'Reviews',
-    'lang.it': 'Italian',
-    'lang.de': 'German',
-    'lang.fr': 'French',
-    'lang.en': 'English',
-    'hero.role': 'AI Full Stack Developer',
-    'hero.tagline': 'Intelligent web applications — LLMs, RAG and automations that drive results.',
-    'about.title': 'About',
-    'about.p1': 'I am Kallebe Gallo, an AI Full Stack Developer with a methodical, quality-driven and results-oriented approach. I combine full stack web development with artificial intelligence to turn ideas and technical specifications into intelligent, stable and scalable digital products, reducing technical debt and accelerating time-to-market.',
-    'about.p2': 'My experience covers the full lifecycle of a web project: from requirements analysis and architecture design to frontend and backend development, through deployment, monitoring and ongoing maintenance. I work daily with HTML5, CSS3, JavaScript, TypeScript, React, Next.js, Node.js, PostgreSQL, MongoDB, Docker and professional Git workflows, applying Agile and Scrum methodologies.',
-    'about.p3': 'On the frontend, I care for every detail of the user experience: typography, accessibility (WCAG), responsive design, micro-interactions and Core Web Vitals optimization. The interfaces I build are fast, readable, brand-consistent and engineered to convert, with strong Lighthouse scores and solid technical SEO.',
-    'about.p4': 'On the backend, I build secure REST APIs, handle authentication, authorization, third-party integrations and both relational and NoSQL databases. I rely on proven patterns, automated testing, code reviews and clean code principles to deliver products that stay reliable under load, with a sharp focus on security, scalability and maintainability.',
-    'about.p5': 'I think with a business mindset: I understand the client’s goals before writing a single line of code. I communicate clearly, meet deadlines, prioritize effectively and deliver concrete solutions instead of new problems. I work autonomously and integrate naturally into distributed teams, partnering with designers, product owners and non-technical stakeholders.',
-    'about.p6': 'I speak Italian, English, French, German and Portuguese, which lets me move smoothly across international contexts and manage diverse stakeholders. Continuous learning keeps me current with the most in-demand technologies and industry best practices, from serverless architecture to next-generation frameworks, including DevOps and accessibility.',
-    'about.p7': 'To recruiters, hiring managers and CTOs reading this: I’m looking for ambitious companies where I can contribute from day one with clean code, attention to detail and a strong work ethic. I’m available for full-time roles, freelance contracts and long-term collaborations — on-site, hybrid or fully remote. Let’s talk: the next solid project starts with a concrete conversation.',
-    'skillsIntro.title': 'AI Full Stack Developer Skills',
-    'skillsIntro.p1': 'An AI Full Stack Developer is a complete professional who can manage the entire development process of a web project — from interface design to server-side logic and database management — integrating artificial intelligence wherever it creates real value.',
-    'skillsIntro.p2': 'On the frontend, they build modern, responsive websites and applications focused on user experience using technologies like HTML, CSS, and JavaScript. On the backend, they build the structure that keeps the system secure and efficient by creating APIs, managing databases, and implementing authentication.',
-    'skillsIntro.p3': 'Beyond technical expertise, a Full Stack Developer brings problem-solving, organization, and client communication skills, ensuring complete, high-performance, and scalable digital solutions.',
-    'skillsIntro.p4': 'It is a strategic role for companies that want to build professional web projects with one competent and reliable technical point of contact.',
-    'skillsIntro.stack': 'Core technologies',
-    'skillsIntro.ai1': 'As an AI Full Stack Developer, I bring artificial intelligence into the product itself: I integrate LLM models (OpenAI, Anthropic Claude), build conversational assistants, RAG pipelines with vector databases, intelligent automations and data-driven features that turn an app into a truly differentiating product.',
-    'skillsIntro.ai2': 'I design the end-to-end architecture of AI solutions: prompt engineering, orchestration with LangChain, embeddings and semantic search, lightweight fine-tuning, token cost management and secure production deployment — always with a focus on privacy, answer reliability and measurable results.',
-    'skillsIntro.aiStack': 'AI & Machine Learning',
-    'skillsIntro.tag.rag': 'RAG',
-    'skillsIntro.tag.llm': 'LLM Integration',
-    'skillsIntro.tag.prompt': 'Prompt Engineering',
-    'skillsIntro.tag.embeddings': 'Embeddings & Semantic Search',
-    'skillsIntro.tag.agents': 'AI Agents',
-    'skillsIntro.tag.automation': 'AI Automations',
-    'skills.title': 'My Skills',
-    'skills.subtitle': 'Main areas of expertise and technical knowledge.',
-    'specialties.title': 'Specialties',
-    'specialties.frontend.title': 'Frontend',
-    'specialties.frontend.desc': 'HTML5, CSS3, JavaScript, TypeScript, React, Next.js, modern UX/UI',
-    'specialties.backend.title': 'Backend',
-    'specialties.backend.desc': 'Node.js, REST APIs, authentication, security, scalable architecture',
-    'specialties.performance.title': 'Performance',
-    'specialties.performance.desc': 'Technical SEO, optimization, accessibility and best practices',
-    'specialties.tools.title': 'Tools',
-    'specialties.tools.desc': 'Git, Docker, CI/CD, cloud and modern workflows',
-    'ghp.title': 'Featured Projects',
-    'ghp.subtitle': 'Real products built end-to-end: open code on GitHub, live demos and systems running in production.',
-    'ghp.type.crm': 'Multi-tenant SaaS',
-    'ghp.type.inbox': 'AI Automation',
-    'ghp.type.prof': 'AI EdTech',
-    'ghp.type.pharma': 'AI Chatbot',
-    'ghp.type.agenda': 'Booking SaaS',
-    'ghp.badge.prod': 'In production',
-    'ghp.desc.crm': 'Multi-tenant CRM in production: FastAPI, Next.js, PostgreSQL row-level security, Stripe billing and a 7-language interface.',
-    'ghp.desc.inbox': 'AI email automation for B2B back offices: classifies mail, drafts replies and surfaces business opportunities.',
-    'ghp.desc.prof': 'AI grading SaaS for teachers: provider-agnostic LLM layer (OpenAI, Anthropic, Groq) on Next.js and Supabase.',
-    'ghp.desc.pharma': 'AI assistant for pharmacies: Python backend with a chat interface for quick medication and store information.',
-    'ghp.desc.agenda': 'Online booking SaaS for businesses and professionals: Next.js 16, Supabase and Stripe payments, with a bilingual IT/EN interface.',
-    'ghp.live': 'Live demo',
-    'ghp.code': 'Source code',
-    'ghp.cta': 'All repositories on GitHub',
-    'ghp.tags.aria': 'Tech stack',
-    'reviews.title': 'Reviews',
-    'reviews.subtitle': 'Real Google-style feedback from clients and collaborators.',
-    'reviews.aria': 'Client reviews',
-    'reviews.stars': '5 stars',
-    'reviews.source': 'Google Review',
-    'reviews.role1': 'CEO • Studio MB',
-    'reviews.role2': 'Marketing Manager',
-    'reviews.role3': 'Founder • LM Tech',
-    'reviews.role4': 'Project Lead',
-    'reviews.role5': 'COO • DG Consulting',
-    'reviews.role6': 'Creative Director',
-    'reviews.role7': 'Product Manager',
-    'reviews.role8': 'E-commerce Specialist',
-    'reviews.role9': 'Founder • AS Digital',
-    'reviews.role10': 'Brand Strategist',
-    'reviews.text1': 'Professional, fast, and precise. The new website boosted both conversions and brand credibility.',
-    'reviews.text2': 'Premium design and excellent performance. Flawless collaboration from kickoff to delivery.',
-    'reviews.text3': 'He transformed our idea into a modern, stable, results-driven platform.',
-    'reviews.text4': 'Great communication, attention to detail, and high-level technical solutions.',
-    'reviews.text5': 'Clean code, on-time delivery, and strong strategic vision. Truly a top-tier experience.',
-    'reviews.text6': 'Elegant and intuitive UX. The final result clearly exceeded our initial expectations.',
-    'reviews.text7': 'Perfect balance between technology and design. Serious, fast, and business-focused work.',
-    'reviews.text8': 'Measurable increase in online sales after the redesign. Outstanding expertise.',
-    'reviews.text9': 'Consistent support and premium quality. Every detail was handled impeccably.',
-    'reviews.text10': 'Modern implementation, strong SEO, and high performance. Highly recommended.',
-    'footer.about': 'Modern, high-performance web development focused on results for companies and professionals.',
-    'footer.cta': 'Reviews',
-    'footer.nav.title': 'Navigation',
-    'footer.nav.about': 'About',
-    'footer.nav.skills': 'Skills',
-    'footer.nav.projects': 'Projects',
-    'footer.nav.reviews': 'Reviews',
-    'footer.contact.title': 'Contacts',
-    'footer.contact.email': 'Email',
-    'footer.contact.freelance': 'Freelance availability',
-    'footer.news.title': 'Newsletter',
-    'footer.news.desc': 'Get updates on new projects and technologies.',
-    'footer.news.placeholder': 'Enter your email',
-    'footer.news.aria': 'Newsletter email',
-    'footer.news.send': 'Send email',
-    'footer.copy': '© 2026 Kallebe Gallo',
-    'hero.scroll': 'Scroll down',
-    'whatsapp.aria': 'Contact on WhatsApp',
-    'contact.title': 'Contact me:',
-    'contact.subtitle': 'Let’s talk about projects, ideas or opportunities?',
-    'contact.email': 'Email',
-    'footer.text': '© 2026 Kallebe Gallo • AI Full Stack Developer'
-  }
-};
-
-const languageMeta = {
-  it: { code: 'IT', flagSrc: 'https://flagcdn.com/w20/it.png', flagAlt: 'Bandiera Italia' },
-  de: { code: 'DE', flagSrc: 'https://flagcdn.com/w20/de.png', flagAlt: 'Bandiera Germania' },
-  fr: { code: 'FR', flagSrc: 'https://flagcdn.com/w20/fr.png', flagAlt: 'Bandiera Francia' },
-  en: { code: 'EN', flagSrc: 'https://flagcdn.com/w20/gb.png', flagAlt: 'Bandiera Regno Unito' }
-};
-
-const languageDropdown = document.getElementById('languageDropdown');
-const languageTrigger = document.getElementById('languageTrigger');
-const languageMenu = document.getElementById('languageMenu');
-const languageArrow = document.getElementById('languageArrow');
-const languageCurrentFlag = document.getElementById('languageCurrentFlag');
-const languageCurrentCode = document.getElementById('languageCurrentCode');
-const languageOptions = document.querySelectorAll('.language-option');
-
-function getTranslationValue(key) {
-  const currentLang = translations[document.documentElement.lang] ? document.documentElement.lang : 'it';
-  return translations[currentLang]?.[key] || translations.it[key] || '';
-}
-
-function getSelectedOption() {
-  return document.querySelector('.language-option[aria-selected="true"]') || languageOptions[0];
-}
-
-function validateTranslationDictionaries() {
-  const baseKeys = Object.keys(translations.it || {});
-  const report = {};
-
-  Object.entries(translations).forEach(([lang, dict]) => {
-    const missing = baseKeys.filter((key) => !(key in dict));
-    const extra = Object.keys(dict).filter((key) => !baseKeys.includes(key));
-    report[lang] = { missing, extra };
-  });
-
-  const hasIssues = Object.values(report).some((entry) => entry.missing.length || entry.extra.length);
-  if (hasIssues) {
-    console.warn('Translation consistency check:', report);
-  }
-}
-
-function applyTranslations(lang) {
-  const dict = translations[lang] || translations.it;
-
-  document.title = dict.pageTitle;
-  document.documentElement.lang = lang;
-  document.querySelectorAll('[data-i18n]').forEach((element) => {
-    const key = element.getAttribute('data-i18n');
-    if (dict[key]) {
-      element.textContent = dict[key];
-    }
-  });
-
-  document.querySelectorAll('[data-i18n-placeholder]').forEach((element) => {
-    const key = element.getAttribute('data-i18n-placeholder');
-    if (dict[key]) {
-      element.setAttribute('placeholder', dict[key]);
-    }
-  });
-
-  document.querySelectorAll('[data-i18n-aria-label]').forEach((element) => {
-    const key = element.getAttribute('data-i18n-aria-label');
-    if (dict[key]) {
-      element.setAttribute('aria-label', dict[key]);
-    }
-  });
-
-  document.querySelectorAll('[data-i18n-preview-label]').forEach((element) => {
-    const key = element.getAttribute('data-i18n-preview-label');
-    if (dict[key]) {
-      element.setAttribute('data-preview-label', dict[key]);
-    }
-  });
-
-  document.querySelectorAll('.review-stars').forEach((element) => {
-    if (dict['reviews.stars']) {
-      element.setAttribute('aria-label', dict['reviews.stars']);
-    }
-  });
-
-  document.querySelectorAll('.review-card small').forEach((element) => {
-    if (dict['reviews.source']) {
-      element.textContent = dict['reviews.source'];
-    }
-  });
-
-  const reviewTexts = Array.from({ length: 10 }, (_, index) => dict[`reviews.text${index + 1}`]);
-  const reviewRoles = Array.from({ length: 10 }, (_, index) => dict[`reviews.role${index + 1}`]);
-
-  document.querySelectorAll('.review-card').forEach((card, index) => {
-    const normalizedIndex = index % 10;
-    const roleElement = card.querySelector('.review-head span');
-    const textElement = card.querySelector('p');
-
-    if (roleElement && reviewRoles[normalizedIndex]) {
-      roleElement.textContent = reviewRoles[normalizedIndex];
-    }
-
-    if (textElement && reviewTexts[normalizedIndex]) {
-      textElement.textContent = reviewTexts[normalizedIndex];
-    }
-  });
-
-}
-
-function setLanguageUI(lang) {
-  const selectedLang = languageMeta[lang] ? lang : 'it';
-  applyTranslations(selectedLang);
-
-  languageCurrentFlag.src = languageMeta[selectedLang].flagSrc;
-  languageCurrentFlag.alt = languageMeta[selectedLang].flagAlt;
-  languageCurrentCode.textContent = languageMeta[selectedLang].code;
-
-  languageOptions.forEach((option) => {
-    option.setAttribute('aria-selected', option.dataset.lang === selectedLang ? 'true' : 'false');
-  });
-
-  localStorage.setItem('siteLanguage', selectedLang);
-}
-
-function closeLanguageMenu() {
-  languageDropdown.classList.remove('open');
-  languageTrigger.setAttribute('aria-expanded', 'false');
-  languageArrow.textContent = '▾';
-}
-
-function openLanguageMenu() {
-  languageDropdown.classList.add('open');
-  languageTrigger.setAttribute('aria-expanded', 'true');
-  languageArrow.textContent = '▴';
-}
-
-languageTrigger.addEventListener('click', () => {
-  const isOpen = languageDropdown.classList.contains('open');
-  if (isOpen) {
-    closeLanguageMenu();
-  } else {
-    openLanguageMenu();
-  }
-});
-
-languageTrigger.addEventListener('keydown', (event) => {
-  if (event.key === 'ArrowDown' || event.key === 'Enter' || event.key === ' ') {
-    event.preventDefault();
-    openLanguageMenu();
-    getSelectedOption().focus();
-  }
-});
-
-languageOptions.forEach((option) => {
-  option.addEventListener('click', () => {
-    const lang = option.dataset.lang;
-    setLanguageUI(lang);
-    closeLanguageMenu();
-    languageTrigger.focus();
-  });
-});
-
-languageMenu.addEventListener('keydown', (event) => {
-  const options = Array.from(languageOptions);
-  const currentIndex = options.indexOf(document.activeElement);
-
-  if (event.key === 'Escape') {
-    closeLanguageMenu();
-    languageTrigger.focus();
-    return;
-  }
-
-  if (event.key === 'ArrowDown') {
-    event.preventDefault();
-    const nextIndex = currentIndex < options.length - 1 ? currentIndex + 1 : 0;
-    options[nextIndex].focus();
-  }
-
-  if (event.key === 'ArrowUp') {
-    event.preventDefault();
-    const prevIndex = currentIndex > 0 ? currentIndex - 1 : options.length - 1;
-    options[prevIndex].focus();
-  }
-
-  if (event.key === 'Home') {
-    event.preventDefault();
-    options[0].focus();
-  }
-
-  if (event.key === 'End') {
-    event.preventDefault();
-    options[options.length - 1].focus();
-  }
-});
-
-document.addEventListener('click', (event) => {
-  if (!languageDropdown.contains(event.target)) {
-    closeLanguageMenu();
-  }
-});
-
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape') {
-    closeLanguageMenu();
-  }
-});
-
-const inPageAnchors = document.querySelectorAll('a[href^="#"]');
-
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const revealTargets = document.querySelectorAll('#sobre, .skills-intro, #skills-container, #progetti-live, .reviews, .site-footer');
-
-function clamp(value, min, max) {
-  return Math.min(Math.max(value, min), max);
-}
-
-function easeInOutCubic(value) {
-  return value < 0.5
-    ? 4 * value * value * value
-    : 1 - Math.pow(-2 * value + 2, 3) / 2;
-}
-
-function smoothScrollToPosition(targetY) {
-  const startY = window.scrollY || window.pageYOffset;
-  const distance = targetY - startY;
-  const duration = Math.min(2400, Math.max(1300, Math.abs(distance) * 0.9));
-  const startTime = performance.now();
-
-  function step(currentTime) {
-    const elapsed = currentTime - startTime;
-    const progress = clamp(elapsed / duration, 0, 1);
-    const eased = easeInOutCubic(progress);
-
-    window.scrollTo(0, startY + distance * eased);
-
-    if (progress < 1) {
-      window.requestAnimationFrame(step);
-    }
-  }
-
-  window.requestAnimationFrame(step);
-}
-
-inPageAnchors.forEach((anchor) => {
-  anchor.addEventListener('click', (event) => {
-    const rawTarget = anchor.getAttribute('href');
-    if (!rawTarget || !rawTarget.startsWith('#')) {
-      return;
-    }
-
-    const targetElement = rawTarget === '#' ? document.documentElement : document.querySelector(rawTarget);
-    if (!targetElement) {
-      return;
-    }
-
-    event.preventDefault();
-
-    const navHeight = document.querySelector('.nav-sticky')?.offsetHeight
-      || document.querySelector('.main-nav')?.offsetHeight
-      || 0;
-    const targetY = rawTarget === '#'
-      ? 0
-      : Math.max(targetElement.getBoundingClientRect().top + window.scrollY - navHeight - 24, 0);
-
-    if (prefersReducedMotion) {
-      window.scrollTo({ top: targetY, behavior: 'auto' });
-    } else {
-      smoothScrollToPosition(targetY);
-    }
-
-    if (rawTarget === '#') {
-      history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
-    } else {
-      history.replaceState(null, '', rawTarget);
-    }
-  });
-});
-
-if (!prefersReducedMotion) {
-  document.documentElement.classList.add('motion-ready');
-
-  revealTargets.forEach((element) => {
-    element.classList.add('scroll-reveal');
-  });
-
-  if ('IntersectionObserver' in window) {
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.16,
-      rootMargin: '0px 0px -8% 0px'
-    });
-
-    revealTargets.forEach((element) => {
-      revealObserver.observe(element);
-    });
-  } else {
-    revealTargets.forEach((element) => {
-      element.classList.add('is-visible');
-    });
-  }
-} else {
-  revealTargets.forEach((element) => {
-    element.classList.add('is-visible');
-  });
-}
-
-const nameBaseElement = document.getElementById('nameBase');
-const nameAccentElement = document.getElementById('nameAccent');
-
-if (nameBaseElement && nameAccentElement) {
-  const fullName = 'Kallebe Gallo';
-  const accentStart = 'Kallebe '.length;
-  let visibleLength = 0;
-  let isDeleting = false;
-
-  function renderTypingName() {
-    const visibleText = fullName.slice(0, visibleLength);
-
-    if (visibleLength <= accentStart) {
-      nameBaseElement.textContent = visibleText;
-      nameAccentElement.textContent = '';
-    } else {
-      nameBaseElement.textContent = fullName.slice(0, accentStart);
-      nameAccentElement.textContent = visibleText.slice(accentStart);
-    }
-  }
-
-  function animateTypingName() {
-    if (!isDeleting) {
-      visibleLength += 1;
-      if (visibleLength >= fullName.length) {
-        isDeleting = true;
-        setTimeout(animateTypingName, 1800);
-        renderTypingName();
-        return;
-      }
-    } else {
-      visibleLength -= 1;
-      if (visibleLength <= 0) {
-        isDeleting = false;
-        setTimeout(animateTypingName, 700);
-        renderTypingName();
-        return;
-      }
-    }
-
-    renderTypingName();
-    const speed = isDeleting ? 110 : 180;
-    setTimeout(animateTypingName, speed);
-  }
-
-  renderTypingName();
-  setTimeout(animateTypingName, 800);
-}
-
-const bgVideo = document.querySelector('.bg-video');
-if (bgVideo) {
-  const heroElement = document.querySelector('.hero-header');
-
-  function toggleBgVideo() {
-    const heroBottom = heroElement ? heroElement.getBoundingClientRect().bottom : 0;
-    if (heroBottom <= window.innerHeight * 0.92) {
-      bgVideo.play().catch(() => {});
-    } else {
-      bgVideo.pause();
-    }
-  }
-
-  window.addEventListener('scroll', toggleBgVideo, { passive: true });
-  toggleBgVideo();
-}
-
-const savedLang = localStorage.getItem('siteLanguage') || 'it';
-validateTranslationDictionaries();
-setLanguageUI(savedLang);
-</script>
-
-
-
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
