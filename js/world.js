@@ -29,9 +29,6 @@ function lights(scene) {
   const key = new THREE.DirectionalLight(0xfff4ec, 2.4);
   key.position.set(3, 4, 5);
   scene.add(key);
-  const point = new THREE.PointLight(accent, mobile ? 6 : 12, 14);
-  point.position.set(-2, 1.4, 3);
-  scene.add(point);
 }
 
 function hero(scene) {
