@@ -1168,6 +1168,7 @@ html.js.is-ready .reveal { opacity: 1; transform: none; }
   .hero-dock {
     position: absolute;
     left: 50%;
+    right: auto;
     bottom: 2.75rem;
     transform: translateX(-50%);
     margin: 0;
