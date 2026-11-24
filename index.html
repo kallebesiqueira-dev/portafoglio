@@ -23,7 +23,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
-  <link rel="preload" as="image" href="img/portrait.webp" type="image/webp" fetchpriority="high">
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@500,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css.css">
@@ -78,10 +77,6 @@
           </span>
         </div>
         <div class="stage" data-scene="hero" aria-hidden="true"></div>
-        <picture class="hero-photo">
-          <source srcset="img/portrait.webp" type="image/webp">
-          <img src="img/portrait.jpg" alt="Kallebe Gallo, ritratto in studio" width="960" height="960" fetchpriority="high" data-i18n-alt="hero.alt">
-        </picture>
         <div class="hero-top">
           <h1 class="display">
             <span class="line"><span data-i18n="hero.l1">Dal codice</span></span>
@@ -109,7 +104,10 @@
           </h2>
           <div class="who-grid">
             <div class="who-visual">
-              <div class="stage" data-scene="who" aria-hidden="true"></div>
+              <picture>
+                <source srcset="img/portrait.webp" type="image/webp">
+                <img src="img/portrait.jpg" alt="Kallebe Gallo, ritratto in studio" width="960" height="960" loading="lazy" data-i18n-alt="hero.alt">
+              </picture>
             </div>
             <div class="who-story">
               <div class="beats" role="tablist" data-i18n-label="who.tabs" aria-label="Percorso">
