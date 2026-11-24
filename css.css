@@ -511,12 +511,12 @@ html.js.is-ready .line > span { transform: none; }
 .exp-card,
 .talk-card {
   height: 100%;
-  padding: 96px clamp(1.4rem, 3vw, 3rem) clamp(1.4rem, 3vw, 3rem);
+  padding: clamp(4.5rem, 8vh, 96px) clamp(1.4rem, 3vw, 3rem) clamp(1.4rem, 3vw, 3rem);
   position: relative;
   overflow: hidden;
 }
 
-.who-card { display: flex; flex-direction: column; overflow: auto; }
+.who-card { display: flex; flex-direction: column; overflow: hidden; }
 
 .who-card .display,
 .stack-card .display { font-size: clamp(2.2rem, 4.2vw, 4.4rem); }
@@ -647,7 +647,7 @@ html.js.is-ready .line > span { transform: none; }
 .stack { height: 280vh; }
 
 .stack-card {
-  overflow: auto;
+  overflow: hidden;
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(260px, 0.95fr);
   gap: clamp(1rem, 3vw, 2.5rem);
