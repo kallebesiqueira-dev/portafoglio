@@ -635,9 +635,7 @@ html.js.is-ready .line > span { transform: none; }
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(260px, 0.95fr);
   gap: clamp(1rem, 3vw, 2.5rem);
-  background:
-    radial-gradient(80% 60% at 80% 40%, rgba(255, 74, 28, 0.08), transparent 60%),
-    var(--card);
+  background: var(--card);
 }
 
 .layers { display: grid; margin-top: 1.4rem; }
