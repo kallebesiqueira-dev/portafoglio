@@ -13,7 +13,8 @@ const dict = {
     "nav.menu": "Menu",
     "hero.l1": "Dal codice",
     "hero.l2": "al prodotto.",
-    "hero.line": "Sistemi web e AI, costruiti per restare in produzione.",
+    "hero.studio": "Co-founder di CTRL Agency",
+    "hero.rest": "Sistemi web e AI, in produzione.",
     "hero.cta": "Vedi i progetti",
     "hero.dock": "Kallebe Gallo",
     "hero.alt": "Kallebe Gallo, ritratto in studio",
@@ -71,8 +72,8 @@ const dict = {
     "exp.kicker": "Esperienza",
     "exp.h1": "Dove sta il lavoro.",
     "exp.now": "Oggi",
-    "exp.r1": "Co-founder, backend",
-    "exp.r1d": "Prodotto, siti e software con lo studio. Architettura, API e i sistemi che il team manda in produzione.",
+    "exp.r1": "Co-founder",
+    "exp.r1d": "Kallebe è co-founder di CTRL Agency: backend, architettura e i sistemi che lo studio manda in produzione.",
     "exp.prod": "In produzione",
     "exp.r2": "Prodotti propri",
     "exp.r2r": "Progetto e sviluppo",
@@ -110,7 +111,8 @@ const dict = {
     "nav.menu": "Menu",
     "hero.l1": "From code",
     "hero.l2": "to product.",
-    "hero.line": "Web and AI systems, built to stay in production.",
+    "hero.studio": "Co-founder of CTRL Agency",
+    "hero.rest": "Web and AI systems, in production.",
     "hero.cta": "See the work",
     "hero.dock": "Kallebe Gallo",
     "hero.alt": "Kallebe Gallo, studio portrait",
@@ -168,8 +170,8 @@ const dict = {
     "exp.kicker": "Experience",
     "exp.h1": "Where the work sits.",
     "exp.now": "Now",
-    "exp.r1": "Co-founder, backend",
-    "exp.r1d": "Product, sites and custom software with the studio. Architecture, APIs and the systems the team ships.",
+    "exp.r1": "Co-founder",
+    "exp.r1d": "Kallebe is co-founder of CTRL Agency: backend, architecture, and the systems the studio ships.",
     "exp.prod": "In production",
     "exp.r2": "Own products",
     "exp.r2r": "Design and engineering",
@@ -337,7 +339,7 @@ function setLayer(next, fromScroll) {
     panel.classList.toggle("is-on", on);
     panel.hidden = wide ? !on : false;
   });
-  const stage = document.querySelector('[data-scene="stack"]');
+  const stage = document.querySelector(".stack-visual");
   if (stage) stage.dataset.layer = String(layer);
   typeInto(document.getElementById("stack-term"), stackScript[lang][layer], fromScroll && reduced);
   if (!fromScroll) {
@@ -619,8 +621,82 @@ function bootWorld() {
   if (reduced) return;
   const script = document.createElement("script");
   script.type = "module";
-  script.src = "js/world.js";
+  script.src = "js/clouds.js";
   document.body.appendChild(script);
+}
+
+function bootPortrait() {
+  if (reduced) return;
+  const load = (src) => new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = src;
+    script.onload = resolve;
+    script.onerror = reject;
+    document.body.appendChild(script);
+  });
+  load("https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js")
+    .then(() => load("https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"))
+    .then(() => {
+      const photo = document.querySelector(".hero-photo");
+      if (!photo || !window.gsap) return;
+      const gsap = window.gsap;
+      gsap.registerPlugin(window.ScrollTrigger);
+      document.documentElement.classList.add("motion");
+      const lines = document.querySelectorAll(".line > span");
+      if (params.has("reveal")) {
+        gsap.set(lines, { yPercent: 0 });
+      } else {
+        gsap.set(lines, { yPercent: 110 });
+        gsap.to("#top .line > span", {
+          yPercent: 0,
+          duration: 1.05,
+          ease: "power3.out",
+          stagger: 0.08,
+          delay: 0.08
+        });
+        gsap.utils.toArray(".display").forEach((heading) => {
+          if (heading.closest("#top")) return;
+          gsap.to(heading.querySelectorAll(".line > span"), {
+            yPercent: 0,
+            duration: 1,
+            ease: "power3.out",
+            stagger: 0.07,
+            scrollTrigger: { trigger: heading, start: "top 86%" }
+          });
+        });
+        gsap.utils.toArray(".mini, .metric-row").forEach((block) => {
+          gsap.from(block, {
+            autoAlpha: 0,
+            y: 28,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: { trigger: block, start: "top 90%" }
+          });
+        });
+      }
+      if (!photo || !window.matchMedia("(min-width: 981px)").matches) return;
+      gsap.set(photo, { xPercent: -50, yPercent: -48, force3D: true });
+      if (!params.has("reveal")) {
+        gsap.from(photo, {
+          autoAlpha: 0,
+          scale: 0.94,
+          yPercent: -40,
+          duration: 1.35,
+          ease: "power3.out",
+          delay: 0.1
+        });
+      }
+      gsap.to(photo, {
+        yPercent: -58,
+        ease: "none",
+        scrollTrigger: {
+          trigger: "#top",
+          start: "top top",
+          end: "bottom top",
+          scrub: 0.6
+        }
+      });
+    });
 }
 
 applyLang();
@@ -629,6 +705,7 @@ bootSmooth();
 
 if ("requestIdleCallback" in window) requestIdleCallback(bootWorld, { timeout: 900 });
 else window.addEventListener("load", () => window.setTimeout(bootWorld, 250));
+bootPortrait();
 
 if (params.has("reveal")) document.documentElement.classList.add("is-ready");
 if (params.get("chat") === "1") openChat();

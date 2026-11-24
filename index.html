@@ -60,7 +60,6 @@
   <main id="main">
     <section class="hero shell" id="top">
       <div class="hero-card">
-        <div class="stage" data-scene="hero" aria-hidden="true"></div>
         <picture class="hero-photo">
           <source srcset="img/portrait.webp" type="image/webp">
           <img src="img/portrait.jpg" alt="Kallebe Gallo, ritratto in studio" width="960" height="960" fetchpriority="high" data-i18n-alt="hero.alt">
@@ -70,7 +69,10 @@
             <span class="line"><span data-i18n="hero.l1">Dal codice</span></span>
             <span class="line"><span data-i18n="hero.l2">al prodotto.</span></span>
           </h1>
-          <p class="hero-line" data-i18n="hero.line">Sistemi web e AI, costruiti per restare in produzione.</p>
+          <p class="hero-line">
+            <a class="hero-studio" href="https://www.ctrlagency.dev/" target="_blank" rel="noopener noreferrer" data-i18n="hero.studio">Co-founder di CTRL Agency</a>
+            <span data-i18n="hero.rest">Sistemi web e AI, in produzione.</span>
+          </p>
         </div>
         <div class="hero-dock">
           <span class="dock-label" data-i18n="hero.dock">Kallebe Gallo</span>
@@ -88,15 +90,6 @@
             <span class="line"><span data-i18n="who.h2">L'intero stack.</span></span>
           </h2>
           <div class="who-grid">
-            <div class="who-visual">
-              <div class="stage" data-scene="who" aria-hidden="true"></div>
-              <figure>
-                <picture>
-                  <source srcset="img/portrait.webp" type="image/webp">
-                  <img src="img/portrait.jpg" alt="Kallebe Gallo" width="960" height="960" loading="lazy" decoding="async" data-i18n-alt="who.alt">
-                </picture>
-              </figure>
-            </div>
             <div class="who-story">
               <div class="beats" role="tablist" data-i18n-label="who.tabs" aria-label="Percorso">
                 <button type="button" role="tab" id="beat-tab-0" data-beat-btn="0" aria-selected="true" aria-controls="who-term" data-i18n="who.b1">Co-founder di CTRL Agency.</button>
@@ -155,8 +148,14 @@ co-founder · CTRL Agency</pre>
               <p class="layer-detail" id="layer-3" role="tabpanel" hidden data-i18n="stack.d4">Vercel, Railway, Docker. Preview, produzione, una via per il rollback.</p>
             </div>
           </div>
-          <div class="stack-visual">
-            <div class="stage" data-scene="stack" data-layer="0" aria-hidden="true"></div>
+          <div class="stack-visual" data-layer="0">
+            <div class="mock" aria-hidden="true">
+              <div class="mock-top"><i></i><i></i><i></i><span>system.kallebe</span></div>
+              <div class="mock-row" data-n="0"><b>01</b><span>Frontend</span><em>Next.js</em></div>
+              <div class="mock-row" data-n="1"><b>02</b><span>API</span><em>FastAPI</em></div>
+              <div class="mock-row" data-n="2"><b>03</b><span>Dati</span><em>PostgreSQL</em></div>
+              <div class="mock-row" data-n="3"><b>04</b><span>Cloud</span><em>Vercel</em></div>
+            </div>
             <div class="term term-dark">
               <div class="term-bar" aria-hidden="true"><i></i><i></i><i></i><em>stack — layer</em></div>
               <pre class="term-body" id="stack-term">$ layer frontend
@@ -183,6 +182,21 @@ UI, accessibilità, Core Web Vitals</pre>
             <p class="kicker" data-i18n="agenda.k">01 — Prodotto</p>
             <h3 class="display case-title">Agenda Easy</h3>
             <p class="role" data-i18n="agenda.role">Full stack, end to end</p>
+            <div class="device-row">
+              <figure class="browser">
+                <figcaption>agendaeasy.it</figcaption>
+                <picture>
+                  <source srcset="img/shots/agenda-desktop.webp" type="image/webp">
+                  <img src="img/shots/agenda-desktop.jpg" alt="Homepage di Agenda Easy" width="1200" height="750" loading="lazy" decoding="async">
+                </picture>
+              </figure>
+              <figure class="phone">
+                <picture>
+                  <source srcset="img/shots/agenda-mobile.webp" type="image/webp">
+                  <img src="img/shots/agenda-mobile.jpg" alt="Agenda Easy su telefono" width="390" height="844" loading="lazy" decoding="async">
+                </picture>
+              </figure>
+            </div>
             <div class="psr">
               <div>
                 <h4 data-i18n="ps.p">Problema</h4>
@@ -205,9 +219,6 @@ UI, accessibilità, Core Web Vitals</pre>
               <a class="btn btn-ghost" href="https://github.com/kallebesiqueira-dev/agenda-easy-it" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
           </div>
-          <div class="case-visual">
-            <div class="stage" data-scene="agenda" aria-hidden="true"></div>
-          </div>
         </div>
       </article>
 
@@ -217,6 +228,21 @@ UI, accessibilità, Core Web Vitals</pre>
             <p class="kicker" data-i18n="crm.k">02 — Piattaforma</p>
             <h3 class="display case-title">CRM Gallo</h3>
             <p class="role" data-i18n="crm.role">Architettura multi-tenant, full stack</p>
+            <div class="device-row">
+              <figure class="browser">
+                <figcaption>gallo-crm.vercel.app</figcaption>
+                <picture>
+                  <source srcset="img/shots/crm-desktop.webp" type="image/webp">
+                  <img src="img/shots/crm-desktop.jpg" alt="Homepage di CRM Gallo" width="1200" height="750" loading="lazy" decoding="async">
+                </picture>
+              </figure>
+              <figure class="phone">
+                <picture>
+                  <source srcset="img/shots/crm-mobile.webp" type="image/webp">
+                  <img src="img/shots/crm-mobile.jpg" alt="CRM Gallo su telefono" width="390" height="844" loading="lazy" decoding="async">
+                </picture>
+              </figure>
+            </div>
             <div class="psr">
               <div>
                 <h4 data-i18n="ps.p">Problema</h4>
@@ -238,9 +264,6 @@ UI, accessibilità, Core Web Vitals</pre>
               <a class="btn" href="https://gallo-crm.vercel.app" target="_blank" rel="noopener noreferrer"><span data-i18n="links.live">Live</span></a>
               <a class="btn btn-ghost" href="https://github.com/kallebesiqueira-dev/crm_gallo" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
-          </div>
-          <div class="case-visual">
-            <div class="stage" data-scene="crm" aria-hidden="true"></div>
           </div>
         </div>
       </article>
@@ -286,7 +309,6 @@ UI, accessibilità, Core Web Vitals</pre>
 
     <section class="exp shell" id="esperienza">
       <div class="exp-card">
-        <div class="stage" data-scene="exp" aria-hidden="true"></div>
         <p class="kicker" data-i18n="exp.kicker">Esperienza</p>
         <h2 class="display">
           <span class="line"><span data-i18n="exp.h1">Dove sta il lavoro.</span></span>
@@ -297,9 +319,8 @@ UI, accessibilità, Core Web Vitals</pre>
             <span class="dot" aria-hidden="true"></span>
             <div>
               <h3>CTRL Agency</h3>
-              <p class="role" data-i18n="exp.r1">Co-founder, backend</p>
-              <p data-i18n="exp.r1d">Prodotto, siti e software con lo studio. Architettura, API e i sistemi che il team manda in produzione.</p>
-              <a class="text-link" href="https://www.ctrlagency.dev/" target="_blank" rel="noopener noreferrer">ctrlagency.dev</a>
+              <p class="role"><span data-i18n="exp.r1">Co-founder</span> · <a href="https://www.ctrlagency.dev/" target="_blank" rel="noopener noreferrer">CTRL Agency</a></p>
+              <p data-i18n="exp.r1d">Kallebe è co-founder di CTRL Agency: backend, architettura e i sistemi che lo studio manda in produzione.</p>
             </div>
           </li>
           <li>
@@ -317,7 +338,6 @@ UI, accessibilità, Core Web Vitals</pre>
 
     <section class="talk shell" id="contatti">
       <div class="talk-card on-paper">
-        <div class="stage" data-scene="contact" aria-hidden="true"></div>
         <p class="kicker" data-i18n="talk.kicker">Contatto</p>
         <h2 class="display">
           <span class="line"><span data-i18n="talk.h1">Parliamone.</span></span>
