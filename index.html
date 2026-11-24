@@ -60,6 +60,7 @@
   <main id="main">
     <section class="hero shell" id="top">
       <div class="hero-card">
+        <div class="stage" data-scene="hero" aria-hidden="true"></div>
         <picture class="hero-photo">
           <source srcset="img/portrait.webp" type="image/webp">
           <img src="img/portrait.jpg" alt="Kallebe Gallo, ritratto in studio" width="960" height="960" fetchpriority="high" data-i18n-alt="hero.alt">
@@ -90,6 +91,9 @@
             <span class="line"><span data-i18n="who.h2">L'intero stack.</span></span>
           </h2>
           <div class="who-grid">
+            <div class="who-visual">
+              <div class="stage" data-scene="who" aria-hidden="true"></div>
+            </div>
             <div class="who-story">
               <div class="beats" role="tablist" data-i18n-label="who.tabs" aria-label="Percorso">
                 <button type="button" role="tab" id="beat-tab-0" data-beat-btn="0" aria-selected="true" aria-controls="who-term" data-i18n="who.b1">Co-founder di CTRL Agency.</button>
@@ -148,14 +152,8 @@ co-founder · CTRL Agency</pre>
               <p class="layer-detail" id="layer-3" role="tabpanel" hidden data-i18n="stack.d4">Vercel, Railway, Docker. Preview, produzione, una via per il rollback.</p>
             </div>
           </div>
-          <div class="stack-visual" data-layer="0">
-            <div class="mock" aria-hidden="true">
-              <div class="mock-top"><i></i><i></i><i></i><span>system.kallebe</span></div>
-              <div class="mock-row" data-n="0"><b>01</b><span>Frontend</span><em>Next.js</em></div>
-              <div class="mock-row" data-n="1"><b>02</b><span>API</span><em>FastAPI</em></div>
-              <div class="mock-row" data-n="2"><b>03</b><span>Dati</span><em>PostgreSQL</em></div>
-              <div class="mock-row" data-n="3"><b>04</b><span>Cloud</span><em>Vercel</em></div>
-            </div>
+          <div class="stack-visual">
+            <div class="stage" data-scene="stack" data-layer="0" aria-hidden="true"></div>
             <div class="term term-dark">
               <div class="term-bar" aria-hidden="true"><i></i><i></i><i></i><em>stack — layer</em></div>
               <pre class="term-body" id="stack-term">$ layer frontend
@@ -309,6 +307,7 @@ UI, accessibilità, Core Web Vitals</pre>
 
     <section class="exp shell" id="esperienza">
       <div class="exp-card">
+        <div class="stage" data-scene="exp" aria-hidden="true"></div>
         <p class="kicker" data-i18n="exp.kicker">Esperienza</p>
         <h2 class="display">
           <span class="line"><span data-i18n="exp.h1">Dove sta il lavoro.</span></span>
@@ -321,6 +320,7 @@ UI, accessibilità, Core Web Vitals</pre>
               <h3>CTRL Agency</h3>
               <p class="role"><span data-i18n="exp.r1">Co-founder</span> · <a href="https://www.ctrlagency.dev/" target="_blank" rel="noopener noreferrer">CTRL Agency</a></p>
               <p data-i18n="exp.r1d">Kallebe è co-founder di CTRL Agency: backend, architettura e i sistemi che lo studio manda in produzione.</p>
+              <a class="text-link" href="https://www.ctrlagency.dev/" target="_blank" rel="noopener noreferrer">ctrlagency.dev</a>
             </div>
           </li>
           <li>
@@ -338,6 +338,7 @@ UI, accessibilità, Core Web Vitals</pre>
 
     <section class="talk shell" id="contatti">
       <div class="talk-card on-paper">
+        <div class="stage" data-scene="contact" aria-hidden="true"></div>
         <p class="kicker" data-i18n="talk.kicker">Contatto</p>
         <h2 class="display">
           <span class="line"><span data-i18n="talk.h1">Parliamone.</span></span>

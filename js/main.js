@@ -339,7 +339,7 @@ function setLayer(next, fromScroll) {
     panel.classList.toggle("is-on", on);
     panel.hidden = wide ? !on : false;
   });
-  const stage = document.querySelector(".stack-visual");
+  const stage = document.querySelector('[data-scene="stack"]');
   if (stage) stage.dataset.layer = String(layer);
   typeInto(document.getElementById("stack-term"), stackScript[lang][layer], fromScroll && reduced);
   if (!fromScroll) {
@@ -621,68 +621,8 @@ function bootWorld() {
   if (reduced) return;
   const script = document.createElement("script");
   script.type = "module";
-  script.src = "js/clouds.js";
+  script.src = "js/world.js";
   document.body.appendChild(script);
-}
-
-function bootPortrait() {
-  if (reduced) return;
-  const load = (src) => new Promise((resolve, reject) => {
-    const script = document.createElement("script");
-    script.src = src;
-    script.onload = resolve;
-    script.onerror = reject;
-    document.body.appendChild(script);
-  });
-  load("https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js")
-    .then(() => load("https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"))
-    .then(() => {
-      if (!window.gsap) return;
-      const gsap = window.gsap;
-      gsap.registerPlugin(window.ScrollTrigger);
-      document.documentElement.classList.add("motion");
-      const photo = document.querySelector(".hero-photo");
-      const reveal = params.has("reveal");
-      const show = (targets) => gsap.set(targets, { autoAlpha: 1, y: 0, yPercent: 0, scale: 1, clearProps: "opacity,visibility" });
-      if (!reveal) {
-        gsap.from("#top .hero-photo, #top .display, #top .hero-line, #top .hero-dock", {
-          autoAlpha: 0,
-          y: 18,
-          duration: 0.9,
-          stagger: 0.08,
-          ease: "power3.out",
-          overwrite: "auto"
-        });
-        document.querySelectorAll(".display").forEach((heading) => {
-          if (heading.closest("#top")) return;
-          const rect = heading.getBoundingClientRect();
-          if (rect.top < window.innerHeight * 0.92) return;
-          gsap.from(heading, {
-            autoAlpha: 0,
-            y: 20,
-            duration: 0.8,
-            ease: "power3.out",
-            immediateRender: false,
-            scrollTrigger: { trigger: heading, start: "top 90%", once: true }
-          });
-        });
-      }
-      if (photo && window.matchMedia("(min-width: 981px)").matches) {
-        gsap.to(photo, {
-          y: -24,
-          ease: "none",
-          scrollTrigger: {
-            trigger: "#top",
-            start: "top top",
-            end: "bottom top",
-            scrub: 0.6
-          }
-        });
-      }
-      window.setTimeout(() => {
-        show("#top .hero-photo, #top .display, #top .hero-line, #top .hero-dock, .line > span");
-      }, 1600);
-    });
 }
 
 applyLang();
@@ -691,7 +631,6 @@ bootSmooth();
 
 if ("requestIdleCallback" in window) requestIdleCallback(bootWorld, { timeout: 900 });
 else window.addEventListener("load", () => window.setTimeout(bootWorld, 250));
-bootPortrait();
 
 if (params.has("reveal")) document.documentElement.classList.add("is-ready");
 if (params.get("chat") === "1") openChat();
