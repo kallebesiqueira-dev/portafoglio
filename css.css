@@ -536,11 +536,14 @@ html.js.is-ready .line > span { transform: none; }
 .who-visual img {
   position: relative;
   z-index: 1;
-  width: 100%;
+  display: block;
+  width: min(70%, 220px);
   height: auto;
+  margin: 0 auto;
   aspect-ratio: 1;
   object-fit: cover;
-  border-radius: 22px;
+  mask-image: radial-gradient(circle at 50% 42%, #000 58%, transparent 78%);
+  -webkit-mask-image: radial-gradient(circle at 50% 42%, #000 58%, transparent 78%);
 }
 
 .beats { display: grid; gap: 0.7rem; }
