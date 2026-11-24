@@ -365,11 +365,18 @@ document.querySelectorAll("[data-layer-btn]").forEach((button) => {
   button.addEventListener("click", () => setLayer(Number(button.dataset.layerBtn), false));
 });
 
+function sectionProgress(section) {
+  const rect = section.getBoundingClientRect();
+  const vh = window.innerHeight;
+  if (rect.bottom <= 0 || rect.top >= vh) return null;
+  return Math.min(1, Math.max(0, (vh - rect.top) / (rect.height + vh)));
+}
+
 function updatePins() {
   const who = document.getElementById("chi-sono");
   const stack = document.getElementById("stack");
-  const whoP = pinProgress(who);
-  const stackP = pinProgress(stack);
+  const whoP = pinProgress(who) ?? sectionProgress(who);
+  const stackP = pinProgress(stack) ?? sectionProgress(stack);
   if (whoP != null) setBeat(Math.min(2, Math.floor(whoP * 2.999)), true);
   if (stackP != null) setLayer(Math.min(3, Math.floor(stackP * 3.999)), true);
   const nav = document.getElementById("nav");
