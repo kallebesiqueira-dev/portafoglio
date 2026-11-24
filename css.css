@@ -1180,6 +1180,8 @@ html.js.is-ready .reveal { opacity: 1; transform: none; }
   .who, .stack { height: auto; }
   .who-sticky, .stack-sticky { position: static; height: auto; }
   .who-card, .stack-card, .talk-card { height: auto; }
+  .stack-visual { min-height: 320px; }
+  .stack-visual .stage { inset: 0 0 50% 0; }
   .case-card { min-height: 0; }
   .case-visual { min-height: 220px; }
   .device-row {
