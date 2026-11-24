@@ -1181,6 +1181,15 @@ html.js.is-ready .reveal { opacity: 1; transform: none; }
   .who-card, .stack-card, .talk-card { height: auto; }
   .case-card { min-height: 0; }
   .case-visual { min-height: 220px; }
+  .device-row {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 1.1rem;
+    max-width: 460px;
+    text-align: center;
+  }
+  .device-row .phone { width: 66%; }
+  .case-copy .device-row { margin-inline: auto; }
   .timeline li { grid-template-columns: 1rem minmax(0, 1fr); }
   .when { grid-column: 2; }
 }
