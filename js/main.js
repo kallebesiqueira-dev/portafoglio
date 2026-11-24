@@ -429,12 +429,12 @@ const countObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll("[data-count]").forEach((el) => countObserver.observe(el));
 
 const nav = document.getElementById("nav");
-const toggle = document.querySelector(".nav-toggle");
+const toggle = document.querySelector(".hn-toggle");
 toggle.addEventListener("click", () => {
   const open = nav.classList.toggle("is-open");
   toggle.setAttribute("aria-expanded", open ? "true" : "false");
 });
-document.querySelectorAll(".nav-links a").forEach((link) => {
+document.querySelectorAll(".hn-links a").forEach((link) => {
   link.addEventListener("click", () => {
     nav.classList.remove("is-open");
     toggle.setAttribute("aria-expanded", "false");

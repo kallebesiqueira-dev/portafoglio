@@ -32,25 +32,28 @@
 <body>
   <a class="skip" href="#main">Salta al contenuto</a>
 
-  <header class="nav" id="nav">
-    <a class="logo" href="#top">Kallebe</a>
-    <nav class="nav-links" id="nav-links" aria-label="Principale">
-      <a href="#chi-sono" data-i18n="nav.who">Chi sono</a>
-      <a href="#lavoro" data-i18n="nav.work">Progetti</a>
-      <a href="#stack" data-i18n="nav.stack">Stack</a>
-      <a href="#esperienza" data-i18n="nav.exp">Esperienza</a>
-      <a href="#contatti" data-i18n="nav.contact">Contatti</a>
-    </nav>
-    <div class="nav-end">
-      <div class="lang" role="group" aria-label="Lingua">
-        <button type="button" data-set-lang="it" aria-pressed="true">IT</button>
-        <span aria-hidden="true">/</span>
-        <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+  <header class="hn" id="nav">
+    <div class="hn-bar">
+      <a class="hn-logo" href="#top">Kallebe</a>
+      <nav class="hn-links" id="nav-links" aria-label="Principale">
+        <a href="#chi-sono" data-i18n="nav.who">Chi sono</a>
+        <a href="#lavoro" data-i18n="nav.work">Progetti</a>
+        <a href="#stack" data-i18n="nav.stack">Stack</a>
+        <a href="#esperienza" data-i18n="nav.exp">Esperienza</a>
+        <a href="#contatti" data-i18n="nav.contact">Contatti</a>
+      </nav>
+      <div class="hn-end">
+        <div class="lang hn-lang" role="group" aria-label="Lingua">
+          <button type="button" data-set-lang="it" aria-pressed="true">IT</button>
+          <span aria-hidden="true">/</span>
+          <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <a class="hn-talk" href="#contatti" data-i18n="nav.cta">Parliamone</a>
+        <button class="hn-toggle" type="button" aria-expanded="false" aria-controls="nav-links" data-i18n-label="nav.menu" aria-label="Menu">
+          <span class="hn-toggle-label" data-i18n="nav.menu">Menu</span>
+          <span class="hn-toggle-icon" aria-hidden="true"><i></i><i></i></span>
+        </button>
       </div>
-      <a class="btn btn-small" href="#contatti" data-i18n="nav.cta">Parliamone</a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" data-i18n-label="nav.menu" aria-label="Menu">
-        <span></span><span></span>
-      </button>
     </div>
   </header>
 
