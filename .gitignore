@@ -9,3 +9,6 @@ Thumbs.db
 *.log
 .vercel
 .env*.local
+
+# Local scratch (screenshots, headless chrome profile)
+.tmp/
