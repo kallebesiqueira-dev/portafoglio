@@ -61,19 +61,6 @@ function hero(scene) {
   };
 }
 
-function who(scene) {
-  const knot = new THREE.Mesh(
-    new THREE.TorusKnotGeometry(0.95, 0.18, mobile ? 50 : 110, 12),
-    material(accent, { wireframe: true })
-  );
-  scene.add(knot);
-  return {
-    update(dt, p) {
-      knot.rotation.y += dt * 0.25;
-      knot.rotation.x = 0.4 + p.y * 0.3;
-    }
-  };
-}
 
 function stack(scene) {
   const group = new THREE.Group();
@@ -102,66 +89,6 @@ function stack(scene) {
   };
 }
 
-function agenda(scene) {
-  const group = new THREE.Group();
-  const boxes = [ink, accent, ink].map((color, index) => {
-    const box = new THREE.Mesh(new THREE.BoxGeometry(2.3, 0.26, 1.45), material(color));
-    box.position.y = (1 - index) * 0.5;
-    group.add(box);
-    return box;
-  });
-  scene.add(group);
-  return {
-    update(dt, p) {
-      const time = performance.now() / 1000;
-      group.rotation.y = 0.5 + p.x * 0.45;
-      group.rotation.x = 0.55 + p.y * 0.15;
-      boxes.forEach((box, index) => {
-        box.position.y = (1 - index) * 0.52 + Math.sin(time + index) * 0.04;
-      });
-    }
-  };
-}
-
-function crm(scene) {
-  const group = new THREE.Group();
-  const core = new THREE.Mesh(new THREE.SphereGeometry(0.28, 24, 16), material(accent));
-  group.add(core);
-  const count = mobile ? 5 : 7;
-  const nodes = [];
-  for (let index = 0; index < count; index += 1) {
-    const node = new THREE.Mesh(new THREE.SphereGeometry(0.08, 12, 8), material(paper));
-    node.userData.angle = (index / count) * Math.PI * 2;
-    group.add(node);
-    nodes.push(node);
-  }
-  const positions = new Float32Array(count * 2 * 3);
-  const geometry = new THREE.BufferGeometry();
-  geometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
-  const lines = new THREE.LineSegments(geometry, new THREE.LineBasicMaterial({ color: accent, transparent: true, opacity: 0.75 }));
-  group.add(lines);
-  scene.add(group);
-  return {
-    update(dt, p) {
-      group.rotation.y = p.x * 0.3;
-      group.rotation.x = p.y * 0.2;
-      const time = performance.now() / 1000;
-      nodes.forEach((node, index) => {
-        const angle = node.userData.angle + time * 0.35;
-        const radius = 1.35 + (index % 2) * 0.25;
-        node.position.set(Math.cos(angle) * radius, Math.sin(angle * 0.85) * 0.45, Math.sin(angle) * radius);
-        positions[index * 6] = 0;
-        positions[index * 6 + 1] = 0;
-        positions[index * 6 + 2] = 0;
-        positions[index * 6 + 3] = node.position.x;
-        positions[index * 6 + 4] = node.position.y;
-        positions[index * 6 + 5] = node.position.z;
-      });
-      geometry.attributes.position.needsUpdate = true;
-    }
-  };
-}
-
 function exp(scene) {
   const group = new THREE.Group();
   const cubes = [];
@@ -182,18 +109,7 @@ function exp(scene) {
   };
 }
 
-function contact(scene) {
-  const ring = new THREE.Mesh(new THREE.TorusGeometry(1.35, 0.045, 12, mobile ? 40 : 80), material(accent));
-  scene.add(ring);
-  return {
-    update(dt, p) {
-      ring.rotation.x = 1.1 + p.y * 0.25;
-      ring.rotation.y += dt * 0.35 + p.x * 0.01;
-    }
-  };
-}
-
-const builders = { hero, who, stack, agenda, crm, exp, contact };
+const builders = { hero, stack, exp };
 
 function fit(slot) {
   const width = Math.max(1, slot.host.clientWidth);

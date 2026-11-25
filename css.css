@@ -396,28 +396,8 @@ html.js.is-ready .line > span { transform: none; }
 @media (min-width: 981px) {
   .hero-clouds { z-index: 2; }
   .hero-card .stage { z-index: 3; }
-  .hero-photo { z-index: 4; }
   .hero-top,
   .hero-dock { z-index: 5; }
-}
-
-.hero-photo {
-  position: absolute;
-  right: 10%;
-  top: 50%;
-  width: min(46vh, 38vw);
-  aspect-ratio: 1;
-  transform: translateY(-48%);
-  z-index: 2;
-  mask-image: radial-gradient(circle at 50% 42%, #000 58%, transparent 78%);
-  -webkit-mask-image: radial-gradient(circle at 50% 42%, #000 58%, transparent 78%);
-}
-
-.hero-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 30px;
 }
 
 .hero-card::after {
@@ -516,7 +496,6 @@ html.js.is-ready .line > span { transform: none; }
 
 .who-visual { position: relative; min-height: 280px; }
 
-.who-visual .stage { inset: -18% -24%; }
 
 .who-visual img {
   position: relative;
@@ -1012,7 +991,6 @@ html.js.is-ready .reveal { opacity: 1; transform: none; }
   pointer-events: auto;
 }
 
-.support-glow { display: none; }
 
 .support-head {
   display: grid;
@@ -1142,25 +1120,6 @@ html.js.is-ready .reveal { opacity: 1; transform: none; }
   .case-card, .stack-card, .who-grid, .more-grid { grid-template-columns: 1fr; }
   .psr { grid-template-columns: 1fr; }
   .metric-row { grid-template-columns: 1fr; gap: 1.2rem; }
-  .hero-photo {
-    position: absolute;
-    right: 50%;
-    top: 36%;
-    width: min(88vw, 440px);
-    transform: translate(50%, -50%);
-    margin: 0;
-    z-index: 0;
-    border-radius: 0;
-    mask-image: radial-gradient(circle at 50% 42%, #000 54%, transparent 76%);
-    -webkit-mask-image: radial-gradient(circle at 50% 42%, #000 54%, transparent 76%);
-  }
-  .hero-photo img {
-    position: static;
-    width: 100%;
-    height: 100%;
-    border-radius: 0;
-    transform: none;
-  }
   .hero-card {
     display: flex;
     flex-direction: column;
