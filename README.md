@@ -65,7 +65,7 @@ Real products showcased in the portfolio:
 ```
 portafoglio/
 ├── index.html        # Page structure + content (data-i18n driven)
-├── css.css           # All styling and responsive behavior
+├── style.css         # All styling and responsive behavior
 ├── js/
 │   ├── main.js       # i18n, interactions, scroll logic, chat widget
 │   └── world.js      # Three.js scenes (hero · stack · exp)

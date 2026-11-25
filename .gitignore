@@ -12,3 +12,6 @@ Thumbs.db
 
 # Local scratch (screenshots, headless chrome profile)
 .tmp/
+
+# Editor/linter config
+.hintrc
