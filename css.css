@@ -530,6 +530,13 @@ html.js.is-ready .line > span { transform: none; }
   border-radius: 24px;
 }
 
+/* Editorial left/right mix: Chi sono and Projects lean right */
+.who-card > .kicker,
+.who-card > .display { text-align: right; }
+.who-grid { direction: rtl; }
+.who-grid > * { direction: ltr; }
+.work-head { text-align: right; }
+
 .beats { display: grid; gap: 0.7rem; }
 
 .beats button,
