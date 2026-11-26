@@ -1396,3 +1396,52 @@ html.js.is-ready .reveal { opacity: 1; transform: none; }
   fill: var(--tc, currentColor);
 }
 .on-paper .tags li { background: rgba(12, 12, 12, 0.03); }
+
+/* Marquee: liquid orange name, rippling on hover */
+.play-track span {
+  color: var(--accent);
+  background: linear-gradient(100deg, #ff4a1c 0%, #ff4a1c 38%, #ff7040 50%, #ff4a1c 62%, #ff4a1c 100%);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: play-liquid 7s linear infinite;
+  filter: drop-shadow(0 0 22px rgba(255, 74, 28, 0.18));
+}
+@keyframes play-liquid {
+  to { background-position: -220% 0; }
+}
+.play-marquee { cursor: default; }
+.play-marquee.is-wet .play-track { filter: url(#play-water); }
+
+/* Metrics: hurricane spin on hover */
+.metric-row li { position: relative; }
+.metric-num {
+  position: relative;
+  width: max-content;
+  margin: 0 auto;
+  transform: rotate(var(--spin, 0deg)) scale(var(--spin-scale, 1));
+  will-change: transform;
+}
+.metric-num::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 2.2em;
+  height: 2.2em;
+  margin: -1.1em 0 0 -1.1em;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, transparent 0 55%, rgba(255, 74, 28, 0.0) 55%, rgba(255, 74, 28, 0.45) 80%, rgba(200, 182, 255, 0.35) 92%, transparent 100%);
+  -webkit-mask: radial-gradient(circle, transparent 0 38%, #000 39% 41%, transparent 42% 52%, #000 53% 55%, transparent 56% 66%, #000 67% 69%, transparent 70%);
+  mask: radial-gradient(circle, transparent 0 38%, #000 39% 41%, transparent 42% 52%, #000 53% 55%, transparent 56% 66%, #000 67% 69%, transparent 70%);
+  opacity: var(--swirl, 0);
+  pointer-events: none;
+  z-index: -1;
+}
+.metric-row li.is-spinning .metric-num {
+  text-shadow: -0.06em 0 0 rgba(255, 74, 28, 0.55), 0.06em 0 0 rgba(200, 182, 255, 0.45);
+}
+@media (prefers-reduced-motion: reduce) {
+  .play-track span { animation: none; }
+}

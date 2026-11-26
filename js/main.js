@@ -652,6 +652,63 @@ function bootPlay() {
   io.observe(field);
 }
 
+function bootWater() {
+  const marquee = document.getElementById("play-marquee");
+  const map = document.getElementById("play-water-map");
+  if (!marquee || !map || reduced) return;
+  let level = 0;
+  let target = 0;
+  let raf = 0;
+  const step = () => {
+    level += (target - level) * 0.08;
+    map.setAttribute("scale", level.toFixed(2));
+    if (Math.abs(target - level) > 0.1) raf = requestAnimationFrame(step);
+    else {
+      raf = 0;
+      if (target === 0) marquee.classList.remove("is-wet");
+    }
+  };
+  const go = (value) => {
+    target = value;
+    if (value) marquee.classList.add("is-wet");
+    if (!raf) raf = requestAnimationFrame(step);
+  };
+  marquee.addEventListener("pointerenter", () => go(34));
+  marquee.addEventListener("pointerleave", () => go(0));
+}
+
+function bootHurricane() {
+  if (reduced) return;
+  document.querySelectorAll(".metric-row li").forEach((li) => {
+    const num = li.querySelector(".metric-num");
+    if (!num) return;
+    let angle = 0;
+    let speed = 0;
+    let hover = false;
+    let raf = 0;
+    const max = 26;
+    const step = () => {
+      if (hover) speed += (max - speed) * 0.06;
+      else speed *= 0.93;
+      angle += speed;
+      let done = false;
+      if (!hover && speed < 0.6) {
+        const rest = Math.ceil(angle / 360) * 360;
+        angle += (rest - angle) * 0.18;
+        if (Math.abs(rest - angle) < 0.3) { angle = 0; speed = 0; done = true; }
+      }
+      const k = Math.min(1, speed / max);
+      num.style.setProperty("--spin", angle.toFixed(2) + "deg");
+      num.style.setProperty("--spin-scale", (1 + k * 0.12).toFixed(3));
+      num.style.setProperty("--swirl", k.toFixed(3));
+      li.classList.toggle("is-spinning", k > 0.15);
+      raf = done ? 0 : requestAnimationFrame(step);
+    };
+    li.addEventListener("pointerenter", () => { hover = true; if (!raf) raf = requestAnimationFrame(step); });
+    li.addEventListener("pointerleave", () => { hover = false; if (!raf) raf = requestAnimationFrame(step); });
+  });
+}
+
 function bootClouds() {
   const shifts = [...document.querySelectorAll(".hero-cloud-shift")];
   if (!shifts.length || reduced) return;
@@ -700,6 +757,8 @@ updatePins();
 bootSmooth();
 bootClouds();
 bootPlay();
+bootWater();
+bootHurricane();
 
 if ("requestIdleCallback" in window) requestIdleCallback(bootWorld, { timeout: 900 });
 else window.addEventListener("load", () => window.setTimeout(bootWorld, 250));
