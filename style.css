@@ -1226,3 +1226,148 @@ html.js.is-ready .reveal { opacity: 1; transform: none; }
     width: auto;
   }
 }
+
+/* Play: physics playground + name marquee (before contact) */
+.play-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--r);
+  background: var(--card);
+  padding-top: clamp(1.2rem, 3vh, 2rem);
+}
+
+.play-field {
+  position: relative;
+  height: clamp(230px, 34vh, 340px);
+  overflow: hidden;
+  border-bottom: 1px solid var(--rule);
+  touch-action: pan-y;
+}
+
+.toy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+  cursor: grab;
+  will-change: transform;
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  color: var(--fg);
+}
+
+.toy.is-grabbed { cursor: grabbing; }
+
+/* Static fallback (no JS physics / reduced motion): toys rest in a row */
+.play-field:not(:has(.is-live)) {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  align-items: flex-end;
+  gap: 0.5rem;
+  padding: 0 1rem 0.6rem;
+}
+.toy:not(.is-live) { position: relative; }
+
+.toy-pill {
+  height: 44px;
+  padding: 0 1.25rem;
+  border-radius: 999px;
+  border: 1px solid rgba(242, 240, 234, 0.45);
+  background: var(--page);
+}
+.toy-pill s { text-decoration-thickness: 1.5px; margin-right: 0.3em; }
+.toy-pill-accent { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.toy-pill-paper { background: var(--paper); border-color: var(--paper); color: var(--ink); }
+
+.toy-dot {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.35rem;
+}
+
+.toy-diamond {
+  width: 52px;
+  height: 52px;
+  background: var(--paper);
+  border-radius: 3px;
+}
+
+.toy-half {
+  width: 76px;
+  height: 38px;
+  background: var(--paper);
+  border-radius: 76px 76px 0 0;
+}
+
+.toy-plus { width: 64px; height: 64px; }
+.toy-plus::before,
+.toy-plus::after {
+  content: "";
+  position: absolute;
+  background: var(--paper);
+}
+.toy-plus::before { left: 0; right: 0; top: 35%; height: 30%; }
+.toy-plus::after { top: 0; bottom: 0; left: 35%; width: 30%; }
+
+.play-marquee {
+  overflow: hidden;
+  padding: clamp(0.4rem, 1.5vh, 1rem) 0 clamp(1rem, 3vh, 2rem);
+}
+
+.play-track {
+  display: flex;
+  width: max-content;
+  animation: play-marquee 26s linear infinite;
+}
+
+.play-track span {
+  flex: none;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(3.2rem, 11vw, 10.5rem);
+  line-height: 1;
+  letter-spacing: -0.045em;
+  color: var(--fg);
+  white-space: nowrap;
+}
+
+@keyframes play-marquee {
+  to { transform: translateX(-50%); }
+}
+
+.play-hint {
+  position: absolute;
+  top: clamp(1rem, 2.5vh, 1.6rem);
+  right: clamp(1.2rem, 3vw, 2rem);
+  margin: 0;
+  color: var(--dim);
+  font-size: 0.78rem;
+  pointer-events: none;
+}
+
+@media (max-width: 640px) {
+  .toy-pill { height: 36px; padding: 0 0.9rem; font-size: 0.72rem; }
+  .toy-dot { width: 54px; height: 54px; font-size: 1.1rem; }
+  .toy-diamond { width: 42px; height: 42px; }
+  .toy-half { width: 60px; height: 30px; }
+  .toy-plus { width: 50px; height: 50px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .play-track { animation: none; }
+  .play-hint { display: none; }
+}

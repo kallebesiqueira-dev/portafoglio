@@ -81,6 +81,7 @@ const dict = {
     "talk.kicker": "Contatto",
     "talk.h1": "Parliamone.",
     "talk.lead": "Un ruolo, un prodotto, una collaborazione. Si parte dal concreto.",
+    "play.hint": "Trascina le forme",
     "footer.copy": "© 2026 Kallebe Gallo",
     "chip.quote": "Preventivo",
     "chip.work": "Progetti",
@@ -179,6 +180,7 @@ const dict = {
     "talk.kicker": "Contact",
     "talk.h1": "Let's talk.",
     "talk.lead": "A role, a product, or a collaboration. We start from the concrete thing.",
+    "play.hint": "Drag the shapes",
     "footer.copy": "© 2026 Kallebe Gallo",
     "chip.quote": "Quote",
     "chip.work": "Projects",
@@ -632,6 +634,24 @@ function bootWorld() {
   document.body.appendChild(script);
 }
 
+function bootPlay() {
+  const field = document.getElementById("play-field");
+  if (!field || reduced) return;
+  const start = () => {
+    if (window.Matter) return import("./play.js");
+    const script = document.createElement("script");
+    script.src = "https://cdn.jsdelivr.net/npm/matter-js@0.20.0/build/matter.min.js";
+    script.onload = () => import("./play.js");
+    document.body.appendChild(script);
+  };
+  const io = new IntersectionObserver((entries) => {
+    if (!entries.some((entry) => entry.isIntersecting)) return;
+    io.disconnect();
+    start();
+  }, { rootMargin: "300px 0px" });
+  io.observe(field);
+}
+
 function bootClouds() {
   const shifts = [...document.querySelectorAll(".hero-cloud-shift")];
   if (!shifts.length || reduced) return;
@@ -679,6 +699,7 @@ applyLang();
 updatePins();
 bootSmooth();
 bootClouds();
+bootPlay();
 
 if ("requestIdleCallback" in window) requestIdleCallback(bootWorld, { timeout: 900 });
 else window.addEventListener("load", () => window.setTimeout(bootWorld, 250));
