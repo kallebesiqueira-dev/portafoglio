@@ -13,6 +13,7 @@
   --rule: rgba(242, 240, 234, 0.14);
   --accent: #ff4a1c;
   --accent-ink: #0c0c0c;
+  --violet: #c8b6ff;
   --frame: 10px;
   --r: 22px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
@@ -912,7 +913,7 @@ html.js.is-ready .reveal { opacity: 1; transform: none; }
   width: 68px;
   height: 68px;
   border-radius: 22px;
-  background: var(--paper);
+  background: var(--violet);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -943,7 +944,7 @@ html.js.is-ready .reveal { opacity: 1; transform: none; }
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--paper);
+  background: #fff;
   transform: translate(var(--px, 0px), var(--py, 0px));
   transition: transform 0.12s linear;
 }
@@ -955,7 +956,7 @@ html.js.is-ready .reveal { opacity: 1; transform: none; }
   right: 0;
   top: 0;
   height: 100%;
-  background: var(--paper);
+  background: var(--violet);
   transform: scaleY(0);
   transform-origin: center top;
 }
@@ -1371,3 +1372,25 @@ html.js.is-ready .reveal { opacity: 1; transform: none; }
   .play-track { animation: none; }
   .play-hint { display: none; }
 }
+
+/* Tech tags with brand icons */
+.tags li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+  padding: 0.3rem 0.75rem 0.3rem 0.5rem;
+  background: rgba(242, 240, 234, 0.035);
+  transition: border-color 0.3s var(--ease), color 0.3s var(--ease), background 0.3s var(--ease);
+}
+.tags li:hover {
+  color: var(--fg);
+  border-color: color-mix(in srgb, var(--tc, var(--fg)) 55%, transparent);
+  background: color-mix(in srgb, var(--tc, var(--fg)) 10%, transparent);
+}
+.tags .ti {
+  width: 15px;
+  height: 15px;
+  flex: none;
+  fill: var(--tc, currentColor);
+}
+.on-paper .tags li { background: rgba(12, 12, 12, 0.03); }
