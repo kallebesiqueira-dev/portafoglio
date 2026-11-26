@@ -100,9 +100,10 @@ function render() {
 
 function tick(time) {
   if (!running) return;
-  const dt = Math.min(time - last || 16.6, 33);
+  const dt = Math.min(time - last || 16.6, 50);
   last = time;
-  Engine.update(engine, dt);
+  const steps = Math.max(1, Math.ceil(dt / 16.6));
+  for (let i = 0; i < steps; i += 1) Engine.update(engine, dt / steps);
   render();
   requestAnimationFrame(tick);
 }
