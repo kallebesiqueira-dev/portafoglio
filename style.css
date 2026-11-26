@@ -1408,6 +1408,8 @@ html.js.is-ready .reveal { opacity: 1; transform: none; }
   background-clip: text;
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 0 24px rgba(255, 74, 28, 0.22));
+  line-height: 1.12;
+  padding: 0.04em 0 0.16em;
 }
 .play-marquee { cursor: default; }
 
