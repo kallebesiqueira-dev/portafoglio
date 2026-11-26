@@ -1364,6 +1364,7 @@ html.js.is-ready .reveal { opacity: 1; transform: none; }
 }
 
 @media (max-width: 640px) {
+  .play-field { height: clamp(220px, 34vh, 300px); }
   .toy-pill { height: 44px; padding: 0 1.1rem; font-size: 0.82rem; }
   .toy-dot { width: 66px; height: 66px; font-size: 1.3rem; }
   .toy-diamond { width: 50px; height: 50px; }

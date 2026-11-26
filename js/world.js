@@ -115,6 +115,13 @@ function fit(slot) {
   const width = Math.max(1, slot.host.clientWidth);
   const height = Math.max(1, slot.host.clientHeight);
   slot.camera.aspect = width / height;
+  if (slot.kind === "stack") {
+    // Keep the whole staircase in frame (incl. the active slab sliding forward).
+    const t = Math.tan((slot.camera.fov * Math.PI) / 360);
+    const needH = 1.95 / t;
+    const needW = 1.75 / (t * slot.camera.aspect);
+    slot.camera.position.z = Math.max(6, needH, needW) + 0.6;
+  }
   slot.camera.updateProjectionMatrix();
   slot.renderer.setSize(width, height, false);
 }
@@ -132,7 +139,7 @@ function play(slot) {
     pointer.y += (pointer.ty - pointer.y) * 0.08;
     const rect = slot.host.getBoundingClientRect();
     const mid = (rect.top + rect.height / 2) / window.innerHeight - 0.5;
-    slot.group.position.y = -mid * 0.35;
+    slot.group.position.y = -mid * (slot.kind === "stack" ? 0.12 : 0.35);
     slot.api.update(dt, pointer, slot.host);
     slot.renderer.render(slot.scene, slot.camera);
   };
@@ -193,7 +200,7 @@ function mount(host) {
   const build = builders[kind] || builders.hero;
   const api = build(scene);
   const group = scene.children.find((child) => child.isGroup || child.isMesh) || scene;
-  const slot = { host, canvas, renderer, scene, camera, api, group, raf: 0, last: 0, want: true, ro: null };
+  const slot = { host, canvas, renderer, scene, camera, api, group, kind, raf: 0, last: 0, want: true, ro: null };
   const ro = new ResizeObserver(() => fit(slot));
   ro.observe(host);
   slot.ro = ro;
