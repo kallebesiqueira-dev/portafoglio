@@ -1239,7 +1239,7 @@ html.js.is-ready .reveal { opacity: 1; transform: none; }
 
 .play-field {
   position: relative;
-  height: clamp(230px, 34vh, 340px);
+  height: clamp(300px, 44vh, 440px);
   overflow: hidden;
   border-bottom: 1px solid var(--rule);
   touch-action: pan-y;
@@ -1259,7 +1259,7 @@ html.js.is-ready .reveal { opacity: 1; transform: none; }
   will-change: transform;
   font-family: var(--sans);
   font-weight: 500;
-  font-size: 0.82rem;
+  font-size: 1.05rem;
   letter-spacing: 0.02em;
   white-space: nowrap;
   color: var(--fg);
@@ -1279,8 +1279,8 @@ html.js.is-ready .reveal { opacity: 1; transform: none; }
 .toy:not(.is-live) { position: relative; }
 
 .toy-pill {
-  height: 44px;
-  padding: 0 1.25rem;
+  height: 60px;
+  padding: 0 1.7rem;
   border-radius: 999px;
   border: 1px solid rgba(242, 240, 234, 0.45);
   background: var(--page);
@@ -1290,36 +1290,38 @@ html.js.is-ready .reveal { opacity: 1; transform: none; }
 .toy-pill-paper { background: var(--paper); border-color: var(--paper); color: var(--ink); }
 
 .toy-dot {
-  width: 68px;
-  height: 68px;
+  width: 92px;
+  height: 92px;
   border-radius: 50%;
   background: var(--accent);
   color: var(--accent-ink);
   font-family: var(--display);
   font-weight: 700;
-  font-size: 1.35rem;
+  font-size: 1.8rem;
 }
 
 .toy-diamond {
-  width: 52px;
-  height: 52px;
+  width: 70px;
+  height: 70px;
   background: var(--paper);
   border-radius: 3px;
 }
 
 .toy-half {
-  width: 76px;
-  height: 38px;
+  width: 110px;
+  height: 55px;
   background: var(--paper);
-  border-radius: 76px 76px 0 0;
+  border-radius: 110px 110px 0 0;
 }
+.toy-half-violet { background: var(--violet); }
 
-.toy-plus { width: 64px; height: 64px; }
+.toy-plus { width: 88px; height: 88px; }
+.toy-plus-accent { --plus: var(--accent); }
 .toy-plus::before,
 .toy-plus::after {
   content: "";
   position: absolute;
-  background: var(--paper);
+  background: var(--plus, var(--paper));
 }
 .toy-plus::before { left: 0; right: 0; top: 35%; height: 30%; }
 .toy-plus::after { top: 0; bottom: 0; left: 35%; width: 30%; }
@@ -1361,11 +1363,11 @@ html.js.is-ready .reveal { opacity: 1; transform: none; }
 }
 
 @media (max-width: 640px) {
-  .toy-pill { height: 36px; padding: 0 0.9rem; font-size: 0.72rem; }
-  .toy-dot { width: 54px; height: 54px; font-size: 1.1rem; }
-  .toy-diamond { width: 42px; height: 42px; }
-  .toy-half { width: 60px; height: 30px; }
-  .toy-plus { width: 50px; height: 50px; }
+  .toy-pill { height: 44px; padding: 0 1.1rem; font-size: 0.82rem; }
+  .toy-dot { width: 66px; height: 66px; font-size: 1.3rem; }
+  .toy-diamond { width: 50px; height: 50px; }
+  .toy-half { width: 80px; height: 40px; }
+  .toy-plus { width: 62px; height: 62px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

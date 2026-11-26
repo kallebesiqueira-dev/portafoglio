@@ -22,9 +22,9 @@ function wallSet() {
   const opts = { isStatic: true, friction: 0.6, restitution: 0.2 };
   return [
     Bodies.rectangle(width / 2, height + t / 2, width + t * 2, t, opts),
-    Bodies.rectangle(-t / 2, height / 2 - height, t, height * 4, opts),
-    Bodies.rectangle(width + t / 2, height / 2 - height, t, height * 4, opts),
-    Bodies.rectangle(width / 2, -height * 2 - t / 2, width + t * 2, t, opts)
+    Bodies.rectangle(-t / 2, height / 2 - 800, t, height + 1800, opts),
+    Bodies.rectangle(width + t / 2, height / 2 - 800, t, height + 1800, opts),
+    Bodies.rectangle(width / 2, -1600 - t / 2, width + t * 2, t, opts)
   ];
 }
 
@@ -72,11 +72,11 @@ function build() {
   Composite.add(engine.world, walls);
   items = toys.map((el, index) => {
     const x = width * (0.12 + Math.random() * 0.76);
-    const y = -80 - index * 90;
+    const y = -90 - (index % 3) * 80;
     const body = bodyFor(el, x, y);
     Body.setAngle(body, (Math.random() - 0.5) * 1.2);
     el.classList.add("is-live");
-    return { el, body, delay: index * 160 };
+    return { el, body, delay: index * 220 };
   });
   items.forEach((item) => {
     timers.push(window.setTimeout(() => Composite.add(engine.world, item.body), item.delay));
