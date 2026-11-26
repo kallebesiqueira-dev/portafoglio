@@ -652,29 +652,109 @@ function bootPlay() {
   io.observe(field);
 }
 
-function bootWater() {
-  const marquee = document.getElementById("play-marquee");
-  const map = document.getElementById("play-water-map");
-  if (!marquee || !map || reduced) return;
-  let level = 0;
-  let target = 0;
-  let raf = 0;
-  const step = () => {
-    level += (target - level) * 0.08;
-    map.setAttribute("scale", level.toFixed(2));
-    if (Math.abs(target - level) > 0.1) raf = requestAnimationFrame(step);
-    else {
-      raf = 0;
-      if (target === 0) marquee.classList.remove("is-wet");
+function liquidTexture(w, h) {
+  // Tileable glossy "liquid" height field, lit like molten glass, in orange.
+  const canvas = document.createElement("canvas");
+  canvas.width = w;
+  canvas.height = h;
+  const ctx = canvas.getContext("2d");
+  const img = ctx.createImageData(w, h);
+  const T = Math.PI * 2;
+  const height = new Float32Array(w * h);
+  for (let y = 0; y < h; y += 1) {
+    const v = (y / h) * T;
+    for (let x = 0; x < w; x += 1) {
+      const u = (x / w) * T;
+      const wu = u + 0.85 * Math.sin(2 * v + 1.3) + 0.45 * Math.sin(3 * u + v);
+      const wv = v + 0.85 * Math.sin(2 * u + 0.7) + 0.45 * Math.sin(u + 3 * v + 2);
+      height[y * w + x] =
+        Math.sin(3 * wu + 1) * Math.cos(2 * wv) +
+        0.5 * Math.sin(5 * wu + 4 * wv + 2) +
+        0.3 * Math.sin(7 * wu - 3 * wv + 0.5);
     }
+  }
+  const L = [-0.45, -0.6, 0.66];
+  const ln = Math.hypot(...L);
+  L[0] /= ln; L[1] /= ln; L[2] /= ln;
+  const H = [L[0], L[1], L[2] + 1];
+  const hn = Math.hypot(...H);
+  H[0] /= hn; H[1] /= hn; H[2] /= hn;
+  for (let y = 0; y < h; y += 1) {
+    for (let x = 0; x < w; x += 1) {
+      const i = y * w + x;
+      const hx = height[y * w + ((x + 1) % w)] - height[y * w + ((x - 1 + w) % w)];
+      const hy = height[((y + 1) % h) * w + x] - height[((y - 1 + h) % h) * w + x];
+      let nx = -hx * 6;
+      let ny = -hy * 6;
+      let nz = 1;
+      const nl = Math.hypot(nx, ny, nz);
+      nx /= nl; ny /= nl; nz /= nl;
+      const diff = Math.max(0, nx * L[0] + ny * L[1] + nz * L[2]);
+      const spec = Math.pow(Math.max(0, nx * H[0] + ny * H[1] + nz * H[2]), 60);
+      const rim = Math.pow(1 - nz, 1.6);
+      const t = 0.5 + 0.5 * height[i] / 1.8;
+      let r = 238 + 17 * t;
+      let g = 78 + 62 * t;
+      let b = 22 + 22 * t;
+      const shade = 0.82 + 0.3 * diff - 0.22 * rim;
+      r = r * shade + 255 * spec * 1.1;
+      g = g * shade + 245 * spec * 1.1 + 60 * rim * 0.3;
+      b = b * shade + 225 * spec * 1.1;
+      const o = i * 4;
+      img.data[o] = Math.min(255, r);
+      img.data[o + 1] = Math.min(255, g);
+      img.data[o + 2] = Math.min(255, b);
+      img.data[o + 3] = 255;
+    }
+  }
+  ctx.putImageData(img, 0, 0);
+  return canvas.toDataURL("image/jpeg", 0.9);
+}
+
+function bootLiquid() {
+  const marquee = document.getElementById("play-marquee");
+  if (!marquee) return;
+  const run = () => {
+    const tw = 640;
+    const th = 320;
+    marquee.style.setProperty("--liquid", `url(${liquidTexture(tw, th)})`);
+    marquee.style.setProperty("--liquid-size", `${tw * 2.2}px ${th * 2.2}px`);
+    if (reduced) return;
+    const pos = { x: 0, y: 0, tx: 0, ty: 0 };
+    let drift = 0;
+    let visible = false;
+    let last = performance.now();
+    const frame = (now) => {
+      const dt = Math.min(50, now - last);
+      last = now;
+      drift += dt * 0.012;
+      pos.x += (pos.tx - pos.x) * 0.07;
+      pos.y += (pos.ty - pos.y) * 0.07;
+      marquee.style.setProperty("--lx", `${(pos.x - drift).toFixed(1)}px`);
+      marquee.style.setProperty("--ly", `${(pos.y + Math.sin(drift / 60) * 18).toFixed(1)}px`);
+      if (visible) requestAnimationFrame(frame);
+    };
+    marquee.addEventListener("pointermove", (event) => {
+      const rect = marquee.getBoundingClientRect();
+      const nx = (event.clientX - rect.left) / rect.width - 0.5;
+      const ny = (event.clientY - rect.top) / rect.height - 0.5;
+      pos.tx = -nx * 520;
+      pos.ty = -ny * 260;
+    });
+    marquee.addEventListener("pointerleave", () => { pos.tx = 0; pos.ty = 0; });
+    new IntersectionObserver((entries) => {
+      const now = entries.some((entry) => entry.isIntersecting);
+      if (now && !visible) {
+        visible = true;
+        last = performance.now();
+        requestAnimationFrame(frame);
+      } else if (!now) {
+        visible = false;
+      }
+    }).observe(marquee);
   };
-  const go = (value) => {
-    target = value;
-    if (value) marquee.classList.add("is-wet");
-    if (!raf) raf = requestAnimationFrame(step);
-  };
-  marquee.addEventListener("pointerenter", () => go(34));
-  marquee.addEventListener("pointerleave", () => go(0));
+  if ("requestIdleCallback" in window) requestIdleCallback(run, { timeout: 1500 });
+  else window.setTimeout(run, 400);
 }
 
 function bootHurricane() {
@@ -757,7 +837,7 @@ updatePins();
 bootSmooth();
 bootClouds();
 bootPlay();
-bootWater();
+bootLiquid();
 bootHurricane();
 
 if ("requestIdleCallback" in window) requestIdleCallback(bootWorld, { timeout: 900 });
