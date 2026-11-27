@@ -48,7 +48,7 @@ Real products showcased in the portfolio:
 
 | [Agenda Easy](https://agendaeasy.it) | [CRM Gallo](https://gallo-crm.vercel.app) |
 |:---:|:---:|
-| <img src="img/shots/agenda-desktop.jpg" alt="Agenda Easy" width="420"> | <img src="img/shots/crm-desktop.jpg" alt="CRM Gallo" width="420"> |
+| <img src="img/shots/agenda-mac.png" alt="Agenda Easy" width="420"> | <img src="img/shots/crm-mac.png" alt="CRM Gallo" width="420"> |
 | Online booking SaaS — Next.js, Supabase, Stripe | Multi-tenant CRM with an AI copilot — Next.js, Supabase |
 
 ## Tech stack

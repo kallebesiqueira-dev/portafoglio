@@ -699,31 +699,19 @@ html.js.is-ready .line > span { transform: none; }
   text-align: left;
 }
 
-.browser,
-.phone {
+/* Mockup already carries its own device frame + shadow (transparent PNG/WebP) */
+.mock {
   margin: 0;
-  overflow: hidden;
-  background: #101010;
-  border-radius: 18px;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
 }
 
-.browser figcaption,
-.phone figcaption {
-  padding: 0.45rem 0.8rem;
-  color: var(--dim);
-  font-size: 0.72rem;
-  text-align: left;
-}
-
-.browser img,
-.phone img {
+.mock img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-.phone { border-radius: 28px; }
+/* Nudge the phone up so its base aligns with the iMac stand */
+.mock-phone { margin-bottom: 6%; }
 
 .case-copy .psr { text-align: left; }
 .case-copy .tags,
@@ -1158,7 +1146,7 @@ html.js.is-ready .reveal { opacity: 1; transform: none; }
     max-width: 460px;
     text-align: center;
   }
-  .device-row .phone { width: 66%; }
+  .device-row .mock-phone { width: 52%; margin-bottom: 0; }
   .case-copy .device-row { margin-inline: auto; }
   .timeline li { grid-template-columns: 1rem minmax(0, 1fr); }
   .when { grid-column: 2; }
